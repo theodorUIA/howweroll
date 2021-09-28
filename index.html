@@ -4,7 +4,45 @@
 	<meta charset="utf-8">
 	<title>HowWeRoll</title>
 	<style>
-
+		.slider {
+			-webkit-appearance: none;
+			width: 100%;
+			height: 5px;
+			background: #2A9D8F;
+			outline: none;
+			opacity: 0.7;
+			-webkit-transition: .2s;
+			transition: opacity .2s;
+		}
+		.slider:hover{
+			opacity: 1;
+		}
+		.slider::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			background: #264653;
+			width: 18px;
+			height: 18px;
+			cursor: pointer;
+			border-radius: 50%;
+		}
+		.slidercontainer{
+			width: 80%;
+			border: 0px solid black;
+		}
+		.slidercontainer td{
+			border: 0px solid black;
+			width: 33.3%;
+		}
+		.text-align-left{
+			text-align: left;
+		}
+		.text-align-right{ 
+			text-align: right;
+		}
+		.text-align-center{
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
@@ -26,9 +64,18 @@ Navn: <input type="text" name="name">
 	<h4>Skriv inn dine ferdigheter her:</h4>
 ferdigheter: <input type="text" name="Skills">
 </div>
-<div class="slidecontainer">
-	<p>Slider</p>
-	<input type="range" min="0" max="100" value="50">
+<div>
+	<h4>Når jobber du best?</h4>
+	<table class="slidercontainer">
+		<tr>
+			<td colspan="3"><input type="range" min="0" max="100" value="50" class="slider"></td>
+		</tr>
+		<tr>
+			<td class="text-align-left">Morgenfugel</td>
+			<td class="text-align-center">Nøytral</td>
+			<td class="text-align-right">Natteravn</td>
+		</tr>
+	</table>
 </div>
 
 <script>
