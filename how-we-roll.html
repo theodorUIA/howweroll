@@ -23,6 +23,40 @@
             font-family: Arial;
             color: white;
         }
+        .topnav {
+            overflow: hidden;
+            background-color: #264653;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #e76f51;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #e76f51;
+            color: #264563;
+        }
+
+        .topnav a.active {
+            background-color: #2A9D8F;
+            color: #264563;
+        }
+
+        .topnav input[type=text] {
+            float: right;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+        }
+
 
     </style>
 </head>
@@ -30,9 +64,10 @@
 <div class="header"><span class="header-text">How We Roll</span></div>
 
 <div class="topnav">
-    <a class="active" href=index.html>Hjem</a>
-    <a href=how-we-roll.html>Profil</a>
-    <a href=hwr-report.html>Info</a>
+
+    <a href="index.html">Hjem</a>
+    <a class="active" href="how-we-roll.html">Profil</a>
+    <a href="hwr-report.html">Rapport</a>
     <input type="text" placeholder="Søk...">
 </div>
 
