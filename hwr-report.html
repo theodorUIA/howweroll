@@ -3,9 +3,70 @@
 <head>
 	<meta charset="utf-8">
 	<title>HowWeRoll</title>
+	<style>
+		body {
+			margin: 0px;
+		}
+		.header{
+			text-align: left;
 
+			background-color: #264653;
+			height: 30px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			padding-left: 50px;
+
+		}
+		.header-text{
+			font-style: italic;
+			font-size: 30px;
+			font-family: Arial;
+			color: white;
+		}
+		.topnav {
+			overflow: hidden;
+			background-color: #264653;
+		}
+
+		.topnav a {
+			float: left;
+			display: block;
+			color: #e76f51;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+
+		.topnav a:hover {
+			background-color: #e76f51;
+			color: #264563;
+		}
+
+		.topnav a.active {
+			background-color: #2A9D8F;
+			color: #264563;
+		}
+
+		.topnav input[type=text] {
+			float: right;
+			padding: 6px;
+			border: none;
+			margin-top: 8px;
+			margin-right: 16px;
+			font-size: 17px;
+		}
+
+
+	</style>
 </head>
 <body>
+<div class="topnav">
+	<a href=index.html>Hjem</a>
+	<a href=how-we-roll.html>Profil</a>
+	<a class="active" href=hwr-report.html>Rapport</a>
+	<input type="text" placeholder="Søk...">
+</div>
 
 
 <script>
