@@ -89,11 +89,15 @@
 			.topnav input[type=text] {
 				border: 1px solid #ccc;
 			}
+			
+
 		}
+
 		.form-text{
 			border-radius: 4px;
 			border: 1px solid #8C8C8C;
 		}
+    
 	</style>
 </head>
 <body>
@@ -106,21 +110,22 @@
 	<input type="text" placeholder="Søk...">
 </div>
 
-	<!--<h4>Skriv inn fornavn her:</h4>-->
-	Fornavn: <input type="text" name="fname" class="form-text">
-<div>
-	<!--<h4>Skriv inn etternavn her:</h4>-->
-	Etternavn: <input type="text" name="lname" class="form-text">
-</div>
-<div>
-	<!--<h4>Skriv inn Epost her:</h4>-->
-	Epost: <input type="email" name="Email" class="form-text">
-</div>
-<div>
-	<!--<h4>Skriv inn Telefonnummer her:</h4>-->
-	Telefon: <input type="number" name="phone" class="form-text">
-</div>
 
+<table>
+	<tr>
+		<td>Fornavn:</td>
+		<td><input type="text" name="fname"></td>
+		<td>Etternavn:</td>
+		<td><input type="text" name="lname"></td>
+	</tr>
+	<tr>
+		<td>Telefon:</td>
+		<td><input type="number" name="phone"></td>
+		<td>E-post:</td>
+		<td><input type="email" name="Email"></td>
+	</tr>
+
+</table>
 <div>
 	<h4>Skriv inn dine ferdigheter her:</h4>
 Ferdigheter: <input type="text" name="Skills" class="form-text">
