@@ -94,26 +94,30 @@
 </head>
 <body>
 <div class="topnav">
+
 	<a class="active" href="index.html">Hjem</a>
 	<a href="how-we-roll.html">Profil</a>
 	<a href="hwr-report.html">Rapport</a>
+
 	<input type="text" placeholder="Søk...">
 </div>
 
-<h4>Skriv inn navn her:</h4>
-Navn: <input type="text" name="name">
+	<!--<h4>Skriv inn fornavn her:</h4>-->
+	Fornavn: <input type="text" name="fname">
 <div>
+	<!--<h4>Skriv inn etternavn her:</h4>-->
+	Etternavn: <input type="text" name="lname">
 </div>
-	<h4>Skriv inn Telefonnummer her:</h4>
-	Telefon: <input type="number" name="phone">
-
-	<div>
-</div>
-
 <div>
-	<h4>Skriv inn Epost her:</h4>
+	<!--<h4>Skriv inn Epost her:</h4>-->
 	Epost: <input type="email" name="Email" >
-<br>
+</div>
+<div>
+	<!--<h4>Skriv inn Telefonnummer her:</h4>-->
+	Telefon: <input type="number" name="phone">
+</div>
+
+<div>
 	<h4>Skriv inn dine ferdigheter her:</h4>
 Ferdigheter: <input type="text" name="Skills">
 </div>
@@ -141,6 +145,16 @@ Ferdigheter: <input type="text" name="Skills">
 		<td class="text-align-right">Atletisk</td>
 	</tr>
 </table>
+<h4>Hvordan foretrekker du å jobbe?</h4>
+<table class="slidercontainer">
+	<tr>
+		<td colspan="3"><input type="range" min="0" max="100" value="50" class="slider"></td>
+	</tr>
+	<tr>
+		<td class="text-align-left">Selvstendig</td>
+		<td class="text-align-center">Nøytral</td>
+		<td class="text-align-right">Samarbeid</td>
+	</tr>
 <script>
 
 </script>
