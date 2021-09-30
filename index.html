@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="no" xmlns="http://www.w3.org/1999/html">
 <head>
 	<meta charset="utf-8">
 	<title>HowWeRoll</title>
@@ -147,6 +147,8 @@
 			border-radius: 4px;
 			border: 1px solid #8C8C8C;
 		}
+
+
     
 	</style>
 </head>
@@ -215,6 +217,33 @@ Ferdigheter: <input type="text" name="skills" class="form-text">
 		<td class="text-align-center">Nøytral</td>
 		<td class="text-align-right">Samarbeid</td>
 	</tr>
+	</table>
+
+	<h4>Foretrekker du hjemmekontor eller fysisk oppmøte?</h4>
+<table class="slidercontainer">
+	<tr>
+		<td colspan="3"><input type="range" name="dify" min="0" max="100" value="50" class="slider"></td>
+		</tr>
+	<tr>
+		<td class="text-align-left">Hjemmekontor</td>
+		<td class="text-align-center">Nøytral</td>
+		<td class="text-align-right">Fysisk</td>
+	</tr>
+</table>
+
+<h4>Foretrekker du å fortelle bakgrunnshistorie eller gå rett på sak?</h4>
+
+<table class="slidercontainer"
+	   <tr>
+		   <td colspan="3"><input type="range" name="bgrp" min="0" max="100" value="50" class="slider"></td>
+	   </tr>
+<tr>
+	<td class="text-align-left">Bakgrunnshistorie</td>
+	<td class="text-align-center">Nøytral</td>
+	<td class="text-align-right">Rett på sak</td>
+</tr>
+</table>
+
 <script>
 
 </script>
