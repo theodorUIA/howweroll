@@ -10,6 +10,7 @@
         .text-align-center{ text-align: center; }
         body {
             margin: 0px;
+            font-family: Arial;
         }
         .header{
             text-align: left;
@@ -30,6 +31,7 @@
         .topnav {
             overflow: hidden;
             background-color: #264653;
+            padding-left: 50px;
         }
 
         .topnav a {
@@ -120,18 +122,48 @@
             border: 0px solid black;
             width: 33.3%;
         }
+
+        .padding {
+            padding: 50px;
+        }
+        .submit
+        {
+            color: white;
+        }
+        .submit:hover
+        {
+            font-weight: bold;
+            border-radius: 50%;
+            
+        }
+        .btn
+        {
+        background-color: #2A9D8F ;
+        font-size: 16px;
+        cursor: pointer;
+        height: 40px;
+        width: 140px;
+        border-radius: 12px;
+        border: none;
+        }
+        .btncontainer
+        {
+            text-align: center;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
 <div class="header"><span class="header-text">How We Roll</span></div>
 
 <div class="topnav">
-
     <a href="index.html">Hjem</a>
     <a class="active" href="how-we-roll.html">Profil</a>
     <a href="hwr-report.html">Rapport</a>
     <input type="text" placeholder="Søk...">
 </div>
+<form>
+    <div class="padding">
 <table>
     <tr>
         <td>Fornavn:</td>
@@ -156,7 +188,7 @@
     <h4>Når jobber du best?</h4>
     <table class="slidercontainer">
         <tr>
-            <td colspan="3"><input type="range" min="0" max="100" value="50" class="slider"></td>
+            <td colspan="3"><input type="range" name="hours" min="0" max="100" value="50" class="slider"></td>
         </tr>
         <tr>
             <td class="text-align-left">Morgenfugl</td>
@@ -168,7 +200,7 @@
 <h4>Hvor aktiv er du?</h4>
 <table class="slidercontainer">
     <tr>
-        <td colspan="3"><input type="range" min="0" max="100" value="50" class="slider"></td>
+        <td colspan="3"><input type="range" name="akt" min="0" max="100" value="50" class="slider"></td>
     </tr>
     <tr>
         <td class="text-align-left">Sofagris</td>
@@ -179,7 +211,7 @@
 <h4>Hvordan foretrekker du å jobbe?</h4>
 <table class="slidercontainer">
     <tr>
-        <td colspan="3"><input type="range" min="0" max="100" value="50" class="slider"></td>
+        <td colspan="3"><input type="range" name="work" min="0" max="100" value="50" class="slider"></td>
     </tr>
     <tr>
         <td class="text-align-left">Selvstendig</td>
@@ -202,7 +234,7 @@
 
 <h4>Foretrekker du å fortelle bakgrunnshistorie eller gå rett på sak?</h4>
 
-<table class="slidercontainer"
+<table class="slidercontainer">
 <tr>
     <td colspan="3"><input type="range" name="bgrp" min="0" max="100" value="50" class="slider"></td>
 </tr>
@@ -212,6 +244,13 @@
     <td class="text-align-right">Rett på sak</td>
 </tr>
 </table>
+<div class="btncontainer">
+<button class="btn submit">
+    Submit
+</button> 
+</div>
+</form>
+</div class="padding">
 <script>
 
 </script>
