@@ -82,11 +82,73 @@
 			.topnav input[type=text] {
 				border: 1px solid #ccc;
 			}
+    }
+
 
 			.padding {
 				padding: 50px;
 			}
 
+			.card-container {
+				display: flex;
+				flex-direction: row;
+				flex-flow: center;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+			}
+			.card-div {
+				flex-basis: 15em;
+				align-self: center;
+				border: 1px solid black;
+				border-radius: 1px;
+				margin-left: 0.3em;
+				margin-right: 0.3em;
+				margin-bottom: 1.5em;
+				transition: 0.3s ease;
+				border-radius: 10px;
+				overflow:  hidden;
+				box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+			}
+			.card-div:hover{
+				cursor: pointer;
+				box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			}
+
+
+			.information-div {
+				margin-left: 2em;
+				margin-right: 2em;
+				margin-top:  1em;
+				margin-bottom: 1em;
+				padding: 10px;
+				font-size: 1em;
+				font-family: arial;
+				text-align: center;
+				color: white;
+
+			}
+			.image-div {
+				background: white;
+				max-height: 300px;
+				overflow: hidden;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+			}
+			.card-image {
+				max-width: 100%;
+				max-height:  100%;
+				transition: 0.7s ease;
+			}
+			.card-image:hover {
+				transition: 0.7s ease;
+				-webkit-transform: scale(1.2);
+				-ms-transform: scale(1.2);
+				transform: scale(1.2);
+			}
+			.bg-color-1 {
+				background-color: #264653;
+	}
 
 		/*--------Side-spesifikk kode ----------*/
 
@@ -99,9 +161,44 @@
 	<a class="active" href="index.html">Hjem</a>
 	<a href="how-we-roll.html">Profil</a>
 	<a href="hwr-report.html">Rapport</a>
-
 	<input type="text" name="" placeholder="Søk...">
 </div>
+<h2>Velkommen til How We Roll</h2>
+  <p>I dette verktøyet kan du registrere din profil og sammenlikne dine preferanser med andre, for å bedre bli kjent med gruppen/teamet du jobber i.</p>
+<div class='card-container'>
+	<div class='card-div bg-color-1'>
+		<div class='image-div'>
+			<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
+		</div>
+		<div class='information-div'>William
+		</div>
+	</div>
+
+	<div class='card-div bg-color-1'>
+		<div class='image-div'>
+			<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
+		</div>
+		<div class='information-div'>Marcus
+		</div>
+	</div>
+
+	<div class='card-container'>
+		<div class='card-div bg-color-1'>
+			<div class='image-div'>
+				<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
+			</div>
+			<div class='information-div'>Erlend
+			</div>
+		</div>
+
+		<div class='card-container'>
+			<div class='card-div bg-color-1'>
+				<div class='image-div'>
+					<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
+				</div>
+				<div class='information-div'>Sunniva
+				</div>
+			</div>
 
 </body>
 </html>
