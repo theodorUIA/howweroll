@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="no" xmlns="http://www.w3.org/1999/html">
 <head>
 	<meta charset="utf-8">
 	<title>HowWeRoll</title>
@@ -58,12 +57,12 @@
 		.slidercontainer td{
 			border: 0px solid black;
 			width: 33.3%;
-
+		}
 		.topnav {
 			overflow: hidden;
-			background-color: #264563;
+			background-color: #264653;
 		}
-
+  
 		.topnav a {
 			float: left;
 			display: block;
@@ -112,6 +111,9 @@
 
 
 		/*--------Side-spesifikk kode ----------*/
+	    .ferdigheter {
+			margin: 10px;
+		}
 		.slider {
 			-webkit-appearance: none;
 			width: 100%;
@@ -179,10 +181,10 @@
 	</tr>
 
 </table>
-<div>
+<div class="ferdigheter">
 	<h4>Skriv inn dine ferdigheter her:</h4>
-Ferdigheter: <input type="text" name="skills" class="form-text">
-</div>
+	<textarea id="ferdigheter" name="ferdigheter" rows="4" cols="50">
+    </textarea>
 <div>
 	<h4>Når jobber du best?</h4>
 	<table class="slidercontainer">
