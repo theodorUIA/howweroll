@@ -4,10 +4,60 @@
 	<meta charset="utf-8">
 	<title>HowWeRoll</title>
 	<style>
+
 	/*-----------CSS som er felles for hele prosjektet -----------*/
 		.text-align-left{ text-align: left; }
 		.text-align-right{  text-align: right; }
 		.text-align-center{ text-align: center; }
+
+		body {
+			margin: 0px;
+		}
+		.header{
+			text-align: left;
+
+			background-color: #264653;
+			height: 30px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			padding-left: 50px;
+
+		}
+		.header-text{
+			font-style: italic;
+			font-size: 30px;
+			font-family: Arial;
+			color: white;
+		}
+		.slider {
+			-webkit-appearance: none;
+			width: 100%;
+			height: 5px;
+			background: #2A9D8F;
+			outline: none;
+			opacity: 0.7;
+			-webkit-transition: .2s;
+			transition: opacity .2s;
+		}
+		.slider:hover{
+			opacity: 1;
+		}
+		.slider::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			background: #264653;
+			width: 18px;
+			height: 18px;
+			cursor: pointer;
+			border-radius: 50%;
+		}
+		.slidercontainer{
+			width: 80%;
+			border: 0px solid black;
+		}
+		.slidercontainer td{
+			border: 0px solid black;
+			width: 33.3%;
 
 		.topnav {
 			overflow: hidden;
@@ -101,6 +151,7 @@
 	</style>
 </head>
 <body>
+<div class="header"><span class="header-text">How We Roll</span></div>
 <div class="topnav">
 
 	<a class="active" href="index.html">Hjem</a>
