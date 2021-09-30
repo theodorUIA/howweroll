@@ -251,6 +251,10 @@
 </div>
 </form>
 </div class="padding">
+<div class="results">
+    <h4>The results go here:</h4>
+    <posthere></posthere>
+</div>
 <script>
 // Example POST method implementation using fetch:
 async function postData(url = '', data = {}) {
@@ -275,7 +279,7 @@ async function postData(url = '', data = {}) {
         event.preventDefault();
         const data = new FormData(event.target);
         const formJSON = Object.fromEntries(data.entries());
-        const results = document.querySelector('.results pre');
+        const results = document.querySelector('.results posthere');
         postData('https://bacit.info/', formJSON)
         .then(data => {
            results.innerText = JSON.stringify(data, null, 2);
