@@ -12,6 +12,7 @@
 		body {
 			margin: 0px;
 			font-family: Arial;
+			
 		}
 		.header{
 			text-align: left;
@@ -109,8 +110,32 @@
 			}
 			
 		}
-
-
+		.submit
+        {
+            color: white;
+		}
+		.submit:hover
+		{
+			font-weight: bold;
+			border-radius: 50%;
+		    
+		}
+        .btn
+		{
+        background-color: #2A9D8F ;
+        font-size: 16px;
+        cursor: pointer;
+		height: 40px;
+		width: 140px;
+		border-radius: 12px;
+		border: none;
+		}
+		.btncontainer
+		{
+			text-align: center;
+			width: 100%;
+		}
+		
 		/*--------Side-spesifikk kode ----------*/
 	    .ferdigheter {
 			margin: 10px;
@@ -156,6 +181,7 @@
 	</style>
 </head>
 <body>
+	<div>
 <div class="header"><span class="header-text">How We Roll</span></div>
 <div class="topnav">
 
@@ -257,6 +283,12 @@
 		<td class="text-align-right">2 møter hver dag</td>
 	</tr>
 </table>
+<div class="btncontainer">
+<button class="btn submit">
+	Submit
+</button> 
+</div>
+</div>
 <script>
 
 </script>
