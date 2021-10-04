@@ -236,7 +236,7 @@
     <a href="hwr-report.html">Rapport</a>
     <input type="text" placeholder="Søk...">
 </div>
-<form>
+<form id="HWR-form">
     <div class="main-content">
 
         <!------Overskrift på profilsiden------>
@@ -370,7 +370,7 @@
         postData('https://bacit.info/', formJSON)
         .then(data => {
            results.innerText = JSON.stringify(data, null, 2);
-        handleSubmit.reset();
+        document.getElementById("HWR-form").reset();
         return false;
         });
    }
