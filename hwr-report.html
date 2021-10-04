@@ -333,25 +333,23 @@
 </div>
 </body>
 
-<script>
-
-
+<script type="text/javascript">
 //Funksjon for å tegne alle sirkler. Trenger en tall-verdi (value), en farge (color) og element-id til SVG (svgID)
 function drawSvgCircle (value, color, svgID) {
-					const svg = document.getElementById(svgID);
-					const svgns = "http://www.w3.org/2000/svg";
-					let xVal = parseInt(value) * 10;
-						if(xVal == 0) { xVal = xVal + 10; }
-						if(xVal == 1000) { xVal = xVal - 10; }
-					let newCircle = document.createElementNS(svgns, "circle");
+	const svg = document.getElementById(svgID);
+	const svgns = "http://www.w3.org/2000/svg";
+	let xVal = parseInt(value) * 10;
+		if(xVal == 0) { xVal = xVal + 10; }
+		if(xVal == 1000) { xVal = xVal - 10; }
+	let newCircle = document.createElementNS(svgns, "circle");
 
-					newCircle.setAttributeNS(null, 'cx', xVal);
-        	newCircle.setAttributeNS(null, 'cy', 20);
-        	newCircle.setAttributeNS(null, 'r', 10);
-        	newCircle.setAttributeNS(null, 'style', 'fill: '+color+';' );
-       
-					// append the new rectangle to the svg
-					svg.appendChild(newCircle);
+	newCircle.setAttributeNS(null, 'cx', xVal);
+	newCircle.setAttributeNS(null, 'cy', 20);
+	newCircle.setAttributeNS(null, 'r', 10);
+	newCircle.setAttributeNS(null, 'style', 'fill: '+color+';' );
+
+	// append the new rectangle to the svg
+	svg.appendChild(newCircle);
 
 	}
 
@@ -367,6 +365,8 @@ function drawSvgCircle (value, color, svgID) {
 	//Funksjon for å tegne sirkler på linjen i canvas-elementet "work-canvas". Trenger en tallverdi og en farge-verdi for å fungere.
 function drawWork (value, color) {
 		let val = value * 10; //henter inn tallverdi og ganger med 10 for å vises korrekt på linjen i canvas-elementet
+		if(val == 0) { val = val + 10; }
+		if(val == 1000) { val = val - 10; }
 		var sirkel = workCanvas.getContext("2d"); //Oppretter sirkel-tegning
 		sirkel.beginPath(); //start på sirkel
 		sirkel.arc(val,25,10,0,2*Math.PI); //"Kurven" på sirkelen
@@ -386,6 +386,8 @@ function drawWork (value, color) {
 
 function drawAkt (value, color) {
 		let val = value * 10;
+		if(val == 0) { val = val + 10; }
+		if(val == 1000) { val = val - 10; }
 		var sirkel = aktCanvas.getContext("2d");
 		sirkel.beginPath();
 		sirkel.arc(val,25,10,0,2*Math.PI);
@@ -402,6 +404,8 @@ function drawAkt (value, color) {
 
 function drawHours (value, color) {
 		let val = value * 10;
+		if(val == 0) { val = val + 10; }
+		if(val == 1000) { val = val - 10; }
 		var sirkel = hoursCanvas.getContext("2d");
 		sirkel.beginPath();
 		sirkel.arc(val,25,10,0,2*Math.PI);
@@ -419,6 +423,8 @@ function drawHours (value, color) {
 
 function drawDify (value, color) {
 		let val = value * 10;
+		if(val == 0) { val = val + 10; }
+		if(val == 1000) { val = val - 10; }
 		var sirkel = difyCanvas.getContext("2d");
 		sirkel.beginPath();
 		sirkel.arc(val,25,10,0,2*Math.PI);
@@ -436,6 +442,8 @@ function drawDify (value, color) {
 
 function drawBgrp (value, color) {
 		let val = value * 10;
+		if(val == 0) { val = val + 10; }
+		if(val == 1000) { val = val - 10; }
 		var sirkel = bgrpCanvas.getContext("2d");
 		sirkel.beginPath();
 		sirkel.arc(val,25,10,0,2*Math.PI);
