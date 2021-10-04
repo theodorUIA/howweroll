@@ -250,7 +250,7 @@
 </tr>
 </table>
 <div class="btncontainer">
-<button class="btn submit" type="submit" onclick="setTimeout(function() { window.scrollTo(0,document.body.scrollHeight);; }, 750)">
+<button class="btn submit" type="submit" onclick="setTimeout(function() { window.scrollTo(0,document.body.scrollHeight);; }, 750)">   <!--added a delay function that calls an other function to scroll down to the bottom of the page-->
     Submit
 </button> 
 </div>
@@ -300,7 +300,9 @@ async function postData(url = '', data = {}) {
         element.scrollIntoView();
         element.scrollIntoView({behavior: "smooth",block:"end"})
     }
-    
+    // still under construction, issues because the results aren't part the <div>
+    // due the issues I used a function that scrolls all the way down to the bottom of the page and not the div element which works but
+    //it's just a temporary bandaid solution.
 
 </script>
 </body>
