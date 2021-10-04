@@ -256,7 +256,7 @@
 </div>
 </form>
 </div class="padding">
-<div class="results " id="resultsID">
+<div class="results">
     <h4>The results go here:</h4>
     <posthere></posthere>
 </div>
@@ -300,8 +300,8 @@ async function postData(url = '', data = {}) {
         element.scrollIntoView();
         element.scrollIntoView({behavior: "smooth",block:"end"})
     }
-    // still under construction, issues because the results aren't part the <div>
-    // due the issues I used a function that scrolls all the way down to the bottom of the page and not the div element which works but
+    // still under construction, issues because the results aren't part of the <div>
+    // due to the issues I used a function that scrolls all the way down to the bottom of the page and not the div element which works but
     //it's just a temporary bandaid solution.
 
 </script>
