@@ -2,8 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>HowWeRoll</title>
-	<style>
-
+	<style type="text/css">
 	/*-----------CSS som er felles for hele prosjektet -----------*/
 		.text-align-left{ text-align: left; }
 		.text-align-right{  text-align: right; }
@@ -15,7 +14,6 @@
 		}
 		.header{
 			text-align: left;
-
 			background-color: #264653;
 			height: 30px;
 			padding-top: 30px;
@@ -29,16 +27,19 @@
 			font-family: Arial;
 			color: white;
 		}
-		.slidercontainer td{
-			border: 0px solid black;
-			width: 33.3%;
-		}
+
+		/* Div som omkranser innhold utenom header */
+		.main-content {
+            padding: 25px 25px 25px 50px;
+        }
+
+
+		/* Meny i header  */
 		.topnav {
 			overflow: hidden;
 			background-color: #264653;
 			padding-left: 50px;
 		}
-  
 		.topnav a {
 			float: left;
 			display: block;
@@ -48,17 +49,14 @@
 			text-decoration: none;
 			font-size: 17px;
 		}
-
 		.topnav a:hover {
 			background-color: #e76f51;
 			color: #264563;
 		}
-
 		.topnav a.active {
 			background-color: #2A9D8F;
 			color: #264563;
 		}
-
 		.topnav input[type=text] {
 			float: right;
 			padding: 6px;
@@ -67,9 +65,12 @@
 			margin-right: 16px;
 			font-size: 17px;
 		}
-
-
-
+		h4 {
+			padding-top: 40px;
+			padding-bottom: 0px;
+			margin: 0px;
+		}
+	/* Meny når skjermen er mindre enn 600px */
 		@media screen and (max-width: 600px) {
 			.topnav a, .topnav input[type=text] {
 				float: none;
@@ -84,11 +85,7 @@
 			}
     }
 
-
-			.padding-text {
-				padding: 50px;
-			}
-
+	/* Visittkort style */
 			.card-container {
 				display: flex;
 				flex-direction: row;
@@ -105,7 +102,7 @@
 				margin-right: 0.3em;
 				margin-bottom: 1.5em;
 				transition: 0.3s ease;
-				border-radius: 10px;
+				border-radius: 6px;
 				overflow:  hidden;
 				box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 			}
@@ -113,9 +110,7 @@
 				cursor: pointer;
 				box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 			}
-
-
-			.information-div {
+			.card-information-div {
 				margin-left: 2em;
 				margin-right: 2em;
 				margin-top:  1em;
@@ -127,7 +122,7 @@
 				color: white;
 
 			}
-			.image-div {
+			.card-image-div {
 				background: white;
 				max-height: 300px;
 				overflow: hidden;
@@ -146,13 +141,86 @@
 				-ms-transform: scale(1.2);
 				transform: scale(1.2);
 			}
-			.bg-color-1 {
+			.card-bg-color {
 				background-color: #264653;
-	}
+			}
 
-		/*--------Side-spesifikk kode ----------*/
+/* Form styles */
+		.form-div {
+			max-width: 600px;
+		}
+		.form-table {
+			width: 100%;
+		}
+		.form-ferdigheter {
+            border-radius: 4px;
+            font-size: 15px;
+            border: 1px solid #8C8C8C;
+            padding: 7px;
+        }
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 5px;
+            background: #2A9D8F;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+        .slider:hover{
+            opacity: 1;
+        }
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            background: #264653;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .slidercontainer{
+            width: 100%;
+            border: 0px solid black;
+        }
+        .slidercontainer td{
+            border: 0px solid black;
+            width: 33.3%;
+        }
+        .form-textinput {
+            border-radius: 4px;
+            font-size: 15px;
+            border: 1px solid #8C8C8C;
+            padding: 7px;
+        }
 
-	</style>
+        .submit
+        {
+            color: white;
+        }
+        .submit:hover
+        {
+            font-weight: bold;
+            border-radius: 50%;
+            
+        }
+        .btn
+        {
+        background-color: #2A9D8F ;
+        font-size: 16px;
+        cursor: pointer;
+        height: 40px;
+        width: 140px;
+        border-radius: 12px;
+        border: none;
+        }
+        .btncontainer
+        {
+            text-align: center;
+            width: 100%;
+        }
+</style>
 </head>
 <body>
 <div class="header"><span class="header-text">How We Roll</span></div>
@@ -163,43 +231,44 @@
 	<a href="hwr-report.html">Rapport</a>
 	<input type="text" name="" placeholder="Søk...">
 </div>
-<div class="padding-text">
+<div class="main-content">
 <h2>Velkommen til How We Roll</h2>
   <p>I dette verktøyet kan du registrere din profil og sammenlikne dine preferanser med andre, for å bedre bli kjent med gruppen/teamet du jobber i.</p>
-</div class="padding-text">
+
+
 	<div class='card-container'>
-	<div class='card-div bg-color-1'>
-		<div class='image-div'>
+	<div class='card-div card-bg-color'>
+		<div class='card-image-div'>
 			<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
 		</div>
-		<div class='information-div'>William
+		<div class='card-information-div'>William
 		</div>
 	</div>
 
-	<div class='card-div bg-color-1'>
-		<div class='image-div'>
+	<div class='card-div card-bg-color'>
+		<div class='card-image-div'>
 			<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
 		</div>
-		<div class='information-div'>Marcus
+		<div class='card-information-div'>Marcus
 		</div>
 	</div>
 
-	<div class='card-container'>
-		<div class='card-div bg-color-1'>
-			<div class='image-div'>
+		<div class='card-div card-bg-color'>
+			<div class='card-image-div'>
 				<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
 			</div>
-			<div class='information-div'>Erlend
+			<div class='card-information-div'>Erlend
 			</div>
 		</div>
 
-		<div class='card-container'>
-			<div class='card-div bg-color-1'>
-				<div class='image-div'>
+			<div class='card-div card-bg-color'>
+				<div class='card-image-div'>
 					<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
 				</div>
-				<div class='information-div'>Sunniva
+				<div class='card-information-div'>Sunniva
 				</div>
 		</div>
+	</div>
+</div>
 </body>
 </html>
