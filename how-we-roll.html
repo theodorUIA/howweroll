@@ -360,8 +360,6 @@
         postData('https://bacit.info/', formJSON)
         .then(data => {
            results.innerText = JSON.stringify(data, null, 2);
-        handleSubmit.reset();
-        return false;
         });
    }
    const form = document.querySelector('form');
