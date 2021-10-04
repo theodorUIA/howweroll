@@ -234,40 +234,205 @@
 	<input type="text" placeholder="Søk...">
 </div>
 <div class="main-content">
+
+Når jobber du best?<br>
+	<canvas id="hours-canvas" height="50px" width="1000px"></canvas>
+	<br><br>
+
+Hvor aktiv er du?<br>
+	<canvas id="akt-canvas" height="50px" width="1000px"></canvas>
+<br><br>
+
+Hvordan foretrekker du å jobbe?<br>
+	<canvas id="work-canvas" height="50px" width="1000px"></canvas>
+<br><br>
+
+	Foretrekker du hjemmekontor eller fysisk oppmøte?<br>
+	<canvas id="dify-canvas" height="50px" width="1000px"></canvas>
+<br><br>
+
+	Foretrekker du å fortelle bakgrunnshistorie eller gå rett på sak?<br>
+	<canvas id="bgrp-canvas" height="50px" width="1000px"></canvas>
+	<br><br>
+
+
+
 <div id="hwr-report"></div>
+
+
 
 </div>
 <script>
-	fetch('https://bacit.info/hwr/20211001093203-9d047dfc88598ff1b241640de6d0062a.json')
-			.then(response => response.json())
-			.then(data => {
-				let report = document.querySelector("#hwr-report");
-				Object.entries(data).forEach(([key, value]) => {
-					report.innerHTML += `${key}: ${value}`+"<br>";
-				});
-			});
+		let workCanvas = document.getElementById("work-canvas");
+		var workline = workCanvas.getContext("2d");
+		workline.beginPath();
+		workline.moveTo(0, 25);
+		workline.lineTo(1000, 25);
+		workline.stroke();
 
+function drawWork (value, color) {
+		let val = value * 10;
+		var sirkel = workCanvas.getContext("2d");
+		sirkel.beginPath();
+		sirkel.arc(val,25,10,0,2*Math.PI);
+		sirkel.fillStyle = color;
+		sirkel.fill();
+		sirkel.stroke();
+	}
+
+		let aktCanvas = document.getElementById("akt-canvas");
+		var aktline = aktCanvas.getContext("2d");
+		aktline.beginPath();
+		aktline.moveTo(0, 25);
+		aktline.lineTo(1000, 25);
+		aktline.stroke();
+
+function drawAkt (value, color) {
+		let val = value * 10;
+		var sirkel = aktCanvas.getContext("2d");
+		sirkel.beginPath();
+		sirkel.arc(val,25,10,0,2*Math.PI);
+		sirkel.fillStyle = color;
+		sirkel.fill();
+		sirkel.stroke();
+	}
+
+
+		let hoursCanvas = document.getElementById("hours-canvas");
+		var hoursline = hoursCanvas.getContext("2d");
+		hoursline.beginPath();
+		hoursline.moveTo(0, 25);
+		hoursline.lineTo(1000, 25);
+		hoursline.stroke();
+
+function drawHours (value, color) {
+		let val = value * 10;
+		var sirkel = hoursCanvas.getContext("2d");
+		sirkel.beginPath();
+		sirkel.arc(val,25,10,0,2*Math.PI);
+		sirkel.fillStyle = color;
+		sirkel.fill();
+		sirkel.stroke();
+	}
+
+		let difyCanvas = document.getElementById("dify-canvas");
+		var difyline = difyCanvas.getContext("2d");
+		difyline.beginPath();
+		difyline.moveTo(0, 25);
+		difyline.lineTo(1000, 25);
+		difyline.stroke();
+
+function drawDify (value, color) {
+		let val = value * 10;
+		var sirkel = difyCanvas.getContext("2d");
+		sirkel.beginPath();
+		sirkel.arc(val,25,10,0,2*Math.PI);
+		sirkel.fillStyle = color;
+		sirkel.fill();
+		sirkel.stroke();
+	}
+
+		let bgrpCanvas = document.getElementById("bgrp-canvas");
+		var bgrpline = bgrpCanvas.getContext("2d");
+		bgrpline.beginPath();
+		bgrpline.moveTo(0, 25);
+		bgrpline.lineTo(1000, 25);
+		bgrpline.stroke();
+
+function drawBgrp (value, color) {
+		let val = value * 10;
+		var sirkel = bgrpCanvas.getContext("2d");
+		sirkel.beginPath();
+		sirkel.arc(val,25,10,0,2*Math.PI);
+		sirkel.fillStyle = color;
+		sirkel.fill();
+		sirkel.stroke();
+	}
+
+
+Promise.all([
+  fetch('https://bacit.info/hwr/20211001094058-34dc0beed53ce17dd663f6e087108c9d.json').then(response => response.json()),
+  fetch('https://bacit.info/hwr/20211001093746-d8cb56df33e70d2ef254d6c80ea38775.json').then(response => response.json()),
+  fetch('https://bacit.info/hwr/20211001094627-7fa2d75c27d4f4cba1ecc00495324c36.json').then(response => response.json()),
+  fetch('https://bacit.info/hwr/20211001094831-ba9e391bae4b7a39f06be4f8a19a7823.json').then(response => response.json()),
+  fetch('https://bacit.info/hwr/20211001094502-58222a6c00c67dbd401f7b61b12b04ff.json').then(response => response.json()),
+  fetch('https://bacit.info/hwr/20211004103333-c240a2e1dfbe3426bf1e6a2bb1eadbce.json').then(response => response.json()),
+  fetch('https://bacit.info/hwr/20211004103455-8cbc00dea8a541d0c092099f4c8bde96.json').then(response => response.json())
+  ])
+  .then((data) => {
+     console.log(data[0]);
+     let report = document.querySelector("#hwr-report");
+
+     let eirik = data[0]; 
+     drawHours(parseInt(eirik.hours), "#0800FF");
+     drawAkt(parseInt(eirik.akt), "#0800FF");
+     drawWork(parseInt(eirik.work), "#0800FF");
+     drawDify(parseInt(eirik.dify), "#0800FF");
+     drawBgrp(parseInt(eirik.bgrp), "#0800FF");
+
+     let theodor = data[1]; 
+     drawHours(parseInt(theodor.hours), "#2AFF00");
+     drawAkt(parseInt(theodor.akt), "#2AFF00");
+     drawWork(parseInt(theodor.work), "#2AFF00");
+     drawDify(parseInt(theodor.dify), "#2AFF00");
+     drawBgrp(parseInt(theodor.bgrp), "#2AFF00");
+
+     let truls = data[2]; 
+     drawHours(parseInt(truls.hours), "#00B7FF");
+     drawAkt(parseInt(truls.akt), "#00B7FF");
+     drawWork(parseInt(truls.work), "#00B7FF");
+     drawDify(parseInt(truls.dify), "#00B7FF");
+     drawBgrp(parseInt(truls.bgrp), "#00B7FF");
+
+     let marius = data[3]; 
+     drawHours(parseInt(marius.hours), "#FFFF1C");
+     drawAkt(parseInt(marius.akt), "#FFFF1C");
+     drawWork(parseInt(marius.work), "#FFFF1C");
+     drawDify(parseInt(marius.dify), "#FFFF1C");
+     drawBgrp(parseInt(marius.bgrp), "#FFFF1C");
+
+     let thomas = data[4]; 
+     drawHours(parseInt(thomas.hours), "#FF0000");
+     drawAkt(parseInt(thomas.akt), "#FF0000");
+     drawWork(parseInt(thomas.work), "#FF0000");
+     drawDify(parseInt(thomas.dify), "#FF0000");
+     drawBgrp(parseInt(thomas.bgrp), "#FF0000");
+
+     let jacob = data[5]; 
+     drawHours(parseInt(jacob.hours), "#572f9c");
+     drawAkt(parseInt(jacob.akt), "#572f9c");
+     drawWork(parseInt(jacob.work), "#572f9c");
+     drawDify(parseInt(jacob.dify), "#572f9c");
+     drawBgrp(parseInt(jacob.bgrp), "#572f9c");
+
+     let magnus = data[6]; 
+     drawHours(parseInt(magnus.hours), "#8c862a");
+     drawAkt(parseInt(magnus.akt), "#8c862a");
+     drawWork(parseInt(magnus.work), "#8c862a");
+     drawDify(parseInt(magnus.dify), "#8c862a");
+     drawBgrp(parseInt(magnus.bgrp), "#8c862a");
+  });
 
 </script>
-<br>
 Eirik:
 <br>
-  "trxid": "34dc0beed53ce17dd663f6e087108c9d",
+"trxid": "34dc0beed53ce17dd663f6e087108c9d",
 <br>
-  "time": "20211001094058"
-
+"time": "20211001094058"
 <br>
 <br>
 Theodor:
 <br>
-  "trxid": "d8cb56df33e70d2ef254d6c80ea38775",
+"trxid": "d8cb56df33e70d2ef254d6c80ea38775",
 <br>
-  "time": "20211001093746"
+"time": "20211001093746"
 <br>
 <br>
 Truls
-  "trxid": "7fa2d75c27d4f4cba1ecc00495324c36",
-  "time": "20211001094627"
+<br>
+"trxid": "7fa2d75c27d4f4cba1ecc00495324c36",
+<br>
+"time": "20211001094627"
 <br>
 <br>
 Marius:
@@ -275,6 +440,27 @@ Marius:
 "trxid": "ba9e391bae4b7a39f06be4f8a19a7823",
 <br>
 "time": "20211001094831"
+<br>
+<br>
+Thomas:
+<br>
+"trxid": "58222a6c00c67dbd401f7b61b12b04ff",
+<br>
+"time": "20211001094502"
+<br>
+<br>
+Jacob:
+<br>
+"trxid": "c240a2e1dfbe3426bf1e6a2bb1eadbce",
+<br>
+"time": "20211004103333"
+<br>
+<br>
+Magnus:
+<br>
+"trxid": "8cbc00dea8a541d0c092099f4c8bde96",
+<br>
+"time": "20211004103455"
 <br>
 
 
