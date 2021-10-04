@@ -238,6 +238,75 @@
 <h2>How-we-roll rapport</h2>
 <p>Her er en visuell fremstilling av gruppe 8A sine innmeldinger i skjema "HowWeRoll".</p>
 
+
+<h1>SVG-elementer:</h1>
+<h4>Når jobber du best?</h4>
+<svg xmlns="http://www.w3.org/2000/svg" height="50" width="1000" id="hours-svg">
+  <line x1="0" y1="20" x2="1000" y2="20" style="stroke:rgb(38,70,83);stroke-width:2" />
+
+  <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
+  text-anchor="left">
+    <text x="0" y="45" dx="0">Morgenfugl</text>
+    <text x="500" y="45" dx="0">Nøytral</text>
+    <text x="933" y="45" dx="0">Natteravn</text>
+  </g>
+</svg>
+
+<br>
+<h4>Hvor aktiv er du?</h4>
+<svg xmlns="http://www.w3.org/2000/svg" height="50" width="1000" id="akt-svg">
+  <line x1="0" y1="20" x2="1000" y2="20" style="stroke:rgb(38,70,83);stroke-width:2" />
+
+  <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
+  text-anchor="left">
+    <text x="0" y="45" dx="0">Sofagris</text>
+    <text x="500" y="45" dx="0">Nøytral</text>
+    <text x="933" y="45" dx="0">Atletisk</text>
+  </g>
+</svg>
+
+<br>
+<h4>Hvordan foretrekker du å jobbe?</h4>
+<svg xmlns="http://www.w3.org/2000/svg" height="50" width="1000" id="work-svg">
+  <line x1="0" y1="20" x2="1000" y2="20" style="stroke:rgb(38,70,83);stroke-width:2" />
+
+  <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
+  text-anchor="left">
+    <text x="0" y="45" dx="0">Selvstendig</text>
+    <text x="500" y="45" dx="0">Nøytral</text>
+    <text x="933" y="45" dx="0">Samarbeid</text>
+  </g>
+</svg>
+
+<br>
+	<h4>Foretrekker du hjemmekontor eller fysisk oppmøte?</h4>
+<svg xmlns="http://www.w3.org/2000/svg" height="50" width="1000" id="dify-svg">
+  <line x1="0" y1="20" x2="1000" y2="20" style="stroke:rgb(38,70,83);stroke-width:2" />
+
+  <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
+  text-anchor="left">
+    <text x="0" y="45" dx="0">Hjemmekontor</text>
+    <text x="500" y="45" dx="0">Nøytral</text>
+    <text x="933" y="45" dx="0">Fysisk</text>
+  </g>
+</svg>
+
+<br>
+	<h4>Foretrekker du å fortelle bakgrunnshistorie eller gå rett på sak?</h4>
+<svg xmlns="http://www.w3.org/2000/svg" height="50" width="1000" id="bgrp-svg">
+  <line x1="0" y1="20" x2="1000" y2="20" style="stroke:rgb(38,70,83);stroke-width:2" />
+
+  <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
+  text-anchor="left">
+    <text x="0" y="45" dx="0">Bakgrunnshistorie</text>
+    <text x="500" y="45" dx="0">Nøytral</text>
+    <text x="933" y="45" dx="0">Rett på sak</text>
+  </g>
+</svg>
+
+<br>
+
+<h1>CANVAS-elementer:</h1>
 <h4>Når jobber du best?</h4>
 	<canvas id="hours-canvas" height="50px" width="1000px"></canvas>
 	<br><br>
@@ -261,6 +330,24 @@
 </body>
 
 <script>
+
+
+//Funksjon for å tegne alle sirkler. Trenger en tall-verdi (value), en farge (color) og element-id til SVG (svgID)
+function drawSvgCircle (value, color, svgID) {
+					const svg = document.getElementById(svgID);
+					const svgns = "http://www.w3.org/2000/svg";
+					let xVal = parseInt(value) * 10;
+					let newCircle = document.createElementNS(svgns, "circle");
+
+					newCircle.setAttributeNS(null, 'cx', xVal);
+        	newCircle.setAttributeNS(null, 'cy', 20);
+        	newCircle.setAttributeNS(null, 'r', 10);
+        	newCircle.setAttributeNS(null, 'style', 'fill: '+color+';' );
+       
+					// append the new rectangle to the svg
+					svg.appendChild(newCircle);
+
+	}
 
 	//Oppretter canvas-elementet for "work-data".
 		let workCanvas = document.getElementById("work-canvas");
@@ -300,8 +387,6 @@ function drawAkt (value, color) {
 		sirkel.fill();
 		sirkel.stroke();
 	}
-
-
 		let hoursCanvas = document.getElementById("hours-canvas");
 		var hoursline = hoursCanvas.getContext("2d");
 		hoursline.beginPath();
@@ -375,12 +460,26 @@ Promise.all([
 	 drawDify(parseInt(eirik.dify), "#0800FF");
 	 drawBgrp(parseInt(eirik.bgrp), "#0800FF");
 
+	 //SVG
+		drawSvgCircle(eirik.hours, "#0800FF", "hours-svg");
+		drawSvgCircle(eirik.akt, "#0800FF", "akt-svg");
+		drawSvgCircle(eirik.work, "#0800FF", "work-svg");
+		drawSvgCircle(eirik.dify, "#0800FF", "dify-svg");
+		drawSvgCircle(eirik.bgrp, "#0800FF", "bgrp-svg");
+
 	 let theodor = data[1]; 
 	 drawHours(parseInt(theodor.hours), "#2AFF00");
 	 drawAkt(parseInt(theodor.akt), "#2AFF00");
 	 drawWork(parseInt(theodor.work), "#2AFF00");
 	 drawDify(parseInt(theodor.dify), "#2AFF00");
 	 drawBgrp(parseInt(theodor.bgrp), "#2AFF00");
+
+	 //SVG
+		drawSvgCircle(theodor.hours, "#2AFF00", "hours-svg");
+		drawSvgCircle(theodor.akt, "#2AFF00", "akt-svg");
+		drawSvgCircle(theodor.work, "#2AFF00", "work-svg");
+		drawSvgCircle(theodor.dify, "#2AFF00", "dify-svg");
+		drawSvgCircle(theodor.bgrp, "#2AFF00", "bgrp-svg");
 
 	 let truls = data[2]; 
 	 drawHours(parseInt(truls.hours), "#00B7FF");
@@ -389,12 +488,26 @@ Promise.all([
 	 drawDify(parseInt(truls.dify), "#00B7FF");
 	 drawBgrp(parseInt(truls.bgrp), "#00B7FF");
 
+	 //SVG
+		drawSvgCircle(truls.hours, "#00B7FF", "hours-svg");
+		drawSvgCircle(truls.akt, "#00B7FF", "akt-svg");
+		drawSvgCircle(truls.work, "#00B7FF", "work-svg");
+		drawSvgCircle(truls.dify, "#00B7FF", "dify-svg");
+		drawSvgCircle(truls.bgrp, "#00B7FF", "bgrp-svg");
+
 	 let marius = data[3]; 
 	 drawHours(parseInt(marius.hours), "#FFFF1C");
 	 drawAkt(parseInt(marius.akt), "#FFFF1C");
 	 drawWork(parseInt(marius.work), "#FFFF1C");
 	 drawDify(parseInt(marius.dify), "#FFFF1C");
 	 drawBgrp(parseInt(marius.bgrp), "#FFFF1C");
+
+	 //SVG
+		drawSvgCircle(marius.hours, "#FFFF1C", "hours-svg");
+		drawSvgCircle(marius.akt, "#FFFF1C", "akt-svg");
+		drawSvgCircle(marius.work, "#FFFF1C", "work-svg");
+		drawSvgCircle(marius.dify, "#FFFF1C", "dify-svg");
+		drawSvgCircle(marius.bgrp, "#FFFF1C", "bgrp-svg");
 
 	 let thomas = data[4]; 
 	 drawHours(parseInt(thomas.hours), "#FF0000");
@@ -403,6 +516,13 @@ Promise.all([
 	 drawDify(parseInt(thomas.dify), "#FF0000");
 	 drawBgrp(parseInt(thomas.bgrp), "#FF0000");
 
+	 //SVG
+		drawSvgCircle(thomas.hours, "#FF0000", "hours-svg");
+		drawSvgCircle(thomas.akt, "#FF0000", "akt-svg");
+		drawSvgCircle(thomas.work, "#FF0000", "work-svg");
+		drawSvgCircle(thomas.dify, "#FF0000", "dify-svg");
+		drawSvgCircle(thomas.bgrp, "#FF0000", "bgrp-svg");
+
 	 let jacob = data[5]; 
 	 drawHours(parseInt(jacob.hours), "#572f9c");
 	 drawAkt(parseInt(jacob.akt), "#572f9c");
@@ -410,12 +530,26 @@ Promise.all([
 	 drawDify(parseInt(jacob.dify), "#572f9c");
 	 drawBgrp(parseInt(jacob.bgrp), "#572f9c");
 
+	 //SVG
+		drawSvgCircle(jacob.hours, "#572f9c", "hours-svg");
+		drawSvgCircle(jacob.akt, "#572f9c", "akt-svg");
+		drawSvgCircle(jacob.work, "#572f9c", "work-svg");
+		drawSvgCircle(jacob.dify, "#572f9c", "dify-svg");
+		drawSvgCircle(jacob.bgrp, "#572f9c", "bgrp-svg");
+
 	 let magnus = data[6]; 
 	 drawHours(parseInt(magnus.hours), "#8c862a");
 	 drawAkt(parseInt(magnus.akt), "#8c862a");
 	 drawWork(parseInt(magnus.work), "#8c862a");
 	 drawDify(parseInt(magnus.dify), "#8c862a");
 	 drawBgrp(parseInt(magnus.bgrp), "#8c862a");
+
+	 //SVG
+		drawSvgCircle(magnus.hours, "#8c862a", "hours-svg");
+		drawSvgCircle(magnus.akt, "#8c862a", "akt-svg");
+		drawSvgCircle(magnus.work, "#8c862a", "work-svg");
+		drawSvgCircle(magnus.dify, "#8c862a", "dify-svg");
+		drawSvgCircle(magnus.bgrp, "#8c862a", "bgrp-svg");
   });
 
 </script>
