@@ -225,6 +225,9 @@
     </style>
 </head>
 <body>
+
+<!-----------------Header------------------->
+
 <div class="header"><span class="header-text">How We Roll</span></div>
 
 <div class="topnav">
@@ -233,8 +236,10 @@
     <a href="hwr-report.html">Rapport</a>
     <input type="text" placeholder="Søk...">
 </div>
-<form>
+<form id="HWR-form">
     <div class="main-content">
+
+        <!------Overskrift på profilsiden------>
 
 <h2>Registrer din profil her</h2>
 
@@ -254,6 +259,8 @@
         <td class="text-align-left"><input type="email" name="email" class='form-textinput' placeholder="E-post"></td>
     </tr>
 </table>
+
+    <!-----------Slidere----------->
 
     <h4>Skriv inn dine ferdigheter her:</h4>
     <textarea name="ferdigheter" rows="4" cols="50" class="form-ferdigheter"></textarea>
@@ -323,6 +330,7 @@
 </button> 
 </div>
 </form>
+<!------Resultat på undersøkelse----->
 <br><br>
     <div class='results'>
         Her kommer resultat:<br>
@@ -330,6 +338,8 @@
     </div>
 </div>
 </div>
+
+<!--------Javascript for dokumentet------>
 
 <script>
    // From https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (seen 2021-09-27)
@@ -360,7 +370,7 @@
         postData('https://bacit.info/', formJSON)
         .then(data => {
            results.innerText = JSON.stringify(data, null, 2);
-        handleSubmit.reset();
+        document.getElementById("HWR-form").reset();
         return false;
         });
    }
