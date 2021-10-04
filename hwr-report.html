@@ -253,11 +253,7 @@
 
 	<h4>Foretrekker du å fortelle bakgrunnshistorie eller gå rett på sak?</h4>
 	<canvas id="bgrp-canvas" height="50px" width="1000px"></canvas>
-	<br><br>
 
-
-
-<div id="hwr-report"></div>
 
 
 
@@ -265,22 +261,28 @@
 </body>
 
 <script>
+
+	//Oppretter canvas-elementet for "work-data".
 		let workCanvas = document.getElementById("work-canvas");
+	//Tegner en rett linje i canvas-elementet, midt i.
 		var workline = workCanvas.getContext("2d");
 		workline.beginPath();
 		workline.moveTo(0, 25);
 		workline.lineTo(1000, 25);
 		workline.stroke();
 
+	//Funksjon for å tegne sirkler på linjen i canvas-elementet "work-canvas". Trenger en tallverdi og en farge-verdi for å fungere.
 function drawWork (value, color) {
-		let val = value * 10;
-		var sirkel = workCanvas.getContext("2d");
-		sirkel.beginPath();
-		sirkel.arc(val,25,10,0,2*Math.PI);
-		sirkel.fillStyle = color;
-		sirkel.fill();
-		sirkel.stroke();
+		let val = value * 10; //henter inn tallverdi og ganger med 10 for å vises korrekt på linjen i canvas-elementet
+		var sirkel = workCanvas.getContext("2d"); //Oppretter sirkel-tegning
+		sirkel.beginPath(); //start på sirkel
+		sirkel.arc(val,25,10,0,2*Math.PI); //"Kurven" på sirkelen
+		sirkel.fillStyle = color; //Legger inn fargen på fyllet i sirkelen fra variabel "color"
+		sirkel.fill(); //Fyller sirkelen med farge
+		sirkel.stroke(); //Setter en ramme rundt sirkelen
 	}
+
+	//Øvrige canvas-tegninger og funksjoner nedenfor er lik den over, men har andre variabler. De er derfor ikke forklart ytterligere.
 
 		let aktCanvas = document.getElementById("akt-canvas");
 		var aktline = aktCanvas.getContext("2d");
@@ -352,6 +354,7 @@ function drawBgrp (value, color) {
 	}
 
 
+//Henter ut data fra bacit.info ved bruk av fetch(). Data struktureres i Json-format
 Promise.all([
   fetch('https://bacit.info/hwr/20211001094058-34dc0beed53ce17dd663f6e087108c9d.json').then(response => response.json()),
   fetch('https://bacit.info/hwr/20211001093746-d8cb56df33e70d2ef254d6c80ea38775.json').then(response => response.json()),
@@ -362,57 +365,57 @@ Promise.all([
   fetch('https://bacit.info/hwr/20211004103455-8cbc00dea8a541d0c092099f4c8bde96.json').then(response => response.json())
   ])
   .then((data) => {
-     console.log(data[0]);
-     let report = document.querySelector("#hwr-report");
+  	//Henter ut data for hver enkelt person i en egen variabel/array
 
-     let eirik = data[0]; 
-     drawHours(parseInt(eirik.hours), "#0800FF");
-     drawAkt(parseInt(eirik.akt), "#0800FF");
-     drawWork(parseInt(eirik.work), "#0800FF");
-     drawDify(parseInt(eirik.dify), "#0800FF");
-     drawBgrp(parseInt(eirik.bgrp), "#0800FF");
+	 let eirik = data[0]; 
+	 //Kaller på funksjonene som tegner inn sirkler på linjen i canvas-elementene. Funksjonene trenger en tall-verdi, derfor brukes parseInt for å "rense" resultatet fra serveren. Funksjonen trenger også en farge-verdi som er unik for hver enkelt person. functionName(number, color);
+	 drawHours(parseInt(eirik.hours), "#0800FF");
+	 drawAkt(parseInt(eirik.akt), "#0800FF");
+	 drawWork(parseInt(eirik.work), "#0800FF");
+	 drawDify(parseInt(eirik.dify), "#0800FF");
+	 drawBgrp(parseInt(eirik.bgrp), "#0800FF");
 
-     let theodor = data[1]; 
-     drawHours(parseInt(theodor.hours), "#2AFF00");
-     drawAkt(parseInt(theodor.akt), "#2AFF00");
-     drawWork(parseInt(theodor.work), "#2AFF00");
-     drawDify(parseInt(theodor.dify), "#2AFF00");
-     drawBgrp(parseInt(theodor.bgrp), "#2AFF00");
+	 let theodor = data[1]; 
+	 drawHours(parseInt(theodor.hours), "#2AFF00");
+	 drawAkt(parseInt(theodor.akt), "#2AFF00");
+	 drawWork(parseInt(theodor.work), "#2AFF00");
+	 drawDify(parseInt(theodor.dify), "#2AFF00");
+	 drawBgrp(parseInt(theodor.bgrp), "#2AFF00");
 
-     let truls = data[2]; 
-     drawHours(parseInt(truls.hours), "#00B7FF");
-     drawAkt(parseInt(truls.akt), "#00B7FF");
-     drawWork(parseInt(truls.work), "#00B7FF");
-     drawDify(parseInt(truls.dify), "#00B7FF");
-     drawBgrp(parseInt(truls.bgrp), "#00B7FF");
+	 let truls = data[2]; 
+	 drawHours(parseInt(truls.hours), "#00B7FF");
+	 drawAkt(parseInt(truls.akt), "#00B7FF");
+	 drawWork(parseInt(truls.work), "#00B7FF");
+	 drawDify(parseInt(truls.dify), "#00B7FF");
+	 drawBgrp(parseInt(truls.bgrp), "#00B7FF");
 
-     let marius = data[3]; 
-     drawHours(parseInt(marius.hours), "#FFFF1C");
-     drawAkt(parseInt(marius.akt), "#FFFF1C");
-     drawWork(parseInt(marius.work), "#FFFF1C");
-     drawDify(parseInt(marius.dify), "#FFFF1C");
-     drawBgrp(parseInt(marius.bgrp), "#FFFF1C");
+	 let marius = data[3]; 
+	 drawHours(parseInt(marius.hours), "#FFFF1C");
+	 drawAkt(parseInt(marius.akt), "#FFFF1C");
+	 drawWork(parseInt(marius.work), "#FFFF1C");
+	 drawDify(parseInt(marius.dify), "#FFFF1C");
+	 drawBgrp(parseInt(marius.bgrp), "#FFFF1C");
 
-     let thomas = data[4]; 
-     drawHours(parseInt(thomas.hours), "#FF0000");
-     drawAkt(parseInt(thomas.akt), "#FF0000");
-     drawWork(parseInt(thomas.work), "#FF0000");
-     drawDify(parseInt(thomas.dify), "#FF0000");
-     drawBgrp(parseInt(thomas.bgrp), "#FF0000");
+	 let thomas = data[4]; 
+	 drawHours(parseInt(thomas.hours), "#FF0000");
+	 drawAkt(parseInt(thomas.akt), "#FF0000");
+	 drawWork(parseInt(thomas.work), "#FF0000");
+	 drawDify(parseInt(thomas.dify), "#FF0000");
+	 drawBgrp(parseInt(thomas.bgrp), "#FF0000");
 
-     let jacob = data[5]; 
-     drawHours(parseInt(jacob.hours), "#572f9c");
-     drawAkt(parseInt(jacob.akt), "#572f9c");
-     drawWork(parseInt(jacob.work), "#572f9c");
-     drawDify(parseInt(jacob.dify), "#572f9c");
-     drawBgrp(parseInt(jacob.bgrp), "#572f9c");
+	 let jacob = data[5]; 
+	 drawHours(parseInt(jacob.hours), "#572f9c");
+	 drawAkt(parseInt(jacob.akt), "#572f9c");
+	 drawWork(parseInt(jacob.work), "#572f9c");
+	 drawDify(parseInt(jacob.dify), "#572f9c");
+	 drawBgrp(parseInt(jacob.bgrp), "#572f9c");
 
-     let magnus = data[6]; 
-     drawHours(parseInt(magnus.hours), "#8c862a");
-     drawAkt(parseInt(magnus.akt), "#8c862a");
-     drawWork(parseInt(magnus.work), "#8c862a");
-     drawDify(parseInt(magnus.dify), "#8c862a");
-     drawBgrp(parseInt(magnus.bgrp), "#8c862a");
+	 let magnus = data[6]; 
+	 drawHours(parseInt(magnus.hours), "#8c862a");
+	 drawAkt(parseInt(magnus.akt), "#8c862a");
+	 drawWork(parseInt(magnus.work), "#8c862a");
+	 drawDify(parseInt(magnus.dify), "#8c862a");
+	 drawBgrp(parseInt(magnus.bgrp), "#8c862a");
   });
 
 </script>
