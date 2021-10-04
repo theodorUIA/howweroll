@@ -225,6 +225,9 @@
 	</style>
 </head>
 <body>
+
+<!----------------Header-------------->
+
 <div class="header"><span class="header-text">How We Roll</span></div>
 
 <div class="topnav">
@@ -234,8 +237,10 @@
 	<input type="text" placeholder="Søk...">
 </div>
 
+<!------------------Javascript for dokumentet-------------------->
 
 <script>
+
 	fetch('https://bacit.info/hwr/20211001093203-9d047dfc88598ff1b241640de6d0062a.json')
 			.then(response => response.json())
 			.then(data => console.log(data.work));
@@ -244,6 +249,8 @@
 			.then(response => response.json())
 			.then(data => console.log(data.work));
 </script>
+
+<!----------------Rapport fra besvarelser------------------------>
 
 Eirik:
 <br>
