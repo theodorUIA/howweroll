@@ -247,7 +247,7 @@
   <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
   text-anchor="left">
     <text x="0" y="45" dx="0">Morgenfugl</text>
-    <text x="500" y="45" dx="0">Nøytral</text>
+    <text x="475" y="45" dx="0">Nøytral</text>
     <text x="933" y="45" dx="0">Natteravn</text>
   </g>
 </svg>
@@ -260,8 +260,8 @@
   <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
   text-anchor="left">
     <text x="0" y="45" dx="0">Sofagris</text>
-    <text x="500" y="45" dx="0">Nøytral</text>
-    <text x="933" y="45" dx="0">Atletisk</text>
+    <text x="475" y="45" dx="0">Nøytral</text>
+    <text x="940" y="45" dx="0">Atletisk</text>
   </g>
 </svg>
 
@@ -273,8 +273,8 @@
   <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
   text-anchor="left">
     <text x="0" y="45" dx="0">Selvstendig</text>
-    <text x="500" y="45" dx="0">Nøytral</text>
-    <text x="933" y="45" dx="0">Samarbeid</text>
+    <text x="475" y="45" dx="0">Nøytral</text>
+    <text x="920" y="45" dx="0">Samarbeid</text>
   </g>
 </svg>
 
@@ -286,8 +286,8 @@
   <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
   text-anchor="left">
     <text x="0" y="45" dx="0">Hjemmekontor</text>
-    <text x="500" y="45" dx="0">Nøytral</text>
-    <text x="933" y="45" dx="0">Fysisk</text>
+    <text x="475" y="45" dx="0">Nøytral</text>
+    <text x="950" y="45" dx="0">Fysisk</text>
   </g>
 </svg>
 
@@ -299,8 +299,8 @@
   <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
   text-anchor="left">
     <text x="0" y="45" dx="0">Bakgrunnshistorie</text>
-    <text x="500" y="45" dx="0">Nøytral</text>
-    <text x="933" y="45" dx="0">Rett på sak</text>
+    <text x="475" y="45" dx="0">Nøytral</text>
+    <text x="920" y="45" dx="0">Rett på sak</text>
   </g>
 </svg>
 
@@ -337,6 +337,8 @@ function drawSvgCircle (value, color, svgID) {
 					const svg = document.getElementById(svgID);
 					const svgns = "http://www.w3.org/2000/svg";
 					let xVal = parseInt(value) * 10;
+						if(xVal == 0) { xVal = xVal + 10; }
+						if(xVal == 1000) { xVal = xVal - 10; }
 					let newCircle = document.createElementNS(svgns, "circle");
 
 					newCircle.setAttributeNS(null, 'cx', xVal);
