@@ -250,17 +250,18 @@
 </tr>
 </table>
 <div class="btncontainer">
-<button class="btn submit" type="submit">
+<button class="btn submit" type="submit" onclick="setTimeout(function() { window.scrollTo(0,document.body.scrollHeight);; }, 750)">
     Submit
 </button> 
 </div>
 </form>
 </div class="padding">
-<div class="results ">
+<div class="results " id="resultsID">
     <h4>The results go here:</h4>
     <posthere></posthere>
 </div>
 <script>
+    // source code from Janis
 // Example POST method implementation using fetch:
 async function postData(url = '', data = {}) {
        // Default options are marked with *
@@ -292,6 +293,15 @@ async function postData(url = '', data = {}) {
    }
    const form = document.querySelector('form');
    form.addEventListener('submit', handleSubmit);
+          //end of source code from Janis
+
+    function ScrollToALocation(ElementID){
+        var element = document.getElementById(ElementID);
+        element.scrollIntoView();
+        element.scrollIntoView({behavior: "smooth",block:"end"})
+    }
+    
+
 </script>
 </body>
 </html>
