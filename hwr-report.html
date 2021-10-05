@@ -34,8 +34,6 @@
 		.main-content {
             padding: 25px 25px 25px 50px;
         }
-
-
 		/* Meny i header  */
 		.topnav {
 			overflow: hidden;
@@ -247,7 +245,7 @@
 <h1>SVG-elementer:</h1>
 <h4>Når jobber du best?</h4>
 <svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="hours-svg">
-  <line x1="0" y1="40" x2="1000" y2="40" style="stroke:rgb(38,70,83);stroke-width:2" />
+  <line x1="0" y1="40" x2="1000" y2="40" style="stroke:rgb(42,157,144);stroke-width:2" />
 
   <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
   text-anchor="left">
@@ -260,7 +258,7 @@
 <br>
 <h4>Hvor aktiv er du?</h4>
 <svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="akt-svg">
-  <line x1="0" y1="40" x2="1000" y2="40" style="stroke:rgb(38,70,83);stroke-width:2" />
+  <line x1="0" y1="40" x2="1000" y2="40" style="stroke:rgb(42,157,144);stroke-width:2" />
 
   <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
   text-anchor="left">
@@ -273,7 +271,7 @@
 <br>
 <h4>Hvordan foretrekker du å jobbe?</h4>
 <svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="work-svg">
-  <line x1="0" y1="40" x2="1000" y2="40" style="stroke:rgb(38,70,83);stroke-width:2" />
+  <line x1="0" y1="40" x2="1000" y2="40" style="stroke:rgb(42,157,144);stroke-width:2" />
 
   <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
   text-anchor="left">
@@ -286,7 +284,7 @@
 <br>
 	<h4>Foretrekker du hjemmekontor eller fysisk oppmøte?</h4>
 <svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="dify-svg">
-  <line x1="0" y1="40" x2="1000" y2="40" style="stroke:rgb(38,70,83);stroke-width:2" />
+  <line x1="0" y1="40" x2="1000" y2="40" style="stroke:rgb(42,157,144);stroke-width:2" />
 
   <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
   text-anchor="left">
@@ -299,7 +297,7 @@
 <br>
 	<h4>Foretrekker du å fortelle bakgrunnshistorie eller gå rett på sak?</h4>
 <svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="bgrp-svg">
-  <line x1="0" y1="40" x2="1000" y2="40" style="stroke:rgb(38,70,83);stroke-width:2" />
+  <line x1="0" y1="40" x2="1000" y2="40" style="stroke:rgb(42,157,144);stroke-width:2" />
 
   <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
   text-anchor="left">
@@ -479,7 +477,8 @@ Promise.all([
   fetch('https://bacit.info/hwr/20211001094831-ba9e391bae4b7a39f06be4f8a19a7823.json').then(response => response.json()), //Marius
   fetch('https://bacit.info/hwr/20211001094502-58222a6c00c67dbd401f7b61b12b04ff.json').then(response => response.json()), //Thomas
   fetch('https://bacit.info/hwr/20211004103333-c240a2e1dfbe3426bf1e6a2bb1eadbce.json').then(response => response.json()), //Jacob
-  fetch('https://bacit.info/hwr/20211004103455-8cbc00dea8a541d0c092099f4c8bde96.json').then(response => response.json()) //Magnus
+  fetch('https://bacit.info/hwr/20211004103455-8cbc00dea8a541d0c092099f4c8bde96.json').then(response => response.json()), //Magnus
+  fetch('https://bacit.info/hwr/20211004193742-933a4cf17a4bfc1f3904ba223102ac12.json').then(response => response.json()) //Zeyd
   ])
   .then((data) => {
   	//Henter ut data for hver enkelt person i en egen variabel/array
@@ -582,6 +581,20 @@ Promise.all([
 		drawSvgCircle(magnus.work, "#8c862a", "work-svg", magnus.fname);
 		drawSvgCircle(magnus.dify, "#8c862a", "dify-svg", magnus.fname);
 		drawSvgCircle(magnus.bgrp, "#8c862a", "bgrp-svg", magnus.fname);
+
+	 let zeyd = data[7]; 
+	 drawHours(parseInt(zeyd.hours), "#349beb");
+	 drawAkt(parseInt(zeyd.akt), "#349beb");
+	 drawWork(parseInt(zeyd.work), "#349beb");
+	 drawDify(parseInt(zeyd.dify), "#349beb");
+	 drawBgrp(parseInt(zeyd.bgrp), "#349beb");
+
+	 //SVG
+		drawSvgCircle(zeyd.hours, "#349beb", "hours-svg", magnus.fname);
+		drawSvgCircle(zeyd.akt, "#349beb", "akt-svg", magnus.fname);
+		drawSvgCircle(zeyd.work, "#349beb", "work-svg", magnus.fname);
+		drawSvgCircle(zeyd.dify, "#349beb", "dify-svg", magnus.fname);
+		drawSvgCircle(zeyd.bgrp, "#349beb", "bgrp-svg", magnus.fname);
   });
 
 </script>
