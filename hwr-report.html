@@ -313,11 +313,31 @@
 
 <script type="text/javascript">
 
+let z=1;
 
+function CheckPrimary(z){
+			if (z === 2) {
+    return 1;
+  } else if (z > 1) {
+    for (var i = 2; i < z; i++) {
+
+      if (z % i !== 0) {
+        return 1;
+      } else if (z === i * i) {
+        return 0
+      } else {
+        return 0;
+      }
+    }
+  } else {
+    return 0;
+  }
+		}
 //Funksjon for å tegne alle sirkler. Trenger en tall-verdi (value), en farge (color) og element-id til SVG (svgID)
 function drawSvgCircle (value, color, svgID, name) {
 	const svg = document.getElementById(svgID);
 	const svgns = "http://www.w3.org/2000/svg";
+	if (CheckPrimary(z)) {
 	let xVal = parseInt(value) * 10;
 		if(xVal == 0) { xVal = xVal + 10; }
 		if(xVal == 1000) { xVal = xVal - 10; }
@@ -347,6 +367,40 @@ function drawSvgCircle (value, color, svgID, name) {
 	svg.appendChild(newCircle);
 	//svg.appendChild(valtext);
 	svg.appendChild(nametext);
+	z=z+1
+	}
+	else{
+		let xVal = parseInt(value) * 10;
+		if(xVal == 0) { xVal = xVal + 10; }
+		if(xVal == 1000) { xVal = xVal - 10; }
+
+
+	let newCircle = document.createElementNS(svgns, "circle");
+	newCircle.setAttributeNS(null, 'cx', xVal);
+	newCircle.setAttributeNS(null, 'cy', 40);
+	newCircle.setAttributeNS(null, 'r', 10);
+	newCircle.setAttributeNS(null, 'style', 'fill: '+color+';' );
+
+	let nametext = document.createElementNS(svgns, 'text');
+	nametext.setAttributeNS(null, 'x', xVal-10);
+	nametext.setAttributeNS(null, 'y', '10');
+	nametext.setAttributeNS(null, 'font-size', '12px');
+	nametext.setAttributeNS(null, 'fill', '#000');
+	nametext.textContent = name;
+
+	let valtext = document.createElementNS(svgns, 'text');
+	valtext.setAttributeNS(null, 'x', xVal-10);
+	valtext.setAttributeNS(null, 'y', '10');
+	valtext.setAttributeNS(null, 'font-size', '12px');
+	valtext.setAttributeNS(null, 'fill', '#000');
+	valtext.textContent = value + "%";
+	
+	//Legger til sirkelen til svg-elementet
+	svg.appendChild(newCircle);
+	//svg.appendChild(valtext);
+	svg.appendChild(nametext);
+	z=z+1
+	}
 	}
 
 
