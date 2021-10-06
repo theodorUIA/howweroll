@@ -220,6 +220,20 @@
             text-align: center;
             width: 100%;
         }
+        .svg {
+         	animation: 1s ease-out 0s 1 fadeIn;
+        }
+        .svg:hover {
+        	cursor: pointer;
+        }
+        @keyframes fadeIn {
+			  0% {
+			    opacity: 0;
+			  }
+			  100% {
+			    opacity: 1;
+			  }
+			}
 	</style>
 </head>
 <body>
@@ -328,20 +342,16 @@ function drawSvgCircle (value, color, svgID, name) {
 	newCircle.setAttributeNS(null, 'cy', 40);
 	newCircle.setAttributeNS(null, 'r', 10);
 	newCircle.setAttributeNS(null, 'style', 'fill: '+color+';' );
+	newCircle.setAttributeNS(null, 'class', 'svg');
 
 	let nametext = document.createElementNS(svgns, 'text');
 	nametext.setAttributeNS(null, 'x', xVal-10);
 	nametext.setAttributeNS(null, 'y', '20');
 	nametext.setAttributeNS(null, 'font-size', '12px');
 	nametext.setAttributeNS(null, 'fill', '#000');
-	nametext.textContent = name;
+	nametext.setAttributeNS(null, 'class', 'svg');
 
-	let valtext = document.createElementNS(svgns, 'text');
-	valtext.setAttributeNS(null, 'x', xVal-10);
-	valtext.setAttributeNS(null, 'y', '20');
-	valtext.setAttributeNS(null, 'font-size', '12px');
-	valtext.setAttributeNS(null, 'fill', '#000');
-	valtext.textContent = value + "%";
+	nametext.textContent = name;
 
 	//Legger til sirkelen til svg-elementet
 	svg.appendChild(newCircle);
