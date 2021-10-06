@@ -308,26 +308,6 @@
   </g>
 </svg>
 
-<h1>CANVAS-elementer:</h1>
-<h4>Når jobber du best?</h4>
-	<canvas id="hours-canvas" height="50px" width="1000px"></canvas>
-	<br><br>
-
-<h4>Hvor aktiv er du?</h4>
-	<canvas id="akt-canvas" height="50px" width="1000px"></canvas>
-<br><br>
-
-<h4>Hvordan foretrekker du å jobbe?</h4>
-	<canvas id="work-canvas" height="50px" width="1000px"></canvas>
-<br><br>
-
-	<h4>Foretrekker du hjemmekontor eller fysisk oppmøte?</h4>
-	<canvas id="dify-canvas" height="50px" width="1000px"></canvas>
-<br><br>
-
-	<h4>Foretrekker du å fortelle bakgrunnshistorie eller gå rett på sak?</h4>
-	<canvas id="bgrp-canvas" height="50px" width="1000px"></canvas>
-
 </div>
 </body>
 
@@ -350,18 +330,18 @@ function drawSvgCircle (value, color, svgID, name) {
 	newCircle.setAttributeNS(null, 'style', 'fill: '+color+';' );
 
 	let nametext = document.createElementNS(svgns, 'text');
-nametext.setAttributeNS(null, 'x', xVal-10);
-nametext.setAttributeNS(null, 'y', '20');
-nametext.setAttributeNS(null, 'font-size', '12px');
-nametext.setAttributeNS(null, 'fill', '#000');
-nametext.textContent = name;
+	nametext.setAttributeNS(null, 'x', xVal-10);
+	nametext.setAttributeNS(null, 'y', '20');
+	nametext.setAttributeNS(null, 'font-size', '12px');
+	nametext.setAttributeNS(null, 'fill', '#000');
+	nametext.textContent = name;
 
 	let valtext = document.createElementNS(svgns, 'text');
-valtext.setAttributeNS(null, 'x', xVal-10);
-valtext.setAttributeNS(null, 'y', '20');
-valtext.setAttributeNS(null, 'font-size', '12px');
-valtext.setAttributeNS(null, 'fill', '#000');
-valtext.textContent = value + "%";
+	valtext.setAttributeNS(null, 'x', xVal-10);
+	valtext.setAttributeNS(null, 'y', '20');
+	valtext.setAttributeNS(null, 'font-size', '12px');
+	valtext.setAttributeNS(null, 'fill', '#000');
+	valtext.textContent = value + "%";
 
 	//Legger til sirkelen til svg-elementet
 	svg.appendChild(newCircle);
@@ -369,128 +349,22 @@ valtext.textContent = value + "%";
 	svg.appendChild(nametext);
 	}
 
-	//Oppretter canvas-elementet for "work-data".
-		let workCanvas = document.getElementById("work-canvas");
-	//Tegner en rett linje i canvas-elementet, midt i.
-		var workline = workCanvas.getContext("2d");
-		workline.beginPath();
-		workline.moveTo(0, 25);
-		workline.lineTo(1000, 25);
-		workline.stroke();
-
-	//Funksjon for å tegne sirkler på linjen i canvas-elementet "work-canvas". Trenger en tallverdi og en farge-verdi for å fungere.
-function drawWork (value, color) {
-		let val = value * 10; //henter inn tallverdi og ganger med 10 for å vises korrekt på linjen i canvas-elementet
-		if(val == 0) { val = val + 10; }
-		if(val == 1000) { val = val - 10; }
-		var sirkel = workCanvas.getContext("2d"); //Oppretter sirkel-tegning
-		sirkel.beginPath(); //start på sirkel
-		sirkel.arc(val,25,10,0,2*Math.PI); //"Kurven" på sirkelen
-		sirkel.fillStyle = color; //Legger inn fargen på fyllet i sirkelen fra variabel "color"
-		sirkel.fill(); //Fyller sirkelen med farge
-		sirkel.stroke(); //Setter en ramme rundt sirkelen
-	}
-
-	//Øvrige canvas-tegninger og funksjoner nedenfor er lik den over, men har andre variabler. De er derfor ikke forklart ytterligere.
-
-		let aktCanvas = document.getElementById("akt-canvas");
-		var aktline = aktCanvas.getContext("2d");
-		aktline.beginPath();
-		aktline.moveTo(0, 25);
-		aktline.lineTo(1000, 25);
-		aktline.stroke();
-
-function drawAkt (value, color) {
-		let val = value * 10;
-		if(val == 0) { val = val + 10; }
-		if(val == 1000) { val = val - 10; }
-		var sirkel = aktCanvas.getContext("2d");
-		sirkel.beginPath();
-		sirkel.arc(val,25,10,0,2*Math.PI);
-		sirkel.fillStyle = color;
-		sirkel.fill();
-		sirkel.stroke();
-	}
-		let hoursCanvas = document.getElementById("hours-canvas");
-		var hoursline = hoursCanvas.getContext("2d");
-		hoursline.beginPath();
-		hoursline.moveTo(0, 25);
-		hoursline.lineTo(1000, 25);
-		hoursline.stroke();
-
-function drawHours (value, color) {
-		let val = value * 10;
-		if(val == 0) { val = val + 10; }
-		if(val == 1000) { val = val - 10; }
-		var sirkel = hoursCanvas.getContext("2d");
-		sirkel.beginPath();
-		sirkel.arc(val,25,10,0,2*Math.PI);
-		sirkel.fillStyle = color;
-		sirkel.fill();
-		sirkel.stroke();
-	}
-
-		let difyCanvas = document.getElementById("dify-canvas");
-		var difyline = difyCanvas.getContext("2d");
-		difyline.beginPath();
-		difyline.moveTo(0, 25);
-		difyline.lineTo(1000, 25);
-		difyline.stroke();
-
-function drawDify (value, color) {
-		let val = value * 10;
-		if(val == 0) { val = val + 10; }
-		if(val == 1000) { val = val - 10; }
-		var sirkel = difyCanvas.getContext("2d");
-		sirkel.beginPath();
-		sirkel.arc(val,25,10,0,2*Math.PI);
-		sirkel.fillStyle = color;
-		sirkel.fill();
-		sirkel.stroke();
-	}
-
-		let bgrpCanvas = document.getElementById("bgrp-canvas");
-		var bgrpline = bgrpCanvas.getContext("2d");
-		bgrpline.beginPath();
-		bgrpline.moveTo(0, 25);
-		bgrpline.lineTo(1000, 25);
-		bgrpline.stroke();
-
-function drawBgrp (value, color) {
-		let val = value * 10;
-		if(val == 0) { val = val + 10; }
-		if(val == 1000) { val = val - 10; }
-		var sirkel = bgrpCanvas.getContext("2d");
-		sirkel.beginPath();
-		sirkel.arc(val,25,10,0,2*Math.PI);
-		sirkel.fillStyle = color;
-		sirkel.fill();
-		sirkel.stroke();
-	}
-
 
 //Henter ut data fra bacit.info ved bruk av fetch(). Data struktureres i Json-format
 Promise.all([
   fetch('https://bacit.info/hwr/20211001094058-34dc0beed53ce17dd663f6e087108c9d.json').then(response => response.json()), //Eirik
-  fetch('https://bacit.info/hwr/20211001093746-d8cb56df33e70d2ef254d6c80ea38775.json').then(response => response.json()),	//Theodor
+  fetch('https://bacit.info/hwr/20211001093746-d8cb56df33e70d2ef254d6c80ea38775.json').then(response => response.json()), //Theodor
   fetch('https://bacit.info/hwr/20211001094627-7fa2d75c27d4f4cba1ecc00495324c36.json').then(response => response.json()), //Truls
   fetch('https://bacit.info/hwr/20211001094831-ba9e391bae4b7a39f06be4f8a19a7823.json').then(response => response.json()), //Marius
   fetch('https://bacit.info/hwr/20211005113204-b6cfa28db27ae79a0bbf35470e248e88.json').then(response => response.json()), //Thomas
   fetch('https://bacit.info/hwr/20211004103333-c240a2e1dfbe3426bf1e6a2bb1eadbce.json').then(response => response.json()), //Jacob
   fetch('https://bacit.info/hwr/20211004103455-8cbc00dea8a541d0c092099f4c8bde96.json').then(response => response.json()), //Magnus
-  fetch('https://bacit.info/hwr/20211004193742-933a4cf17a4bfc1f3904ba223102ac12.json').then(response => response.json()) //Zeyd
+  fetch('https://bacit.info/hwr/20211004193742-933a4cf17a4bfc1f3904ba223102ac12.json').then(response => response.json()), //Zeyd
   ])
   .then((data) => {
   	//Henter ut data for hver enkelt person i en egen variabel/array
 
 	 let eirik = data[0]; 
-	 //Kaller på funksjonene som tegner inn sirkler på linjen i canvas-elementene. Funksjonene trenger en tall-verdi, derfor brukes parseInt for å "rense" resultatet fra serveren. Funksjonen trenger også en farge-verdi som er unik for hver enkelt person. functionName(number, color);
-	 drawHours(parseInt(eirik.hours), "#0800FF");
-	 drawAkt(parseInt(eirik.akt), "#0800FF");
-	 drawWork(parseInt(eirik.work), "#0800FF");
-	 drawDify(parseInt(eirik.dify), "#0800FF");
-	 drawBgrp(parseInt(eirik.bgrp), "#0800FF");
-
 	 //SVG
 		drawSvgCircle(eirik.hours, "#0800FF", "hours-svg", eirik.fname);
 		drawSvgCircle(eirik.akt, "#0800FF", "akt-svg", eirik.fname);
@@ -499,12 +373,6 @@ Promise.all([
 		drawSvgCircle(eirik.bgrp, "#0800FF", "bgrp-svg", eirik.fname);
 
 	 let theodor = data[1]; 
-	 drawHours(parseInt(theodor.hours), "#2AFF00");
-	 drawAkt(parseInt(theodor.akt), "#2AFF00");
-	 drawWork(parseInt(theodor.work), "#2AFF00");
-	 drawDify(parseInt(theodor.dify), "#2AFF00");
-	 drawBgrp(parseInt(theodor.bgrp), "#2AFF00");
-
 	 //SVG
 		drawSvgCircle(theodor.hours, "#2AFF00", "hours-svg", theodor.fname);
 		drawSvgCircle(theodor.akt, "#2AFF00", "akt-svg", theodor.fname);
@@ -513,12 +381,6 @@ Promise.all([
 		drawSvgCircle(theodor.bgrp, "#2AFF00", "bgrp-svg", theodor.fname);
 
 	 let truls = data[2]; 
-	 drawHours(parseInt(truls.hours), "#00B7FF");
-	 drawAkt(parseInt(truls.akt), "#00B7FF");
-	 drawWork(parseInt(truls.work), "#00B7FF");
-	 drawDify(parseInt(truls.dify), "#00B7FF");
-	 drawBgrp(parseInt(truls.bgrp), "#00B7FF");
-
 	 //SVG
 		drawSvgCircle(truls.hours, "#00B7FF", "hours-svg", truls.fname);
 		drawSvgCircle(truls.akt, "#00B7FF", "akt-svg", truls.fname);
@@ -527,12 +389,6 @@ Promise.all([
 		drawSvgCircle(truls.bgrp, "#00B7FF", "bgrp-svg", truls.fname);
 
 	 let marius = data[3]; 
-	 drawHours(parseInt(marius.hours), "#FFFF1C");
-	 drawAkt(parseInt(marius.akt), "#FFFF1C");
-	 drawWork(parseInt(marius.work), "#FFFF1C");
-	 drawDify(parseInt(marius.dify), "#FFFF1C");
-	 drawBgrp(parseInt(marius.bgrp), "#FFFF1C");
-
 	 //SVG
 		drawSvgCircle(marius.hours, "#FFFF1C", "hours-svg", marius.fname);
 		drawSvgCircle(marius.akt, "#FFFF1C", "akt-svg", marius.fname);
@@ -541,12 +397,6 @@ Promise.all([
 		drawSvgCircle(marius.bgrp, "#FFFF1C", "bgrp-svg", marius.fname);
 
 	 let thomas = data[4]; 
-	 drawHours(parseInt(thomas.hours), "#FF0000");
-	 drawAkt(parseInt(thomas.akt), "#FF0000");
-	 drawWork(parseInt(thomas.work), "#FF0000");
-	 drawDify(parseInt(thomas.dify), "#FF0000");
-	 drawBgrp(parseInt(thomas.bgrp), "#FF0000");
-
 	 //SVG
 		drawSvgCircle(thomas.hours, "#FF0000", "hours-svg", thomas.fname);
 		drawSvgCircle(thomas.akt, "#FF0000", "akt-svg", thomas.fname);
@@ -555,11 +405,6 @@ Promise.all([
 		drawSvgCircle(thomas.bgrp, "#FF0000", "bgrp-svg", thomas.fname);
 
 	 let jacob = data[5]; 
-	 drawHours(parseInt(jacob.hours), "#572f9c");
-	 drawAkt(parseInt(jacob.akt), "#572f9c");
-	 drawWork(parseInt(jacob.work), "#572f9c");
-	 drawDify(parseInt(jacob.dify), "#572f9c");
-	 drawBgrp(parseInt(jacob.bgrp), "#572f9c");
 
 	 //SVG
 		drawSvgCircle(jacob.hours, "#572f9c", "hours-svg", jacob.fname);
@@ -569,12 +414,6 @@ Promise.all([
 		drawSvgCircle(jacob.bgrp, "#572f9c", "bgrp-svg", jacob.fname);
 
 	 let magnus = data[6]; 
-	 drawHours(parseInt(magnus.hours), "#8c862a");
-	 drawAkt(parseInt(magnus.akt), "#8c862a");
-	 drawWork(parseInt(magnus.work), "#8c862a");
-	 drawDify(parseInt(magnus.dify), "#8c862a");
-	 drawBgrp(parseInt(magnus.bgrp), "#8c862a");
-
 	 //SVG
 		drawSvgCircle(magnus.hours, "#8c862a", "hours-svg", magnus.fname);
 		drawSvgCircle(magnus.akt, "#8c862a", "akt-svg", magnus.fname);
@@ -583,12 +422,6 @@ Promise.all([
 		drawSvgCircle(magnus.bgrp, "#8c862a", "bgrp-svg", magnus.fname);
 
 	 let zeyd = data[7]; 
-	 drawHours(parseInt(zeyd.hours), "#eb34e5");
-	 drawAkt(parseInt(zeyd.akt), "#eb34e5");
-	 drawWork(parseInt(zeyd.work), "#eb34e5");
-	 drawDify(parseInt(zeyd.dify), "#eb34e5");
-	 drawBgrp(parseInt(zeyd.bgrp), "#eb34e5");
-
 	 //SVG
 		drawSvgCircle(zeyd.hours, "#eb34e5", "hours-svg", zeyd.fname);
 		drawSvgCircle(zeyd.akt, "#eb34e5", "akt-svg", zeyd.fname);
