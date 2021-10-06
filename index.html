@@ -164,6 +164,21 @@
 		border: 1px solid black;
 
 	}
+
+	.visittkort-main {
+				width:500px; display:grid; grid-template-columns:250px; grid-template-rows: 150px; border: 1px solid black; border-radius: 10px; overflow: hidden;
+				float: left;
+				margin: 20px;
+			}
+			.visittkort-img-container  {
+				text-align: center; padding: 25px; background-color: #264653; grid-column-start: 1; grid-row-start: 1
+			}
+			.visittkort-profile {
+				color: white; background-color: #264653; grid-column-start: 1; grid-row-start: 2; padding: 25px
+			}
+			.visittkort-how-we-roll {
+			background-color: #fafafa; grid-column-start: 2; grid-row-start: 1; grid-row-end: span 2; padding: 25px
+			}
 /* Form styles */
 
 </style>
@@ -187,149 +202,93 @@
 <h2>Velkommen til How We Roll</h2>
   <p>I dette verktøyet kan du registrere din profil og sammenlikne dine preferanser med andre, for å bedre bli kjent med gruppen/teamet du jobber i.</p>
 
+	<!-----------Visittkort----------->
 
-	<!------------ alternativ visittkort-------->
-  <div class="visittkort-main">
-	  <div class="visittkort-img-container">
- <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
-	  </div>
-	    <div class="visittkort-profile">
-		    Thomas Tvedten <br>
-			Tlf: 48245171 <br>
-			Mail: t.tvedten@hotmail.no
-		</div>
-	      <div class="visittkort-how-we-roll">
-			  how we roll
-		  </div>
+<div id="visittkort-container" width="100%">
+	
 
-	  <div class="visittkort-main">
-		  <div class="visittkort-img-container">
-			  <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
-		  </div>
-		  <div class="visittkort-profile">
-			  Thomas Tvedten <br>
-			  Tlf: 48245171 <br>
-			  Mail: t.tvedten@hotmail.no
-		  </div>
-		  <div class="visittkort-how-we-roll">
-			  how we roll
-		  </div>
+</div>
 
-		  <div class="visittkort-main">
-			  <div class="visittkort-img-container">
-				  <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
-			  </div>
-			  <div class="visittkort-profile">
-				  Thomas Tvedten <br>
-				  Tlf: 48245171 <br>
-				  Mail: t.tvedten@hotmail.no
-			  </div>
-			  <div class="visittkort-how-we-roll">
-				  how we roll
-			  </div>
-
-			  <div class="visittkort-main">
-				  <div class="visittkort-img-container">
-					  <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
-				  </div>
-				  <div class="visittkort-profile">
-					  Thomas Tvedten <br>
-					  Tlf: 48245171 <br>
-					  Mail: t.tvedten@hotmail.no
-				  </div>
-				  <div class="visittkort-how-we-roll">
-					  how we roll
-				  </div>
-
-				  <div class="visittkort-main">
-					  <div class="visittkort-img-container">
-						  <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
-					  </div>
-					  <div class="visittkort-profile">
-						  Thomas Tvedten <br>
-						  Tlf: 48245171 <br>
-						  Mail: t.tvedten@hotmail.no
-					  </div>
-					  <div class="visittkort-how-we-roll">
-						  how we roll
-					  </div>
-
-					  <div class="visittkort-main">
-						  <div class="visittkort-img-container">
-							  <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
-						  </div>
-						  <div class="visittkort-profile">
-							  Thomas Tvedten <br>
-							  Tlf: 48245171 <br>
-							  Mail: t.tvedten@hotmail.no
-						  </div>
-						  <div class="visittkort-how-we-roll">
-							  how we roll
-						  </div>
-
-						  <div class="visittkort-main">
-							  <div class="visittkort-img-container">
-								  <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
-							  </div>
-							  <div class="visittkort-profile">
-								  Thomas Tvedten <br>
-								  Tlf: 48245171 <br>
-								  Mail: t.tvedten@hotmail.no
-							  </div>
-							  <div class="visittkort-how-we-roll">
-								  how we roll
-							  </div>
-
-							  <div class="visittkort-main">
-								  <div class="visittkort-img-container">
-									  <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
-								  </div>
-								  <div class="visittkort-profile">
-									  Thomas Tvedten <br>
-									  Tlf: 48245171 <br>
-									  Mail: t.tvedten@hotmail.no
-								  </div>
-								  <div class="visittkort-how-we-roll">
-									  how we roll
-								  </div>
-
-	  
-
- </div>
 
 		<script>
 
-			fetch('https://bacit.info/hwr/20211001094058-34dc0beed53ce17dd663f6e087108c9d.json') //Eirik
-					.then(response => response.json())
-					.then(data => console.log(data));
+function skrivUtData(data) {
+	let navn = data.fname + " " + data.lname + "<br>";
+	let tlfnr = "Tlf: " + data.phone + "<br>";
+	let mail = data.Email;
+ 	
+ 	//We fucked up, but fixed it
+	if(mail === undefined) { 
+		mail = data.email; 
+	}
 
-			fetch('https://bacit.info/hwr/20211001093746-d8cb56df33e70d2ef254d6c80ea38775.json') //Theodor
-					.then(response => response.json())
-					.then(data => console.log(data));
+	let ferdigheter = "Ferdigheter: " + data.ferdigheter;
+	let hours = data.hours;
+	let akt = data.akt;
+	let work = data.work;
+	let dify = data.dify;
+	let bgrp = data.bgrp;
 
-			fetch('https://bacit.info/hwr/20211001094627-7fa2d75c27d4f4cba1ecc00495324c36.json') //Truls
-					.then(response => response.json())
-					.then(data => console.log(data));
+	if(akt < 50 ) { akt = "Sofagris ("+akt+")"; } else {
+		akt = "Atletisk ("+akt+")<br>";
+	}
 
-			fetch('https://bacit.info/hwr/20211001094831-ba9e391bae4b7a39f06be4f8a19a7823.json') //Marius
-					.then(response => response.json())
-					.then(data => console.log(data));
 
-			fetch('https://bacit.info/hwr/20211001094502-58222a6c00c67dbd401f7b61b12b04ff.json') //Thomas
-					.then(response => response.json())
-					.then(data => console.log(data));
 
-			fetch('https://bacit.info/hwr/20211004103333-c240a2e1dfbe3426bf1e6a2bb1eadbce.json') //Jacob
-					.then(response => response.json())
-					.then(data => console.log(data));
+	document.getElementById("visittkort-container").innerHTML += 
+	"<div class='visittkort-main'>" + 
+	"<div class='visittkort-img-container'>" + 
+		"<img src='profilbilde-mann.jpp'style='max-height: 100px; max-width:200px' />"+
+	"</div>" + 
+		"<div class='visittkort-profile'>"+
+		navn +
+		tlfnr +
+		mail +
+	"</div>" +
+	"<div class='visittkort-how-we-roll'>" +
+		hours + akt + work + dify + bgrp +
+		"</div></div>";
 
-			fetch('https://bacit.info/hwr/20211004103455-8cbc00dea8a541d0c092099f4c8bde96.json') //Magnus
-					.then(response => response.json())
-					.then(data => console.log(data));
+	console.log(data);
+}
 
-			fetch('https://bacit.info/hwr/20211004193742-933a4cf17a4bfc1f3904ba223102ac12.json') //Zeyd
-					.then(response => response.json())
-					.then(data => console.log(data));
+Promise.all([
+  fetch('https://bacit.info/hwr/20211001094058-34dc0beed53ce17dd663f6e087108c9d.json').then(response => response.json()), //Eirik
+  fetch('https://bacit.info/hwr/20211001093746-d8cb56df33e70d2ef254d6c80ea38775.json').then(response => response.json()), //Theodor
+  fetch('https://bacit.info/hwr/20211001094627-7fa2d75c27d4f4cba1ecc00495324c36.json').then(response => response.json()), //Truls
+  fetch('https://bacit.info/hwr/20211001094831-ba9e391bae4b7a39f06be4f8a19a7823.json').then(response => response.json()), //Marius
+  fetch('https://bacit.info/hwr/20211005113204-b6cfa28db27ae79a0bbf35470e248e88.json').then(response => response.json()), //Thomas
+  fetch('https://bacit.info/hwr/20211004103333-c240a2e1dfbe3426bf1e6a2bb1eadbce.json').then(response => response.json()), //Jacob
+  fetch('https://bacit.info/hwr/20211004103455-8cbc00dea8a541d0c092099f4c8bde96.json').then(response => response.json()), //Magnus
+  fetch('https://bacit.info/hwr/20211004193742-933a4cf17a4bfc1f3904ba223102ac12.json').then(response => response.json()), //Zeyd
+  ])
+  .then((data) => {
+  	//Henter ut data for hver enkelt person i en egen variabel/array
+
+	 let eirik = data[0]; 
+	 skrivUtData(eirik);
+
+	 let theodor = data[1]; 
+	 skrivUtData(theodor);
+
+	 let truls = data[2]; 
+	 skrivUtData(truls);
+
+	 let marius = data[3]; 
+	 skrivUtData(marius);
+
+	 let thomas = data[4];
+	 skrivUtData(thomas); 
+
+	 let jacob = data[5];
+	 skrivUtData(jacob); 
+
+	 let magnus = data[6];
+	 skrivUtData(magnus); 
+
+	 let zeyd = data[7];
+	 skrivUtData(zeyd); 
+  });
 		</script>
 
 </body>
