@@ -347,14 +347,38 @@
 
 <script type="text/javascript">
 
-let svgYvalue = 50;
+let svgYvalue = 0;
+let svgHeightLeft = 25;
+let svgHeightRight = 25;
+let svgLeftValueSum = 0;
+let svgRightValueSum = 0;
+
+
 //Funksjon for å plassere navn på SVG-demo. Trenger en tall-verdi (value), en farge (color) og element-id til SVG (svgID)
 function drawSvgText (value, color, svgID, name) {
 	const svg = document.getElementById(svgID);
 	const svgns = "http://www.w3.org/2000/svg";
 	let xVal = parseInt(value) * 10;
+
+	if(xVal < 500) { 
+			svgHeightLeft = svgHeightLeft + 30; 
+			svgYvalue = svgHeightLeft;
+			svgLeftValueSum = svgLeftValueSum + xVal;
+		} 
+		else { 
+			svgHeightRight = svgHeightRight + 30; 
+			svgYvalue = svgHeightRight; 
+			svgRightValueSum = svgRightValueSum + xVal;
+		}
+
 		if(xVal == 0) { xVal = xVal + 50; }
 		if(xVal == 1000) { xVal = xVal - 50; }
+
+
+		
+
+		//console.log("Right: " + svgHeightRight);
+		//console.log("Left: " + svgHeightLeft);
 
 	let nametext = document.createElementNS(svgns, 'text');
 	nametext.setAttributeNS(null, 'x', xVal);
@@ -381,7 +405,6 @@ function drawSvgText (value, color, svgID, name) {
 
 
 
-	svgYvalue = svgYvalue+30;
 
 	//Legger til sirkelen til svg-elementet
 	svg.appendChild(newCircle);
@@ -435,7 +458,7 @@ Promise.all([
 
 	 let eirik = data[0]; 
 	 //SVG
-		drawSvgText(eirik.hours, "#0800FF", "hours-svg-compare", eirik.fname);
+		drawSvgText(eirik.akt, "#0800FF", "hours-svg-compare", eirik.fname);
 		drawSvgCircle(eirik.hours, "#0800FF", "hours-svg", eirik.fname);
 		drawSvgCircle(eirik.akt, "#0800FF", "akt-svg", eirik.fname);
 		drawSvgCircle(eirik.work, "#0800FF", "work-svg", eirik.fname);
@@ -444,7 +467,7 @@ Promise.all([
 
 	 let theodor = data[1]; 
 	 //SVG
-		drawSvgText(theodor.hours, "#2AFF00", "hours-svg-compare", theodor.fname);
+		drawSvgText(theodor.akt, "#2AFF00", "hours-svg-compare", theodor.fname);
 		drawSvgCircle(theodor.hours, "#2AFF00", "hours-svg", theodor.fname);
 		drawSvgCircle(theodor.akt, "#2AFF00", "akt-svg", theodor.fname);
 		drawSvgCircle(theodor.work, "#2AFF00", "work-svg", theodor.fname);
@@ -453,7 +476,7 @@ Promise.all([
 
 	 let truls = data[2]; 
 	 //SVG
-		drawSvgText(truls.hours, "#00B7FF", "hours-svg-compare", truls.fname);
+		drawSvgText(truls.akt, "#00B7FF", "hours-svg-compare", truls.fname);
 		drawSvgCircle(truls.hours, "#00B7FF", "hours-svg", truls.fname);
 		drawSvgCircle(truls.akt, "#00B7FF", "akt-svg", truls.fname);
 		drawSvgCircle(truls.work, "#00B7FF", "work-svg", truls.fname);
@@ -462,7 +485,7 @@ Promise.all([
 
 	 let marius = data[3]; 
 	 //SVG
-		drawSvgText(marius.hours, "#FFFF1C", "hours-svg-compare", marius.fname);
+		drawSvgText(marius.akt, "#FFFF1C", "hours-svg-compare", marius.fname);
 		drawSvgCircle(marius.hours, "#FFFF1C", "hours-svg", marius.fname);
 		drawSvgCircle(marius.akt, "#FFFF1C", "akt-svg", marius.fname);
 		drawSvgCircle(marius.work, "#FFFF1C", "work-svg", marius.fname);
@@ -471,7 +494,7 @@ Promise.all([
 
 	 let thomas = data[4]; 
 	 //SVG
-		drawSvgText(thomas.hours, "#FF0000", "hours-svg-compare", thomas.fname);
+		drawSvgText(thomas.akt, "#FF0000", "hours-svg-compare", thomas.fname);
 		drawSvgCircle(thomas.hours, "#FF0000", "hours-svg", thomas.fname);
 		drawSvgCircle(thomas.akt, "#FF0000", "akt-svg", thomas.fname);
 		drawSvgCircle(thomas.work, "#FF0000", "work-svg", thomas.fname);
@@ -481,7 +504,7 @@ Promise.all([
 	 let jacob = data[5]; 
 
 	 //SVG
-		drawSvgText(jacob.hours, "#572f9c", "hours-svg-compare", jacob.fname);
+		drawSvgText(jacob.akt, "#572f9c", "hours-svg-compare", jacob.fname);
 		drawSvgCircle(jacob.hours, "#572f9c", "hours-svg", jacob.fname);
 		drawSvgCircle(jacob.akt, "#572f9c", "akt-svg", jacob.fname);
 		drawSvgCircle(jacob.work, "#572f9c", "work-svg", jacob.fname);
@@ -490,7 +513,7 @@ Promise.all([
 
 	 let magnus = data[6]; 
 	 //SVG
-		drawSvgText(magnus.hours, "#8c862a", "hours-svg-compare", magnus.fname);
+		drawSvgText(magnus.akt, "#8c862a", "hours-svg-compare", magnus.fname);
 		drawSvgCircle(magnus.hours, "#8c862a", "hours-svg", magnus.fname);
 		drawSvgCircle(magnus.akt, "#8c862a", "akt-svg", magnus.fname);
 		drawSvgCircle(magnus.work, "#8c862a", "work-svg", magnus.fname);
@@ -499,7 +522,7 @@ Promise.all([
 
 	 let zeyd = data[7]; 
 	 //SVG
-		drawSvgText(zeyd.hours, "#eb34e5", "hours-svg-compare", zeyd.fname);
+		drawSvgText(zeyd.akt, "#eb34e5", "hours-svg-compare", zeyd.fname);
 		drawSvgCircle(zeyd.hours, "#eb34e5", "hours-svg", zeyd.fname);
 		drawSvgCircle(zeyd.akt, "#eb34e5", "akt-svg", zeyd.fname);
 		drawSvgCircle(zeyd.work, "#eb34e5", "work-svg", zeyd.fname);
@@ -507,7 +530,12 @@ Promise.all([
 		drawSvgCircle(zeyd.bgrp, "#eb34e5", "bgrp-svg", zeyd.fname);
   });
 
-document.getElementById('hours-svg-compare').setAttribute("height", svgYvalue+250);
+  if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
+
+  console.log("Right sum: " +svgRightValueSum);
+  console.log("Left sum: " +svgLeftValueSum);
+
+document.getElementById('hours-svg-compare').setAttribute("height", svgYvalue+200);
 
 </script>
 </html>
