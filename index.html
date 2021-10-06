@@ -144,10 +144,17 @@
 			.card-bg-color {
 				background-color: #264653;
 			}
-			.card-text-information {
-				
+			.visittkort-main {
+				width:500px; display:grid; grid-template-columns:250px; grid-template-rows: 150px; border: 1px solid black; border-radius: 10px; overflow: hidden
 			}
-
+			.visittkort-img-container  {
+				text-align: center; padding: 25px; background-color: #264653; grid-column-start: 1; grid-row-start: 1
+			}
+			.visittkort-profile {
+				color: white; background-color: #264653; grid-column-start: 1; grid-row-start: 2; padding: 25px
+			}
+			.visittkort-how-we-roll {
+			background-color: #fafafa; grid-column-start: 2; grid-row-start: 1; grid-row-end: span 2; padding: 25px
 
         .slidercontainer td{
             border: 0px solid black;
@@ -180,21 +187,115 @@
 <h2>Velkommen til How We Roll</h2>
   <p>I dette verktøyet kan du registrere din profil og sammenlikne dine preferanser med andre, for å bedre bli kjent med gruppen/teamet du jobber i.</p>
 
-	<!-----------Visittkort----------->
 
-	<table class="table-visittkort">
-		<tr>
-		  <th>Theodor</th>
-		  <th>Truls</th>
-		  <th>Thomas</th>
-		  <th>Marius</th>
-		</tr>
-		<tr>
-			<th>Magnus</th>
-			<th>Jacob</th>
-			<th>Zeyd</th>
-			<th>Eirik</th>
-		</tr>
+	<!------------ alternativ visittkort-------->
+  <div class="visittkort-main">
+	  <div class="visittkort-img-container">
+ <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
+	  </div>
+	    <div class="visittkort-profile">
+		    Thomas Tvedten <br>
+			Tlf: 48245171 <br>
+			Mail: t.tvedten@hotmail.no
+		</div>
+	      <div class="visittkort-how-we-roll">
+			  how we roll
+		  </div>
+
+	  <div class="visittkort-main">
+		  <div class="visittkort-img-container">
+			  <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
+		  </div>
+		  <div class="visittkort-profile">
+			  Thomas Tvedten <br>
+			  Tlf: 48245171 <br>
+			  Mail: t.tvedten@hotmail.no
+		  </div>
+		  <div class="visittkort-how-we-roll">
+			  how we roll
+		  </div>
+
+		  <div class="visittkort-main">
+			  <div class="visittkort-img-container">
+				  <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
+			  </div>
+			  <div class="visittkort-profile">
+				  Thomas Tvedten <br>
+				  Tlf: 48245171 <br>
+				  Mail: t.tvedten@hotmail.no
+			  </div>
+			  <div class="visittkort-how-we-roll">
+				  how we roll
+			  </div>
+
+			  <div class="visittkort-main">
+				  <div class="visittkort-img-container">
+					  <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
+				  </div>
+				  <div class="visittkort-profile">
+					  Thomas Tvedten <br>
+					  Tlf: 48245171 <br>
+					  Mail: t.tvedten@hotmail.no
+				  </div>
+				  <div class="visittkort-how-we-roll">
+					  how we roll
+				  </div>
+
+				  <div class="visittkort-main">
+					  <div class="visittkort-img-container">
+						  <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
+					  </div>
+					  <div class="visittkort-profile">
+						  Thomas Tvedten <br>
+						  Tlf: 48245171 <br>
+						  Mail: t.tvedten@hotmail.no
+					  </div>
+					  <div class="visittkort-how-we-roll">
+						  how we roll
+					  </div>
+
+					  <div class="visittkort-main">
+						  <div class="visittkort-img-container">
+							  <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
+						  </div>
+						  <div class="visittkort-profile">
+							  Thomas Tvedten <br>
+							  Tlf: 48245171 <br>
+							  Mail: t.tvedten@hotmail.no
+						  </div>
+						  <div class="visittkort-how-we-roll">
+							  how we roll
+						  </div>
+
+						  <div class="visittkort-main">
+							  <div class="visittkort-img-container">
+								  <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
+							  </div>
+							  <div class="visittkort-profile">
+								  Thomas Tvedten <br>
+								  Tlf: 48245171 <br>
+								  Mail: t.tvedten@hotmail.no
+							  </div>
+							  <div class="visittkort-how-we-roll">
+								  how we roll
+							  </div>
+
+							  <div class="visittkort-main">
+								  <div class="visittkort-img-container">
+									  <img src="profilbilde-mann.jpg"style="max-height: 100px; max-width:200px" />
+								  </div>
+								  <div class="visittkort-profile">
+									  Thomas Tvedten <br>
+									  Tlf: 48245171 <br>
+									  Mail: t.tvedten@hotmail.no
+								  </div>
+								  <div class="visittkort-how-we-roll">
+									  how we roll
+								  </div>
+
+	  
+
+ </div>
 
 		<script>
 
@@ -231,6 +332,5 @@
 					.then(data => console.log(data));
 		</script>
 
-</div>
 </body>
 </html>
