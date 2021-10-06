@@ -148,9 +148,16 @@
 				
 			}
 
+
+        .slidercontainer td{
+            border: 0px solid black;
+            width: 33.3%;
+        }
+    .table-visittkort, tr, th, td{
+		border: 1px solid black;
+
+	}
 /* Form styles */
-
-
 
 </style>
 </head>
@@ -175,41 +182,55 @@
 
 	<!-----------Visittkort----------->
 
-	<div class='card-container'>
+	<table class="table-visittkort">
+		<tr>
+		  <th>Theodor</th>
+		  <th>Truls</th>
+		  <th>Thomas</th>
+		  <th>Marius</th>
+		</tr>
+		<tr>
+			<th>Magnus</th>
+			<th>Jacob</th>
+			<th>Zeyd</th>
+			<th>Eirik</th>
+		</tr>
 
-	<div class='card-div card-bg-color'>
-		<div class='card-image-div'>
-			<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
-		</div>
-		<div class='card-information-div'>William
-		</div>
-		<div class='card-text-info'>Her kommer all informasjon</div>
-	</div>
+		<script>
 
-	<div class='card-div card-bg-color'>
-		<div class='card-image-div'>
-			<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
-		</div>
-		<div class='card-information-div'>Marcus
-		</div>
-	</div>
+			fetch('https://bacit.info/hwr/20211001094058-34dc0beed53ce17dd663f6e087108c9d.json') //Eirik
+					.then(response => response.json())
+					.then(data => console.log(data));
 
-		<div class='card-div card-bg-color'>
-			<div class='card-image-div'>
-				<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
-			</div>
-			<div class='card-information-div'>Erlend
-			</div>
-		</div>
+			fetch('https://bacit.info/hwr/20211001093746-d8cb56df33e70d2ef254d6c80ea38775.json') //Theodor
+					.then(response => response.json())
+					.then(data => console.log(data));
 
-			<div class='card-div card-bg-color'>
-				<div class='card-image-div'>
-					<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
-				</div>
-				<div class='card-information-div'>Sunniva
-				</div>
-		</div>
-	</div>
+			fetch('https://bacit.info/hwr/20211001094627-7fa2d75c27d4f4cba1ecc00495324c36.json') //Truls
+					.then(response => response.json())
+					.then(data => console.log(data));
+
+			fetch('https://bacit.info/hwr/20211001094831-ba9e391bae4b7a39f06be4f8a19a7823.json') //Marius
+					.then(response => response.json())
+					.then(data => console.log(data));
+
+			fetch('https://bacit.info/hwr/20211001094502-58222a6c00c67dbd401f7b61b12b04ff.json') //Thomas
+					.then(response => response.json())
+					.then(data => console.log(data));
+
+			fetch('https://bacit.info/hwr/20211004103333-c240a2e1dfbe3426bf1e6a2bb1eadbce.json') //Jacob
+					.then(response => response.json())
+					.then(data => console.log(data));
+
+			fetch('https://bacit.info/hwr/20211004103455-8cbc00dea8a541d0c092099f4c8bde96.json') //Magnus
+					.then(response => response.json())
+					.then(data => console.log(data));
+
+			fetch('https://bacit.info/hwr/20211004193742-933a4cf17a4bfc1f3904ba223102ac12.json') //Zeyd
+					.then(response => response.json())
+					.then(data => console.log(data));
+		</script>
+
 </div>
 </body>
 </html>
