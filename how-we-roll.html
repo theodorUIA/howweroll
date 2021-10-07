@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>HowWeRoll</title>
+
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,7 +16,9 @@
     <a href="index.html">Hjem</a>
     <a class="active" href="how-we-roll.html">Profil</a>
     <a href="hwr-report.html">Rapport</a>
+    <input type="button" value="Søk" onclick="OnlyAPlaceHolder()">
     <input type="text" placeholder="Søk...">
+
 </div>
 <form id="HWR-form">
     <div class="main-content">
@@ -157,6 +160,12 @@
    }
    const form = document.querySelector('form');
    form.addEventListener('submit', handleSubmit);
+
+   // just an alert message for when users try to use the search bar
+   function OnlyAPlaceHolder(){
+	  alert("this item doesn't have much functionality yet and is only a placeholder")
+  }
+
 </script>
 </body>
 </html>
