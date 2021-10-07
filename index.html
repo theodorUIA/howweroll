@@ -145,41 +145,40 @@
 				background-color: #264653;
 			}
 			.visittkort-main {
-				width:500px; display:grid; grid-template-columns:250px; grid-template-rows: 150px; border: 1px solid black; border-radius: 10px; overflow: hidden
-			}
-			.visittkort-img-container  {
-				text-align: center; padding: 25px; background-color: #264653; grid-column-start: 1; grid-row-start: 1
-			}
-			.visittkort-profile {
-				color: white; background-color: #264653; grid-column-start: 1; grid-row-start: 2; padding: 25px
-			}
-			.visittkort-how-we-roll {
-			background-color: #fafafa; grid-column-start: 2; grid-row-start: 1; grid-row-end: span 2; padding: 25px
-
-        .slidercontainer td{
-            border: 0px solid black;
-            width: 33.3%;
-        }
-    .table-visittkort, tr, th, td{
-		border: 1px solid black;
-
-	}
-
-	.visittkort-main {
-				width:500px; display:grid; grid-template-columns:250px; grid-template-rows: 150px; border: 1px solid black; border-radius: 10px; overflow: hidden;
 				float: left;
-				margin: 20px;
+				width:500px;
+				height: 250px;
+				margin: 10px;
+				display:grid;
+				grid-template-columns:220px;
+				grid-template-rows: 150px;
+				border: 1px solid black;
+				border-radius: 10px;
+				overflow: hidden;
 			}
 			.visittkort-img-container  {
-				text-align: center; padding: 25px; background-color: #264653; grid-column-start: 1; grid-row-start: 1
+				text-align: center;
+				padding: 25px;
+				background-color: #264653;
+				grid-column-start: 1;
+				grid-row-start: 1;
 			}
 			.visittkort-profile {
-				color: white; background-color: #264653; grid-column-start: 1; grid-row-start: 2; padding: 25px
+				color: white;
+				background-color: #264653;
+				grid-column-start: 1;
+				grid-row-start: 2;
+				padding: 25px
 			}
 			.visittkort-how-we-roll {
-			background-color: #fafafa; grid-column-start: 2; grid-row-start: 1; grid-row-end: span 2; padding: 25px
-			}
-/* Form styles */
+				background-color: #fafafa;
+				grid-column-start: 2;
+				grid-row-start: 1;
+				grid-row-end: span 2;
+				padding: 15px;
+				font-size: 14px;
+
+ }
 
 </style>
 </head>
@@ -213,41 +212,83 @@
 		<script>
 
 function skrivUtData(data) {
-	let navn = data.fname + " " + data.lname + "<br>";
-	let tlfnr = "Tlf: " + data.phone + "<br>";
-	let mail = data.Email;
+
+	let mail = data.Email; //Hente ut mail fra Email-variabel
  	
- 	//We fucked up, but fixed it
+ 	//We fucked up, but fixed it..isj
 	if(mail === undefined) { 
-		mail = data.email; 
+		mail = data.email;  //Hente ut mail på de som har sendt inn skjema etter endring av variabel
 	}
 
-	let ferdigheter = "Ferdigheter: " + data.ferdigheter;
-	let hours = data.hours;
-	let akt = data.akt;
-	let work = data.work;
-	let dify = data.dify;
-	let bgrp = data.bgrp;
+	let hours = "";
+	let akt = "";
+	let work = "";
+	let dify = "";
+	let bgrp = "";
 
-	if(akt < 50 ) { akt = "Sofagris ("+akt+")"; } else {
-		akt = "Atletisk ("+akt+")<br>";
-	}
+	//Generaliserer verdiene fra how-we-roll
+	if(data.hours < 50 ) { hours = "Morgenfugl ("+data.hours+")"; } 
+	else { hours = "Natteravn ("+ data.hours +")"; }
+
+	if(data.akt < 50 ) { akt = "Sofagris ("+data.akt+")"; } 
+	else { akt = "Atletisk ("+data.akt+")";	}
+
+	if(data.work < 50 ) { work = "Hjemmekontor ("+data.work+")"; } 
+	else { work = "Samarbeid ("+data.work+")"; }
+
+	if(data.dify < 50 ) { dify = "Selvstendig ("+data.dify+")"; } 
+	else { dify = "Fysisk ("+data.dify+")<br>"; }
+
+	if(data.bgrp < 50 ) { bgrp = "Bakgrunnshistorie ("+data.bgrp+")"; } 
+	else { bgrp = "Rett på sak ("+data.bgrp+")"; }
+
+	//Oppretter profil fra data
+	let ProfileData = data.fname + " " + data.lname + "<br>" + "Tlf: " + data.phone + "<br>" + mail;
+
+	//Oppretter hwr profil
+	let hwrInfo = "";
+
+	//Hente ut alle verdier i enkelt-variabler
+		hwrInfo += "Mine ferdigheter er; <b>" + data.ferdigheter + "</b><br><br>";
+		hwrInfo += "Jeg er en <b>" + hours + "</b>, og ";
+		hwrInfo += "<b>" + akt + "</b>.<br><br>";
+		hwrInfo += "Jeg foretrekker <b>" + work + "</b>, og å jobbe ";
+		hwrInfo += "<b>" + dify + "</b><br><br>";
+		hwrInfo += "Bakgrunnshistorie eller gå rett på sak? <b>" + bgrp + "</b";
+
+
+	//Oppretter visittkortet
+
+	//Div for how-we-roll informasjon
+	let kortDIVhwr = document.createElement('div');
+		kortDIVhwr.setAttribute('class', 'visittkort-how-we-roll');
+		kortDIVhwr.innerHTML = hwrInfo;
+
+	//Div for profilinformasjon
+	let kortDIVprofil = document.createElement('div');
+		kortDIVprofil.setAttribute('class', 'visittkort-profile');
+		kortDIVprofil.innerHTML= ProfileData;
+
+	//IMG for profilbilde
+	let profilIMG = document.createElement('img');
+		profilIMG.setAttribute('style', 'max-height: 100px; max-width:200px');
+		profilIMG.setAttribute('src', 'profilbilde-mann.jpg');
+
+	//Div for bilde
+	let kortDIVimgContainer = document.createElement('div');
+		kortDIVimgContainer.setAttribute('class', 'visittkort-img-container');
+		kortDIVimgContainer.appendChild(profilIMG);
+
+	//Div for visittkort
+	let kortDIVmain = document.createElement('div');
+		kortDIVmain.setAttribute('class', 'visittkort-main');
+		kortDIVmain.appendChild(kortDIVimgContainer);
+		kortDIVmain.appendChild(kortDIVprofil);
+		kortDIVmain.appendChild(kortDIVhwr);
 
 
 
-	document.getElementById("visittkort-container").innerHTML += 
-	"<div class='visittkort-main'>" + 
-	"<div class='visittkort-img-container'>" + 
-		"<img src='profilbilde-mann.jpp'style='max-height: 100px; max-width:200px' />"+
-	"</div>" + 
-		"<div class='visittkort-profile'>"+
-		navn +
-		tlfnr +
-		mail +
-	"</div>" +
-	"<div class='visittkort-how-we-roll'>" +
-		hours + akt + work + dify + bgrp +
-		"</div></div>";
+	document.getElementById("visittkort-container").append(kortDIVmain);
 
 	console.log(data);
 }
