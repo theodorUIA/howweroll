@@ -119,15 +119,12 @@ function drawSvgText (value, color, svgID, name) {
 
 //Sjekker om verdien er høyere eller lavere enn 500 for å få øke avstanden mellom punktene, samt sette den totale høyden på SVG-elementet
 	if(xVal < 500) { 
-			svgHeightLeft = svgHeightLeft + 40; //Legger til 35 px til venstre-side
+			svgHeightLeft = svgHeightLeft + 50; //Legger til 35 px til venstre-side
 			svgYvalue = svgHeightLeft; //Setter Y-verdi til den oppdaterte venstre-side verdien
-			svgLeftValueSum = svgLeftValueSum + xVal; //Oppdaterer totalsum for høyden på venstresiden
-
 		} 
 		else { 
-			svgHeightRight = svgHeightRight + 40; //Legger til 35 px til høyre-side
+			svgHeightRight = svgHeightRight + 50; //Legger til 35 px til høyre-side
 			svgYvalue = svgHeightRight;  //Setter Y-verdu til den oppdaterte høyre-side verdien
-			svgRightValueSum = svgRightValueSum + xVal; //Oppdaterer totalsum for høyden på høyresiden
 		}
 
 		//Sjekker om verdien er 0 eller 1000. Legger til eller trekker fra 50px for å unngå at punktene kommer helt ut i kanten på SVG-elementet
@@ -155,6 +152,8 @@ function drawSvgText (value, color, svgID, name) {
 	txtValue.setAttributeNS(null, 'class', 'svg-num svg-animation');
 	txtValue.textContent = value;
 
+  console.log("Right: "+svgHeightRight + name);
+  console.log("Left: "+svgHeightLeft + name);
 	//Legger til sirkelen til svg-elementet
 	svg.appendChild(circle);
 	svg.appendChild(txtName);
@@ -163,9 +162,6 @@ function drawSvgText (value, color, svgID, name) {
 svgYvalue = 0; //Totalhøyde på SVG-elementet
 svgHeightLeft = 25; //Høyde på venstre-side i SVG-elementet
 svgHeightRight = 25; //Høyde på høyre-side i SVG-elementet
-svgLeftValueSum = 0; //Totalhøyde for venstre-side i SVG-elementet
-svgRightValueSum = 0; //Totalhøyde for høyre-side i SVG-elementet
-
 
 //Henter ut data fra bacit.info ved bruk av fetch(). Data struktureres i Json-format
 Promise.all([
@@ -179,6 +175,7 @@ Promise.all([
   fetch('https://bacit.info/hwr/20211004193742-933a4cf17a4bfc1f3904ba223102ac12.json').then(response => response.json()), //Zeyd
   ])
   .then((data) => {
+
   	//Henter ut data for hver enkelt person i en egen variabel/array for å gjøre oversikten i koden bedre. Hadde det vært et dynamisk system så hadde ikke dette vært nødvendig/mulig
 	 let eirik = data[0]; 
 	 let theodor = data[1]; 
@@ -186,25 +183,14 @@ Promise.all([
 	 let marius = data[3]; 
 	 let thomas = data[4];
 	 let jacob = data[5]; 
-	 let magnus = data[6]; 
+	 let magnus = data[6];
 	 let zeyd = data[7];
 
-     let gjest = "";
-    if (localStorage.trxid) {
-      let last_trxid = localStorage.getItem("trxid");
-      let last_time = localStorage.getItem("time");
-      fetch('https://bacit.info/hwr/'+last_time+'-'+last_trxid+'.json')
-              .then(response => response.json())
-              .then(data => {
-                let gjest = data;
-              });
-    }
+
 		//Setter variablene for Y verdi av innholdet i dette SVG-elementet
   	svgYvalue = 0; //Totalhøyde på SVG-elementet
 		svgHeightLeft = 25; //Høyde på venstre-side i SVG-elementet
 		svgHeightRight = 25; //Høyde på høyre-side i SVG-elementet
-		svgLeftValueSum = 0; //Totalhøyde for venstre-side i SVG-elementet
-		svgRightValueSum = 0; //Totalhøyde for høyre-side i SVG-elementet
 
 		//Bruker funksjonen drawSvgText til å generere svg-elementene til hours-svg
 		drawSvgText(eirik.hours, "#b9b9b9", "hours-svg", eirik.fname);
@@ -215,20 +201,28 @@ Promise.all([
 		drawSvgText(jacob.hours, "#8f62e1", "hours-svg", jacob.fname);
 		drawSvgText(magnus.hours, "#7bdc5e", "hours-svg", magnus.fname);
 		drawSvgText(zeyd.hours, "#faa5f2", "hours-svg", zeyd.fname);
-    if (localStorage.trxid) { drawSvgText(gjest.hours, "#faa5f2", "hours-svg", gjest.fname);}
+    if (localStorage.trxid) {
+      let last_trxid = localStorage.getItem("trxid");
+      let last_time = localStorage.getItem("time");
+      fetch('https://bacit.info/hwr/'+last_time+'-'+last_trxid+'.json')
+              .then(response => response.json())
+              .then(data => {
+                drawSvgText(data.hours, "#faa5f2", "hours-svg", data.fname);
+              });
+    }
+    //Sjekker hvilken side som er høyest, og bruker deretter den høyeste til å sette "height" på SVG-elementet hours-svg
+    if(svgHeightRight < svgHeightLeft)
+    {
+      svgYvalue = svgHeightLeft; //Venstre side er høyest
+    }
+    else {
+      svgYvalue = svgHeightRight; //Høyre side er høyest
+    }
+    //Endrer høyden på SVG-elementet
+    document.getElementById('hours-svg').setAttribute("height", svgYvalue+40);
 
-		//Sjekker hvilken side som er høyest, og bruker deretter den høyeste til å sette "height" på SVG-elementet hours-svg
-  	if(svgHeightRight < svgHeightLeft) 
-  	{ 
-  		svgYvalue = svgHeightLeft; //Venstre side er høyest
-  	} 
-  	else { 
-  		svgYvalue = svgHeightRight; //Høyre side er høyest
-  	}
-  	//Endrer høyden på SVG-elementet
-		document.getElementById('hours-svg').setAttribute("height", svgYvalue+40);
 
-		
+
 		//Akt
   	svgYvalue = 0;
 		svgHeightLeft = 25;
@@ -243,6 +237,15 @@ Promise.all([
 		drawSvgText(jacob.akt, "#8f62e1", "akt-svg", jacob.fname);
 		drawSvgText(magnus.akt, "#7bdc5e", "akt-svg", magnus.fname);
 		drawSvgText(zeyd.akt, "#faa5f2", "akt-svg", zeyd.fname);
+    if (localStorage.trxid) {
+      let last_trxid = localStorage.getItem("trxid");
+      let last_time = localStorage.getItem("time");
+      fetch('https://bacit.info/hwr/' + last_time + '-' + last_trxid + '.json')
+              .then(response => response.json())
+              .then(data => {
+                drawSvgText(data.akt, "#faa5f2", "akt-svg", data.fname);
+              });
+    }
   	if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
 		document.getElementById('akt-svg').setAttribute("height", svgYvalue+40);
 
@@ -260,6 +263,15 @@ Promise.all([
 		drawSvgText(jacob.work, "#8f62e1", "work-svg", jacob.fname);
 		drawSvgText(magnus.work, "#7bdc5e", "work-svg", magnus.fname);
 		drawSvgText(zeyd.work, "#faa5f2", "work-svg", zeyd.fname);
+    if (localStorage.trxid) {
+      let last_trxid = localStorage.getItem("trxid");
+      let last_time = localStorage.getItem("time");
+      fetch('https://bacit.info/hwr/'+last_time+'-'+last_trxid+'.json')
+              .then(response => response.json())
+              .then(data => {
+                drawSvgText(data.work, "#faa5f2", "work-svg", data.fname);
+              });
+    }
   	if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
 		document.getElementById('work-svg').setAttribute("height", svgYvalue+40);
 
@@ -277,15 +289,25 @@ Promise.all([
 		drawSvgText(jacob.dify, "#8f62e1", "dify-svg", jacob.fname);
 		drawSvgText(magnus.dify, "#7bdc5e", "dify-svg", magnus.fname);
 		drawSvgText(zeyd.dify, "#faa5f2", "dify-svg", zeyd.fname);
+    if (localStorage.trxid) {
+      let last_trxid = localStorage.getItem("trxid");
+      let last_time = localStorage.getItem("time");
+      fetch('https://bacit.info/hwr/'+last_time+'-'+last_trxid+'.json')
+              .then(response => response.json())
+              .then(data => {
+                drawSvgText(data.dify, "#faa5f2", "dify-svg", data.fname);
+              });
+    }
   	if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
 		document.getElementById('dify-svg').setAttribute("height", svgYvalue+40);
 
 		  //Bgrp
-  	svgYvalue = 0;
+  	    svgYvalue = 0;
 		svgHeightLeft = 25;
 		svgHeightRight = 25;
 		svgLeftValueSum = 0;
 		svgRightValueSum = 0;
+
 		drawSvgText(eirik.bgrp, "#b9b9b9", "bgrp-svg", eirik.fname);
 		drawSvgText(theodor.bgrp, "#7dcc6f", "bgrp-svg", theodor.fname);
 		drawSvgText(truls.bgrp, "#8fdeff", "bgrp-svg", truls.fname);
@@ -294,6 +316,18 @@ Promise.all([
 		drawSvgText(jacob.bgrp, "#8f62e1", "bgrp-svg", jacob.fname);
 		drawSvgText(magnus.bgrp, "#7bdc5e", "bgrp-svg", magnus.fname);
 		drawSvgText(zeyd.bgrp, "#faa5f2", "bgrp-svg", zeyd.fname);
+
+    console.log(svgYvalue);
+    if (localStorage.trxid) {
+      let last_trxid = localStorage.getItem("trxid");
+      let last_time = localStorage.getItem("time");
+      fetch('https://bacit.info/hwr/'+last_time+'-'+last_trxid+'.json')
+              .then(response => response.json())
+              .then(data => {
+                console.log(svgYvalue);
+                drawSvgText(data.bgrp, "#faa5f2", "bgrp-svg", data.fname);
+              });
+    }
   	if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
 		document.getElementById('bgrp-svg').setAttribute("height", svgYvalue+40);
   });
