@@ -153,6 +153,10 @@
         const results = document.querySelector('.results pre');
         postData('https://bacit.info/', formJSON)
         .then(data => {
+            let trxid = JSON.stringify(data.trxid, null, 2).replace(/"/g, "");
+            let time = JSON.stringify(data.time, null, 2).replace(/"/g, "");
+            localStorage.setItem("trxid", trxid);
+            localStorage.setItem("time", time);
            results.innerText = JSON.stringify(data, null, 2);
         document.getElementById("HWR-form").reset();
         return false;
