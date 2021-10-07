@@ -119,7 +119,7 @@
 				font-size: 1em;
 				font-family: arial;
 				text-align: center;
-				color: white;
+				color: black;
 
 			}
 			.card-image-div {
@@ -164,8 +164,7 @@
 				grid-row-start: 1;
 			}
 			.visittkort-profile {
-				color: white;
-				background-color: #264653;
+				color: black;
 				grid-column-start: 1;
 				grid-row-start: 2;
 				padding: 25px
@@ -211,7 +210,9 @@
 
 		<script>
 
-function skrivUtData(data) {
+function skrivUtData(data, color) {
+
+	console.log(color);
 
 	let mail = data.Email; //Hente ut mail fra Email-variabel
  	
@@ -244,6 +245,7 @@ function skrivUtData(data) {
 
 	//Oppretter profil fra data
 	let ProfileData = data.fname + " " + data.lname + "<br>" + "Tlf: " + data.phone + "<br>" + mail;
+	ProfileData
 
 	//Oppretter hwr profil
 	let hwrInfo = "";
@@ -267,6 +269,7 @@ function skrivUtData(data) {
 	//Div for profilinformasjon
 	let kortDIVprofil = document.createElement('div');
 		kortDIVprofil.setAttribute('class', 'visittkort-profile');
+		kortDIVprofil.setAttribute('style', 'background-color:' + color);
 		kortDIVprofil.innerHTML= ProfileData;
 
 	//IMG for profilbilde
@@ -277,6 +280,7 @@ function skrivUtData(data) {
 	//Div for bilde
 	let kortDIVimgContainer = document.createElement('div');
 		kortDIVimgContainer.setAttribute('class', 'visittkort-img-container');
+		kortDIVimgContainer.setAttribute('style', 'background-color:' + color);
 		kortDIVimgContainer.appendChild(profilIMG);
 
 	//Div for visittkort
@@ -307,28 +311,29 @@ Promise.all([
   	//Henter ut data for hver enkelt person i en egen variabel/array
 
 	 let eirik = data[0]; 
-	 skrivUtData(eirik);
+	 skrivUtData(eirik, "#0800FF");
+
 
 	 let theodor = data[1]; 
-	 skrivUtData(theodor);
+	 skrivUtData(theodor, "#2AFF00");
 
 	 let truls = data[2]; 
-	 skrivUtData(truls);
+	 skrivUtData(truls, "#00B7FF");
 
 	 let marius = data[3]; 
-	 skrivUtData(marius);
+	 skrivUtData(marius, "#ffd900");
 
 	 let thomas = data[4];
-	 skrivUtData(thomas); 
+	 skrivUtData(thomas, "#FF0000");
 
 	 let jacob = data[5];
-	 skrivUtData(jacob); 
+	 skrivUtData(jacob, "#572f9c");
 
 	 let magnus = data[6];
-	 skrivUtData(magnus); 
+	 skrivUtData(magnus, "#8c862a");
 
 	 let zeyd = data[7];
-	 skrivUtData(zeyd); 
+	 skrivUtData(zeyd, "#eb34e5");
   });
 		</script>
 
