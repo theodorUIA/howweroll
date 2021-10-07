@@ -160,6 +160,11 @@ function drawSvgText (value, color, svgID, name) {
 	svg.appendChild(txtName);
 	svg.appendChild(txtValue);
 	}
+svgYvalue = 0; //Totalhøyde på SVG-elementet
+svgHeightLeft = 25; //Høyde på venstre-side i SVG-elementet
+svgHeightRight = 25; //Høyde på høyre-side i SVG-elementet
+svgLeftValueSum = 0; //Totalhøyde for venstre-side i SVG-elementet
+svgRightValueSum = 0; //Totalhøyde for høyre-side i SVG-elementet
 
 
 //Henter ut data fra bacit.info ved bruk av fetch(). Data struktureres i Json-format
@@ -174,7 +179,6 @@ Promise.all([
   fetch('https://bacit.info/hwr/20211004193742-933a4cf17a4bfc1f3904ba223102ac12.json').then(response => response.json()), //Zeyd
   ])
   .then((data) => {
-
   	//Henter ut data for hver enkelt person i en egen variabel/array for å gjøre oversikten i koden bedre. Hadde det vært et dynamisk system så hadde ikke dette vært nødvendig/mulig
 	 let eirik = data[0]; 
 	 let theodor = data[1]; 
@@ -183,8 +187,18 @@ Promise.all([
 	 let thomas = data[4];
 	 let jacob = data[5]; 
 	 let magnus = data[6]; 
-	 let zeyd = data[7]; 
-  
+	 let zeyd = data[7];
+
+     let gjest = "";
+    if (localStorage.trxid) {
+      let last_trxid = localStorage.getItem("trxid");
+      let last_time = localStorage.getItem("time");
+      fetch('https://bacit.info/hwr/'+last_time+'-'+last_trxid+'.json')
+              .then(response => response.json())
+              .then(data => {
+                let gjest = data;
+              });
+    }
 		//Setter variablene for Y verdi av innholdet i dette SVG-elementet
   	svgYvalue = 0; //Totalhøyde på SVG-elementet
 		svgHeightLeft = 25; //Høyde på venstre-side i SVG-elementet
@@ -201,6 +215,7 @@ Promise.all([
 		drawSvgText(jacob.hours, "#8f62e1", "hours-svg", jacob.fname);
 		drawSvgText(magnus.hours, "#7bdc5e", "hours-svg", magnus.fname);
 		drawSvgText(zeyd.hours, "#faa5f2", "hours-svg", zeyd.fname);
+    if (localStorage.trxid) { drawSvgText(gjest.hours, "#faa5f2", "hours-svg", gjest.fname);}
 
 		//Sjekker hvilken side som er høyest, og bruker deretter den høyeste til å sette "height" på SVG-elementet hours-svg
   	if(svgHeightRight < svgHeightLeft) 
