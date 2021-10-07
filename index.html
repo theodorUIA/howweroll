@@ -33,13 +33,12 @@
 		.main-content {
             padding: 25px 25px 25px 50px;
         }
-
-
 		/* Meny i header  */
 		.topnav {
 			overflow: hidden;
 			background-color: #264653;
 			padding-left: 50px;
+			padding-right: 15px;
 		}
 		.topnav a {
 			float: left;
@@ -63,9 +62,28 @@
 			padding: 6px;
 			border: none;
 			margin-top: 8px;
-			margin-right: 16px;
+			margin-right: 3px;
 			font-size: 17px;
 		}
+		.topnav input[type=button]{
+            float:right;
+            border: none;
+            margin-top: 6px;
+            margin-right: 16;
+            background-color: #264563 ;
+            font-size: 16px;
+            cursor: pointer;
+            height: 36px;
+            width: 60px;
+            border: none;
+            color: white;
+            align-items: center;
+        }
+        .topnav input[type=button]:hover{
+            font-weight: bolder;
+            background-color:#2A9D8F ;
+            color: #264563;
+        }
 		h4 {
 			padding-top: 40px;
 			padding-bottom: 0px;
@@ -135,7 +153,8 @@
 	<a class="active" href="index.html">Hjem</a>
 	<a href="how-we-roll.html">Profil</a>
 	<a href="hwr-report.html">Rapport</a>
-	<input type="text" name="" placeholder="Søk...">
+	<input type="button" value="Søk" onclick="OnlyAPlaceHolder()">
+    <input type="text" placeholder="Søk...">
 </div>
 
 <!------Overskrift på hjemsiden------>
@@ -254,31 +273,35 @@ Promise.all([
   .then((data) => {
   	//Henter ut data for hver enkelt person i en egen variabel/array
 
-	 let eirik = data[0];
-	 skrivUtData(eirik, "#0800FF");
+	 let eirik = data[0]; 
+	 skrivUtData(eirik, "#b9b9b9");
 
+	 let theodor = data[1]; 
+	 skrivUtData(theodor, "#7dcc6f");
 
-	 let theodor = data[1];
-	 skrivUtData(theodor, "#2AFF00");
+	 let truls = data[2]; 
+	 skrivUtData(truls, "#8fdeff");
 
-	 let truls = data[2];
-	 skrivUtData(truls, "#00B7FF");
-
-	 let marius = data[3];
-	 skrivUtData(marius, "#ffd900");
+	 let marius = data[3]; 
+	 skrivUtData(marius, "#c9b82e");
 
 	 let thomas = data[4];
-	 skrivUtData(thomas, "#FF0000");
+	 skrivUtData(thomas, "#eea241");
 
 	 let jacob = data[5];
-	 skrivUtData(jacob, "#572f9c");
+	 skrivUtData(jacob, "#8f62e1");
 
 	 let magnus = data[6];
-	 skrivUtData(magnus, "#8c862a");
+	 skrivUtData(magnus, "#7bdc5e");
 
 	 let zeyd = data[7];
-	 skrivUtData(zeyd, "#eb34e5");
+	 skrivUtData(zeyd, "#faa5f2");
+
   });
+// just an alert message for when users try to use the search bar
+  function OnlyAPlaceHolder(){
+	  alert("this item doesn't have much functionality yet and is only a placeholder")
+  }
 		</script>
 
 </body>
