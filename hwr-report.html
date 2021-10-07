@@ -266,19 +266,12 @@
             text-align: center;
             width: 100%;
         }
-        .svg-animation {
+        .svg {
          	animation: 1s ease-out 0s 1 fadeIn;
-					animation-direction: alternate; 
         }
         .svg-text {
          	animation: 1s ease-out 0s 1 fadeIn;
-        	font-size: 12px;
-        	text-anchor: middle;
-        	font-weight: bold;
-        }
-        .svg-num {
-         	animation: 1s ease-out 0s 1 fadeIn;
-        	font-size: 12px;
+        	font-size: 16px;
         	text-anchor: middle;
         }
         @keyframes fadeIn {
@@ -288,10 +281,6 @@
 			  100% {
 			    opacity: 1;
 			  }
-			}
-			.svg-shadow {
-			  -webkit-filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, .3));
-			  filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, .3));
 			}
 
 	</style>
@@ -313,12 +302,14 @@
 
 
 <h2>How-we-roll rapport</h2>
-<p>Her er en visuell fremstilling av gruppe 8A sine innmeldinger i skjema "HowWeRoll". Vi har benyttet SVG-elementer for å vise dataene fra gruppen. </p>
+<p>Her er en visuell fremstilling av gruppe 8A sine innmeldinger i skjema "HowWeRoll".</p>
 
 
-<h4>Når jobber du best?</h4>
-<svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="hours-svg" style='border: 1px solid black;'>
-  <line x1="500" y1="30" x2="500" y2="1000" style="stroke:rgb(42,157,144);stroke-width:2" />
+
+<h1>SVG-elementer:</h1>
+<h4>Når jobber du best? [demo]</h4>
+<svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="hours-svg">
+  <line x1="500" y1="40" x2="500" y2="1000" style="stroke:rgb(42,157,144);stroke-width:2" />
 
   <rect width="1000px" height="30px" fill="#264653"/>
   <g font-size="15" font-family="sans-serif" fill="#e76f51" stroke="none">
@@ -331,8 +322,8 @@
 
 <br>
 <h4>Hvor aktiv er du?</h4>
-<svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="akt-svg" style='border: 1px solid black;'>
-  <line x1="500" y1="30" x2="500" y2="1000" style="stroke:rgb(42,157,144);stroke-width:2" />
+<svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="akt-svg">
+  <line x1="500" y1="40" x2="500" y2="1000" style="stroke:rgb(42,157,144);stroke-width:2" />
   <rect width="1000px" height="30px" fill="#264653"/>
   <g font-size="15" font-family="sans-serif" fill="#e76f51" stroke="none">
     <text x="10" y="20" dx="0" text-anchor="left">SOFAGRIS</text>
@@ -343,8 +334,8 @@
 
 <br>
 <h4>Hvordan foretrekker du å jobbe?</h4>
-<svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="work-svg" style='border: 1px solid black;'>
-  <line x1="500" y1="30" x2="500" y2="1000" style="stroke:rgb(42,157,144);stroke-width:2" />
+<svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="work-svg">
+  <line x1="500" y1="40" x2="500" y2="1000" style="stroke:rgb(42,157,144);stroke-width:2" />
   <rect width="1000px" height="30px" fill="#264653"/>
   <g font-size="15" font-family="sans-serif" fill="#e76f51" stroke="none">
     <text x="10" y="20" dx="0" text-anchor="left">SELVSTENDIG</text>
@@ -355,8 +346,8 @@
 
 <br>
 	<h4>Foretrekker du hjemmekontor eller fysisk oppmøte?</h4>
-<svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="dify-svg" style='border: 1px solid black;'>
-  <line x1="500" y1="30" x2="500" y2="1000" style="stroke:rgb(42,157,144);stroke-width:2" />
+<svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="dify-svg">
+  <line x1="500" y1="40" x2="500" y2="1000" style="stroke:rgb(42,157,144);stroke-width:2" />
   <rect width="1000px" height="30px" fill="#264653"/>
   <g font-size="15" font-family="sans-serif" fill="#e76f51" stroke="none">
     <text x="10" y="20" dx="0" text-anchor="left">HJEMMEKONTOR</text>
@@ -368,8 +359,8 @@
 <br>
 
 	<h4>Foretrekker du å fortelle bakgrunnshistorie eller gå rett på sak?</h4>
-<svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="bgrp-svg" style='border: 1px solid black;'>
-  <line x1="500" y1="30" x2="500" y2="1000" style="stroke:rgb(42,157,144);stroke-width:2" />
+<svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="bgrp-svg">
+  <line x1="500" y1="40" x2="500" y2="1000" style="stroke:rgb(42,157,144);stroke-width:2" />
   <rect width="1000px" height="30px" fill="#264653"/>
   <g font-size="15" font-family="sans-serif" fill="#e76f51" stroke="none">
     <text x="10" y="20" dx="0" text-anchor="left">BAKGRUNNSHISTORIE</text>
@@ -386,51 +377,54 @@
 //Funksjon for å plassere navn på SVG-demo. Trenger en tall-verdi (value), en farge (color) og element-id til SVG (svgID)
 function drawSvgText (value, color, svgID, name) {
 
-	const svg = document.getElementById(svgID); //Setter SVG-element basert på svgID
-	const svgns = "http://www.w3.org/2000/svg"; //
-	let xVal = parseInt(value) * 10; //Ganger verdien med 10 for å tegne inn i SVG-elementet som er 1000px bredt
+	const svg = document.getElementById(svgID);
+	const svgns = "http://www.w3.org/2000/svg";
+	let xVal = parseInt(value) * 10;
 
-//Sjekker om verdien er høyere eller lavere enn 500 for å få øke avstanden mellom punktene, samt sette den totale høyden på SVG-elementet
 	if(xVal < 500) { 
-			svgHeightLeft = svgHeightLeft + 40; //Legger til 35 px til venstre-side
-			svgYvalue = svgHeightLeft; //Setter Y-verdi til den oppdaterte venstre-side verdien
-			svgLeftValueSum = svgLeftValueSum + xVal; //Oppdaterer totalsum for høyden på venstresiden
+			svgHeightLeft = svgHeightLeft + 35; 
+			svgYvalue = svgHeightLeft;
+			svgLeftValueSum = svgLeftValueSum + xVal;
 		} 
 		else { 
-			svgHeightRight = svgHeightRight + 40; //Legger til 35 px til høyre-side
-			svgYvalue = svgHeightRight;  //Setter Y-verdu til den oppdaterte høyre-side verdien
-			svgRightValueSum = svgRightValueSum + xVal; //Oppdaterer totalsum for høyden på høyresiden
+			svgHeightRight = svgHeightRight + 35; 
+			svgYvalue = svgHeightRight; 
+			svgRightValueSum = svgRightValueSum + xVal;
 		}
 
-		//Sjekker om verdien er 0 eller 1000. Legger til eller trekker fra 50px for å unngå at punktene kommer helt ut i kanten på SVG-elementet
-		if(xVal == 0) { xVal = xVal + 50; } //Verdien er 0 og det legges til 50px
-		if(xVal == 1000) { xVal = xVal - 50; } //Verdien er 1000, og det trekkes fra 50px
+		if(xVal == 0) { xVal = xVal + 50; }
+		if(xVal == 1000) { xVal = xVal - 50; }
 
+		console.log("Right: " + svgHeightRight);
+		console.log("Left: " + svgHeightLeft);
 
-	let txtName = document.createElementNS(svgns, 'text'); //Oppretter variabel for å vise navn som SVG
-	txtName.setAttributeNS(null, 'x', xVal); //Setter x-verdi for navn-objektet
-	txtName.setAttributeNS(null, 'y', svgYvalue); //Setter y-verdi for navn-objektet
-	txtName.setAttributeNS(null, 'class', 'svg-text svg-animation'); //Knytter css-klassen svg-text til navn-objektet
-	txtName.textContent = name; //Setter verdien på tekst-elementet, herunder variablenen "name"
+	let nametext = document.createElementNS(svgns, 'text');
+	nametext.setAttributeNS(null, 'x', xVal);
+	nametext.setAttributeNS(null, 'y', svgYvalue);
+	nametext.setAttributeNS(null, 'font-size', '12px');
+	nametext.setAttributeNS(null, 'fill', '#000');
+	nametext.setAttributeNS(null, 'class', 'svg-text');
+	nametext.textContent = name;
 
-	let circle = document.createElementNS(svgns, "circle"); //Oppretter variabel for å vise en sirkel i SVG-elementet
-	circle.setAttributeNS(null, 'cx', xVal); //Setter x-verdi
-	circle.setAttributeNS(null, 'cy', svgYvalue); //Setter y-verdi
-	circle.setAttributeNS(null, 'r', 25); //Setter radius på sirkelen
-	circle.setAttributeNS(null, 'style', 'fill: '+color ); //Setter farge på sirkelen
-	circle.setAttributeNS(null, 'class', 'svg-animation svg-shadow');
+	let newCircle = document.createElementNS(svgns, "circle");
+	newCircle.setAttributeNS(null, 'cx', xVal);
+	newCircle.setAttributeNS(null, 'cy', svgYvalue+10);
+	newCircle.setAttributeNS(null, 'r', 10);
+	newCircle.setAttributeNS(null, 'style', 'fill: '+color );
+	newCircle.setAttributeNS(null, 'class', 'svg');
 
-
-	let txtValue = document.createElementNS(svgns, 'text');
-	txtValue.setAttributeNS(null, 'x', xVal);
-	txtValue.setAttributeNS(null, 'y', svgYvalue+15);
-	txtValue.setAttributeNS(null, 'class', 'svg-num svg-animation');
-	txtValue.textContent = value;
+	let valtext = document.createElementNS(svgns, 'text');
+	valtext.setAttributeNS(null, 'x', xVal);
+	valtext.setAttributeNS(null, 'y', svgYvalue+15);
+	valtext.setAttributeNS(null, 'font-size', '12px');
+	valtext.setAttributeNS(null, 'fill', '#000');
+	valtext.setAttributeNS(null, 'text-anchor', 'middle');
+	valtext.textContent = value;
 
 	//Legger til sirkelen til svg-elementet
-	svg.appendChild(circle);
-	svg.appendChild(txtName);
-	svg.appendChild(txtValue);
+	svg.appendChild(newCircle);
+	svg.appendChild(nametext);
+	svg.appendChild(valtext);
 	}
 
 
@@ -446,25 +440,23 @@ Promise.all([
   fetch('https://bacit.info/hwr/20211004193742-933a4cf17a4bfc1f3904ba223102ac12.json').then(response => response.json()), //Zeyd
   ])
   .then((data) => {
-
-  	//Henter ut data for hver enkelt person i en egen variabel/array for å gjøre oversikten i koden bedre. Hadde det vært et dynamisk system så hadde ikke dette vært nødvendig/mulig
+  	//Henter ut data for hver enkelt person i en egen variabel/array
 	 let eirik = data[0]; 
 	 let theodor = data[1]; 
 	 let truls = data[2]; 
 	 let marius = data[3]; 
 	 let thomas = data[4];
+
 	 let jacob = data[5]; 
 	 let magnus = data[6]; 
 	 let zeyd = data[7]; 
   
-		//Setter variablene for Y verdi av innholdet i dette SVG-elementet
-  	svgYvalue = 0; //Totalhøyde på SVG-elementet
-		svgHeightLeft = 25; //Høyde på venstre-side i SVG-elementet
-		svgHeightRight = 25; //Høyde på høyre-side i SVG-elementet
-		svgLeftValueSum = 0; //Totalhøyde for venstre-side i SVG-elementet
-		svgRightValueSum = 0; //Totalhøyde for høyre-side i SVG-elementet
-
-		//Bruker funksjonen drawSvgText til å generere svg-elementene til hours-svg
+		  //Hours
+  	svgYvalue = 0;
+		svgHeightLeft = 25;
+		svgHeightRight = 25;
+		svgLeftValueSum = 0;
+		svgRightValueSum = 0;
 		drawSvgText(eirik.hours, "#b9b9b9", "hours-svg", eirik.fname);
 		drawSvgText(theodor.hours, "#7dcc6f", "hours-svg", theodor.fname);
 		drawSvgText(truls.hours, "#8fdeff", "hours-svg", truls.fname);
@@ -473,20 +465,10 @@ Promise.all([
 		drawSvgText(jacob.hours, "#8f62e1", "hours-svg", jacob.fname);
 		drawSvgText(magnus.hours, "#7bdc5e", "hours-svg", magnus.fname);
 		drawSvgText(zeyd.hours, "#faa5f2", "hours-svg", zeyd.fname);
-
-		//Sjekker hvilken side som er høyest, og bruker deretter den høyeste til å sette "height" på SVG-elementet hours-svg
-  	if(svgHeightRight < svgHeightLeft) 
-  	{ 
-  		svgYvalue = svgHeightLeft; //Venstre side er høyest
-  	} 
-  	else { 
-  		svgYvalue = svgHeightRight; //Høyre side er høyest
-  	}
-  	//Endrer høyden på SVG-elementet
+  	if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
 		document.getElementById('hours-svg').setAttribute("height", svgYvalue+40);
 
-		
-		//Akt
+		  //Akt
   	svgYvalue = 0;
 		svgHeightLeft = 25;
 		svgHeightRight = 25;
