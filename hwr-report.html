@@ -39,6 +39,7 @@
 			overflow: hidden;
 			background-color: #264653;
 			padding-left: 50px;
+			padding-right: 15px;
 		}
 		.topnav a {
 			float: left;
@@ -62,9 +63,28 @@
 			padding: 6px;
 			border: none;
 			margin-top: 8px;
-			margin-right: 16px;
+			margin-right: 3px;
 			font-size: 17px;
 		}
+		.topnav input[type=button]{
+            float:right;
+            border: none;
+            margin-top: 6px;
+            margin-right: 16;
+            background-color: #264563 ;
+            font-size: 16px;
+            cursor: pointer;
+            height: 36px;
+            width: 60px;
+            border: none;
+            color: white;
+            align-items: center;
+        }
+        .topnav input[type=button]:hover{
+            font-weight: bolder;
+            background-color:#2A9D8F ;
+            color: #264563;
+        }
 		h4 {
 			padding-top: 40px;
 			padding-bottom: 0px;
@@ -249,7 +269,8 @@
 	<a href="index.html">Hjem</a>
 	<a href="how-we-roll.html">Profil</a>
 	<a class="active" href="hwr-report.html">Rapport</a>
-	<input type="text" placeholder="Søk...">
+	<input type="button" value="Søk" onclick="OnlyAPlaceHolder()">
+    <input type="text" placeholder="Søk...">
 </div>
 <div class="main-content">
 
@@ -491,6 +512,11 @@ Promise.all([
 
 
   });
+
+// just an alert message for when users try to use the search bar
+function OnlyAPlaceHolder(){
+	  alert("this item doesn't have much functionality yet and is only a placeholder")
+  }
 
 </script>
 </html>
