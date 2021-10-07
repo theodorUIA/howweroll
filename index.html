@@ -63,7 +63,7 @@
 			padding: 6px;
 			border: none;
 			margin-top: 8px;
-			margin-right: 16px;
+			margin-right: 3px;
 			font-size: 17px;
 		}
 		.topnav input[type=button]{
@@ -212,7 +212,7 @@
 	<a class="active" href="index.html">Hjem</a>
 	<a href="how-we-roll.html">Profil</a>
 	<a href="hwr-report.html">Rapport</a>
-	<input type="button" value="Søk">
+	<input type="button" value="Søk" onclick="OnlyAPlaceHolder()">
     <input type="text" placeholder="Søk...">
 </div>
 
@@ -351,6 +351,10 @@ Promise.all([
 	 let zeyd = data[7];
 	 skrivUtData(zeyd); 
   });
+
+  function OnlyAPlaceHolder(){
+	  alert("this item doesn't have much functionality yet and is only a placeholder")
+  }
 		</script>
 
 </body>

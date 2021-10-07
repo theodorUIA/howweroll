@@ -39,6 +39,7 @@
 			overflow: hidden;
 			background-color: #264653;
 			padding-left: 50px;
+			padding-right: 15px;
 		}
 		.topnav a {
 			float: left;
@@ -62,7 +63,7 @@
 			padding: 6px;
 			border: none;
 			margin-top: 8px;
-			margin-right: 16px;
+			margin-right: 3px;
 			font-size: 17px;
 		}
 		.topnav input[type=button]{
@@ -272,7 +273,7 @@
 	<a href="index.html">Hjem</a>
 	<a href="how-we-roll.html">Profil</a>
 	<a class="active" href="hwr-report.html">Rapport</a>
-	<input type="button" value="Søk">
+	<input type="button" value="Søk" onclick="OnlyAPlaceHolder()">
     <input type="text" placeholder="Søk...">
 </div>
 <div class="main-content">
@@ -557,5 +558,9 @@ Promise.all([
 
 document.getElementById('hours-svg-compare').setAttribute("height", svgYvalue+200);
 
+function OnlyAPlaceHolder(){
+	  alert("this item doesn't have much functionality yet and is only a placeholder")
+  }
+  
 </script>
 </html>
