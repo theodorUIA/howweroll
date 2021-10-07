@@ -85,84 +85,12 @@
 			}
     }
 
-/* Form styles */
-		.form-div {
-			max-width: 600px;
-		}
-		.form-table {
-			width: 100%;
-		}
-		.form-ferdigheter {
-            border-radius: 4px;
-            font-size: 15px;
-            border: 1px solid #8C8C8C;
-            padding: 7px;
-        }
-        .slider {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 5px;
-            background: #2A9D8F;
-            outline: none;
-            opacity: 0.7;
-            -webkit-transition: .2s;
-            transition: opacity .2s;
-        }
-        .slider:hover{
-            opacity: 1;
-        }
-        .slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            background: #264653;
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
-            border-radius: 50%;
-        }
-        .slidercontainer{
-            width: 100%;
-            border: 0px solid black;
-        }
-        .slidercontainer td{
-            border: 0px solid black;
-            width: 33.3%;
-        }
-        .form-textinput {
-            border-radius: 4px;
-            font-size: 15px;
-            border: 1px solid #8C8C8C;
-            padding: 7px;
-        }
-
-        .submit
-        {
-            color: white;
-        }
-        .submit:hover
-        {
-            font-weight: bold;
-            border-radius: 50%;
-            
-        }
-        .btn
-        {
-        background-color: #2A9D8F ;
-        font-size: 16px;
-        cursor: pointer;
-        height: 40px;
-        width: 140px;
-        border-radius: 12px;
-        border: none;
-        }
-        .btncontainer
-        {
-            text-align: center;
-            width: 100%;
-        }
 </style>
 </head>
 <body>
+
+<!-----------------Header------------------->
+
 <div class="header"><span class="header-text">How We Roll</span></div>
 <div class="topnav">
 
@@ -171,44 +99,143 @@
 	<a href="hwr-report.html">Rapport</a>
 	<input type="text" name="" placeholder="Søk...">
 </div>
+
+<!------Overskrift på hjemsiden------>
+
 <div class="main-content">
 <h2>Velkommen til How We Roll</h2>
   <p>I dette verktøyet kan du registrere din profil og sammenlikne dine preferanser med andre, for å bedre bli kjent med gruppen/teamet du jobber i.</p>
 
+	<!-----------Visittkort----------->
 
-	<div class='card-container'>
-	<div class='card-div card-bg-color'>
-		<div class='card-image-div'>
-			<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
-		</div>
-		<div class='card-information-div'>William
-		</div>
-	</div>
+<div id="visittkort-container" width="100%">
+	
 
-	<div class='card-div card-bg-color'>
-		<div class='card-image-div'>
-			<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
-		</div>
-		<div class='card-information-div'>Marcus
-		</div>
-	</div>
-
-		<div class='card-div card-bg-color'>
-			<div class='card-image-div'>
-				<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
-			</div>
-			<div class='card-information-div'>Erlend
-			</div>
-		</div>
-
-			<div class='card-div card-bg-color'>
-				<div class='card-image-div'>
-					<img class='card-image' alt='Profilbilde' src='profilbilde-mann.jpg'>
-				</div>
-				<div class='card-information-div'>Sunniva
-				</div>
-		</div>
-	</div>
 </div>
+
+
+		<script>
+
+function skrivUtData(data) {
+
+	let mail = data.Email; //Hente ut mail fra Email-variabel
+ 	
+ 	//We fucked up, but fixed it..isj
+	if(mail === undefined) { 
+		mail = data.email;  //Hente ut mail på de som har sendt inn skjema etter endring av variabel
+	}
+
+	let hours = "";
+	let akt = "";
+	let work = "";
+	let dify = "";
+	let bgrp = "";
+
+	//Generaliserer verdiene fra how-we-roll
+	if(data.hours < 50 ) { hours = "Morgenfugl ("+data.hours+")"; } 
+	else { hours = "Natteravn ("+ data.hours +")"; }
+
+	if(data.akt < 50 ) { akt = "Sofagris ("+data.akt+")"; } 
+	else { akt = "Atletisk ("+data.akt+")";	}
+
+	if(data.work < 50 ) { work = "Hjemmekontor ("+data.work+")"; } 
+	else { work = "Samarbeid ("+data.work+")"; }
+
+	if(data.dify < 50 ) { dify = "Selvstendig ("+data.dify+")"; } 
+	else { dify = "Fysisk ("+data.dify+")<br>"; }
+
+	if(data.bgrp < 50 ) { bgrp = "Bakgrunnshistorie ("+data.bgrp+")"; } 
+	else { bgrp = "Rett på sak ("+data.bgrp+")"; }
+
+	//Oppretter profil fra data
+	let ProfileData = data.fname + " " + data.lname + "<br>" + "Tlf: " + data.phone + "<br>" + mail;
+
+	//Oppretter hwr profil
+	let hwrInfo = "";
+
+	//Hente ut alle verdier i enkelt-variabler
+		hwrInfo += "Mine ferdigheter er; <b>" + data.ferdigheter + "</b><br><br>";
+		hwrInfo += "Jeg er en <b>" + hours + "</b>, og ";
+		hwrInfo += "<b>" + akt + "</b>.<br><br>";
+		hwrInfo += "Jeg foretrekker <b>" + work + "</b>, og å jobbe ";
+		hwrInfo += "<b>" + dify + "</b><br><br>";
+		hwrInfo += "Bakgrunnshistorie eller gå rett på sak? <b>" + bgrp + "</b";
+
+
+	//Oppretter visittkortet
+
+	//Div for how-we-roll informasjon
+	let kortDIVhwr = document.createElement('div');
+		kortDIVhwr.setAttribute('class', 'visittkort-how-we-roll');
+		kortDIVhwr.innerHTML = hwrInfo;
+
+	//Div for profilinformasjon
+	let kortDIVprofil = document.createElement('div');
+		kortDIVprofil.setAttribute('class', 'visittkort-profile');
+		kortDIVprofil.innerHTML= ProfileData;
+
+	//IMG for profilbilde
+	let profilIMG = document.createElement('img');
+		profilIMG.setAttribute('style', 'max-height: 100px; max-width:200px');
+		profilIMG.setAttribute('src', 'profilbilde-mann.jpg');
+
+	//Div for bilde
+	let kortDIVimgContainer = document.createElement('div');
+		kortDIVimgContainer.setAttribute('class', 'visittkort-img-container');
+		kortDIVimgContainer.appendChild(profilIMG);
+
+	//Div for visittkort
+	let kortDIVmain = document.createElement('div');
+		kortDIVmain.setAttribute('class', 'visittkort-main');
+		kortDIVmain.appendChild(kortDIVimgContainer);
+		kortDIVmain.appendChild(kortDIVprofil);
+		kortDIVmain.appendChild(kortDIVhwr);
+
+
+
+	document.getElementById("visittkort-container").append(kortDIVmain);
+
+	console.log(data);
+}
+
+Promise.all([
+  fetch('https://bacit.info/hwr/20211001094058-34dc0beed53ce17dd663f6e087108c9d.json').then(response => response.json()), //Eirik
+  fetch('https://bacit.info/hwr/20211001093746-d8cb56df33e70d2ef254d6c80ea38775.json').then(response => response.json()), //Theodor
+  fetch('https://bacit.info/hwr/20211001094627-7fa2d75c27d4f4cba1ecc00495324c36.json').then(response => response.json()), //Truls
+  fetch('https://bacit.info/hwr/20211001094831-ba9e391bae4b7a39f06be4f8a19a7823.json').then(response => response.json()), //Marius
+  fetch('https://bacit.info/hwr/20211005113204-b6cfa28db27ae79a0bbf35470e248e88.json').then(response => response.json()), //Thomas
+  fetch('https://bacit.info/hwr/20211004103333-c240a2e1dfbe3426bf1e6a2bb1eadbce.json').then(response => response.json()), //Jacob
+  fetch('https://bacit.info/hwr/20211004103455-8cbc00dea8a541d0c092099f4c8bde96.json').then(response => response.json()), //Magnus
+  fetch('https://bacit.info/hwr/20211004193742-933a4cf17a4bfc1f3904ba223102ac12.json').then(response => response.json()), //Zeyd
+  ])
+  .then((data) => {
+  	//Henter ut data for hver enkelt person i en egen variabel/array
+
+	 let eirik = data[0]; 
+	 skrivUtData(eirik);
+
+	 let theodor = data[1]; 
+	 skrivUtData(theodor);
+
+	 let truls = data[2]; 
+	 skrivUtData(truls);
+
+	 let marius = data[3]; 
+	 skrivUtData(marius);
+
+	 let thomas = data[4];
+	 skrivUtData(thomas); 
+
+	 let jacob = data[5];
+	 skrivUtData(jacob); 
+
+	 let magnus = data[6];
+	 skrivUtData(magnus); 
+
+	 let zeyd = data[7];
+	 skrivUtData(zeyd); 
+  });
+		</script>
+
 </body>
 </html>
