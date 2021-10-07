@@ -152,8 +152,6 @@ function drawSvgText (value, color, svgID, name) {
 	txtValue.setAttributeNS(null, 'class', 'svg-num svg-animation');
 	txtValue.textContent = value;
 
-  console.log("Right: "+svgHeightRight + name);
-  console.log("Left: "+svgHeightLeft + name);
 	//Legger til sirkelen til svg-elementet
 	svg.appendChild(circle);
 	svg.appendChild(txtName);
@@ -163,18 +161,26 @@ svgYvalue = 0; //Totalhøyde på SVG-elementet
 svgHeightLeft = 25; //Høyde på venstre-side i SVG-elementet
 svgHeightRight = 25; //Høyde på høyre-side i SVG-elementet
 
-//Henter ut data fra bacit.info ved bruk av fetch(). Data struktureres i Json-format
-Promise.all([
-  fetch('https://bacit.info/hwr/20211001094058-34dc0beed53ce17dd663f6e087108c9d.json').then(response => response.json()), //Eirik
-  fetch('https://bacit.info/hwr/20211001093746-d8cb56df33e70d2ef254d6c80ea38775.json').then(response => response.json()), //Theodor
-  fetch('https://bacit.info/hwr/20211001094627-7fa2d75c27d4f4cba1ecc00495324c36.json').then(response => response.json()), //Truls
-  fetch('https://bacit.info/hwr/20211001094831-ba9e391bae4b7a39f06be4f8a19a7823.json').then(response => response.json()), //Marius
-  fetch('https://bacit.info/hwr/20211005113204-b6cfa28db27ae79a0bbf35470e248e88.json').then(response => response.json()), //Thomas
-  fetch('https://bacit.info/hwr/20211004103333-c240a2e1dfbe3426bf1e6a2bb1eadbce.json').then(response => response.json()), //Jacob
-  fetch('https://bacit.info/hwr/20211004103455-8cbc00dea8a541d0c092099f4c8bde96.json').then(response => response.json()), //Magnus
-  fetch('https://bacit.info/hwr/20211004193742-933a4cf17a4bfc1f3904ba223102ac12.json').then(response => response.json()), //Zeyd
-  ])
-  .then((data) => {
+
+  let urls = [
+    'https://bacit.info/hwr/20211001094058-34dc0beed53ce17dd663f6e087108c9d.json',
+    'https://bacit.info/hwr/20211001093746-d8cb56df33e70d2ef254d6c80ea38775.json',
+    'https://bacit.info/hwr/20211001094627-7fa2d75c27d4f4cba1ecc00495324c36.json',
+    'https://bacit.info/hwr/20211001094831-ba9e391bae4b7a39f06be4f8a19a7823.json',
+    'https://bacit.info/hwr/20211005113204-b6cfa28db27ae79a0bbf35470e248e88.json',
+    'https://bacit.info/hwr/20211004103333-c240a2e1dfbe3426bf1e6a2bb1eadbce.json',
+    'https://bacit.info/hwr/20211004103455-8cbc00dea8a541d0c092099f4c8bde96.json',
+    'https://bacit.info/hwr/20211004193742-933a4cf17a4bfc1f3904ba223102ac12.json',
+  ]
+
+  if (localStorage.trxid) {
+      let last_trxid = localStorage.getItem("trxid");
+      let last_time = localStorage.getItem("time");
+      urls.push('https://bacit.info/hwr/'+last_time+'-'+last_trxid+'.json'); //Legger til URL til urls array
+    }
+
+  let requests = urls.map(url => fetch(url).then(response => response.json()));
+  Promise.all(requests).then((data) => {
 
   	//Henter ut data for hver enkelt person i en egen variabel/array for å gjøre oversikten i koden bedre. Hadde det vært et dynamisk system så hadde ikke dette vært nødvendig/mulig
 	 let eirik = data[0]; 
@@ -186,6 +192,7 @@ Promise.all([
 	 let magnus = data[6];
 	 let zeyd = data[7];
 
+	 
 
 		//Setter variablene for Y verdi av innholdet i dette SVG-elementet
   	svgYvalue = 0; //Totalhøyde på SVG-elementet
@@ -201,15 +208,8 @@ Promise.all([
 		drawSvgText(jacob.hours, "#8f62e1", "hours-svg", jacob.fname);
 		drawSvgText(magnus.hours, "#7bdc5e", "hours-svg", magnus.fname);
 		drawSvgText(zeyd.hours, "#faa5f2", "hours-svg", zeyd.fname);
-    if (localStorage.trxid) {
-      let last_trxid = localStorage.getItem("trxid");
-      let last_time = localStorage.getItem("time");
-      fetch('https://bacit.info/hwr/'+last_time+'-'+last_trxid+'.json')
-              .then(response => response.json())
-              .then(data => {
-                drawSvgText(data.hours, "#faa5f2", "hours-svg", data.fname);
-              });
-    }
+	 if (localStorage.trxid) { drawSvgText(data[8].hours, "#e36256", "hours-svg", data[8].fname); }
+
     //Sjekker hvilken side som er høyest, og bruker deretter den høyeste til å sette "height" på SVG-elementet hours-svg
     if(svgHeightRight < svgHeightLeft)
     {
@@ -237,15 +237,8 @@ Promise.all([
 		drawSvgText(jacob.akt, "#8f62e1", "akt-svg", jacob.fname);
 		drawSvgText(magnus.akt, "#7bdc5e", "akt-svg", magnus.fname);
 		drawSvgText(zeyd.akt, "#faa5f2", "akt-svg", zeyd.fname);
-    if (localStorage.trxid) {
-      let last_trxid = localStorage.getItem("trxid");
-      let last_time = localStorage.getItem("time");
-      fetch('https://bacit.info/hwr/' + last_time + '-' + last_trxid + '.json')
-              .then(response => response.json())
-              .then(data => {
-                drawSvgText(data.akt, "#faa5f2", "akt-svg", data.fname);
-              });
-    }
+	 if (localStorage.trxid) { drawSvgText(data[8].akt, "#e36256", "akt-svg", data[8].fname); }
+
   	if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
 		document.getElementById('akt-svg').setAttribute("height", svgYvalue+40);
 
@@ -263,15 +256,8 @@ Promise.all([
 		drawSvgText(jacob.work, "#8f62e1", "work-svg", jacob.fname);
 		drawSvgText(magnus.work, "#7bdc5e", "work-svg", magnus.fname);
 		drawSvgText(zeyd.work, "#faa5f2", "work-svg", zeyd.fname);
-    if (localStorage.trxid) {
-      let last_trxid = localStorage.getItem("trxid");
-      let last_time = localStorage.getItem("time");
-      fetch('https://bacit.info/hwr/'+last_time+'-'+last_trxid+'.json')
-              .then(response => response.json())
-              .then(data => {
-                drawSvgText(data.work, "#faa5f2", "work-svg", data.fname);
-              });
-    }
+	 if (localStorage.trxid) { drawSvgText(data[8].work, "#e36256", "work-svg", data[8].fname); }
+
   	if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
 		document.getElementById('work-svg').setAttribute("height", svgYvalue+40);
 
@@ -289,15 +275,8 @@ Promise.all([
 		drawSvgText(jacob.dify, "#8f62e1", "dify-svg", jacob.fname);
 		drawSvgText(magnus.dify, "#7bdc5e", "dify-svg", magnus.fname);
 		drawSvgText(zeyd.dify, "#faa5f2", "dify-svg", zeyd.fname);
-    if (localStorage.trxid) {
-      let last_trxid = localStorage.getItem("trxid");
-      let last_time = localStorage.getItem("time");
-      fetch('https://bacit.info/hwr/'+last_time+'-'+last_trxid+'.json')
-              .then(response => response.json())
-              .then(data => {
-                drawSvgText(data.dify, "#faa5f2", "dify-svg", data.fname);
-              });
-    }
+	 if (localStorage.trxid) { drawSvgText(data[8].dify, "#e36256", "dify-svg", data[8].fname); }
+
   	if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
 		document.getElementById('dify-svg').setAttribute("height", svgYvalue+40);
 
@@ -316,18 +295,8 @@ Promise.all([
 		drawSvgText(jacob.bgrp, "#8f62e1", "bgrp-svg", jacob.fname);
 		drawSvgText(magnus.bgrp, "#7bdc5e", "bgrp-svg", magnus.fname);
 		drawSvgText(zeyd.bgrp, "#faa5f2", "bgrp-svg", zeyd.fname);
+	 if (localStorage.trxid) { drawSvgText(data[8].bgrp, "#e36256", "bgrp-svg", data[8].fname); }
 
-    console.log(svgYvalue);
-    if (localStorage.trxid) {
-      let last_trxid = localStorage.getItem("trxid");
-      let last_time = localStorage.getItem("time");
-      fetch('https://bacit.info/hwr/'+last_time+'-'+last_trxid+'.json')
-              .then(response => response.json())
-              .then(data => {
-                console.log(svgYvalue);
-                drawSvgText(data.bgrp, "#faa5f2", "bgrp-svg", data.fname);
-              });
-    }
   	if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
 		document.getElementById('bgrp-svg').setAttribute("height", svgYvalue+40);
   });

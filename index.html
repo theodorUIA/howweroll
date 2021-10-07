@@ -37,8 +37,6 @@
 
 function skrivUtData(data, color) {
 
-	console.log(color);
-
 	let mail = data.Email; //Hente ut mail fra Email-variabel
 
  	//We fucked up, but fixed it..isj
@@ -165,7 +163,7 @@ if (localStorage.trxid) {
 	let last_time = localStorage.getItem("time");
 	fetch('https://bacit.info/hwr/'+last_time+'-'+last_trxid+'.json')
 			.then(response => response.json())
-			.then(data => skrivUtData(data,"#d164a9"));
+			.then(data => skrivUtData(data,"#e36256"));
 }
 // just an alert message for when users try to use the search bar
   function OnlyAPlaceHolder(){
