@@ -3,252 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>HowWeRoll</title>
-	<style type="text/css">
-		
-	/*-----------CSS som er felles for hele prosjektet -----------*/
-		.text-align-left{ text-align: left; }
-		.text-align-right{  text-align: right; }
-		.text-align-center{ text-align: center; }
-		
-		body {
-			margin: 0px;
-			font-family: Arial;
-		}
-		.header{
-			text-align: left;
-			background-color: #264653;
-			height: 30px;
-			padding-top: 30px;
-			padding-bottom: 30px;
-			padding-left: 50px;
-
-		}
-		.header-text{
-			font-style: italic;
-			font-size: 30px;
-			font-family: Arial;
-			color: white;
-		}
-
-		/* Div som omkranser innhold utenom header */
-		.main-content {
-            padding: 25px 25px 25px 50px;
-        }
-		/* Meny i header  */
-		.topnav {
-			overflow: hidden;
-			background-color: #264653;
-			padding-left: 50px;
-		}
-		.topnav a {
-			float: left;
-			display: block;
-			color: #e76f51;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-			font-size: 17px;
-		}
-		.topnav a:hover {
-			background-color: #e76f51;
-			color: #264563;
-		}
-		.topnav a.active {
-			background-color: #2A9D8F;
-			color: #264563;
-		}
-		.topnav input[type=text] {
-			float: right;
-			padding: 6px;
-			border: none;
-			margin-top: 8px;
-			margin-right: 16px;
-			font-size: 17px;
-		}
-		h4 {
-			padding-top: 40px;
-			padding-bottom: 0px;
-			margin: 0px;
-		}
-	/* Meny når skjermen er mindre enn 600px */
-		@media screen and (max-width: 600px) {
-			.topnav a, .topnav input[type=text] {
-				float: none;
-				display: block;
-				text-align: left;
-				width: 100%;
-				margin: 0;
-				padding: 14px;
-			}
-			.topnav input[type=text] {
-				border: 1px solid #ccc;
-			}
-    }
-
-	/* Visittkort style */
-			.card-container {
-				display: flex;
-				flex-direction: row;
-				flex-flow: center;
-				flex-wrap: wrap;
-				justify-content: space-evenly;
-			}
-			.card-div {
-				flex-basis: 15em;
-				align-self: center;
-				border: 1px solid black;
-				border-radius: 1px;
-				margin-left: 0.3em;
-				margin-right: 0.3em;
-				margin-bottom: 1.5em;
-				transition: 0.3s ease;
-				border-radius: 6px;
-				overflow:  hidden;
-				box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-			}
-			.card-div:hover{
-				cursor: pointer;
-				box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-			}
-			.card-information-div {
-				margin-left: 2em;
-				margin-right: 2em;
-				margin-top:  1em;
-				margin-bottom: 1em;
-				padding: 10px;
-				font-size: 1em;
-				font-family: arial;
-				text-align: center;
-				color: white;
-
-			}
-			.card-image-div {
-				background: white;
-				max-height: 300px;
-				overflow: hidden;
-				justify-content: center;
-				align-items: center;
-				position: relative;
-			}
-			.card-image {
-				max-width: 100%;
-				max-height:  100%;
-				transition: 0.7s ease;
-			}
-			.card-image:hover {
-				transition: 0.7s ease;
-				-webkit-transform: scale(1.2);
-				-ms-transform: scale(1.2);
-				transform: scale(1.2);
-			}
-			.card-bg-color {
-				background-color: #264653;
-			}
-
-/* Form styles */
-		.form-div {
-			max-width: 600px;
-		}
-		.form-table {
-			width: 100%;
-		}
-		.form-ferdigheter {
-            border-radius: 4px;
-            font-size: 15px;
-            border: 1px solid #8C8C8C;
-            padding: 7px;
-        }
-        .slider {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 5px;
-            background: #2A9D8F;
-            outline: none;
-            opacity: 0.7;
-            -webkit-transition: .2s;
-            transition: opacity .2s;
-        }
-        .slider:hover{
-            opacity: 1;
-        }
-        .slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            background: #264653;
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
-            border-radius: 50%;
-        }
-        .slidercontainer{
-            width: 100%;
-            border: 0px solid black;
-        }
-        .slidercontainer td{
-            border: 0px solid black;
-            width: 33.3%;
-        }
-        .form-textinput {
-            border-radius: 4px;
-            font-size: 15px;
-            border: 1px solid #8C8C8C;
-            padding: 7px;
-        }
-
-        .submit
-        {
-            color: white;
-        }
-        .submit:hover
-        {
-            font-weight: bold;
-            border-radius: 50%;
-        }
-        
-        .svg-animation {
-         	animation: 1s ease-out 0s 1 fadeIn;
-					animation-direction: alternate; 
-        }
-        .svg-text {
-         	animation: 1s ease-out 0s 1 fadeIn;
-        	font-size: 12px;
-        	text-anchor: middle;
-        	font-weight: bold;
-        }
-        .svg-num {
-         	animation: 1s ease-out 0s 1 fadeIn;
-        	font-size: 12px;
-        	text-anchor: middle;
-        }
-        @keyframes fadeIn {
-			  0% {
-			    opacity: 0;
-			  }
-			  100% {
-			    opacity: 1;
-			  }
-			}
-			.svg-shadow {
-			  -webkit-filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, .3));
-			  filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, .3));
-			}
-        .btn
-        {
-        background-color: #2A9D8F ;
-        font-size: 16px;
-        cursor: pointer;
-        height: 40px;
-        width: 140px;
-        border-radius: 12px;
-        border: none;
-        }
-        .btncontainer
-        {
-            text-align: center;
-            width: 100%;
-        }
-
-	</style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -260,7 +15,8 @@
 	<a href="index.html">Hjem</a>
 	<a href="how-we-roll.html">Profil</a>
 	<a class="active" href="hwr-report.html">Rapport</a>
-	<input type="text" placeholder="Søk...">
+	<input type="button" value="Søk" onclick="OnlyAPlaceHolder()">
+    <input type="text" placeholder="Søk...">
 </div>
 <div class="main-content"> 
 
@@ -525,9 +281,12 @@ Promise.all([
 		drawSvgText(zeyd.bgrp, "#faa5f2", "bgrp-svg", zeyd.fname);
   	if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
 		document.getElementById('bgrp-svg').setAttribute("height", svgYvalue+40);
-
-
   });
+
+// just an alert message for when users try to use the search bar
+function OnlyAPlaceHolder(){
+	  alert("this item doesn't have much functionality yet and is only a placeholder")
+  }
 
 </script>
 </html>
