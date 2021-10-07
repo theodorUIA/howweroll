@@ -220,6 +220,23 @@
             text-align: center;
             width: 100%;
         }
+        .svg {
+         	animation: 1s ease-out 0s 1 fadeIn;
+        }
+        .svg-text {
+         	animation: 1s ease-out 0s 1 fadeIn;
+        	font-size: 16px;
+        	text-anchor: middle;
+        }
+        @keyframes fadeIn {
+			  0% {
+			    opacity: 0;
+			  }
+			  100% {
+			    opacity: 1;
+			  }
+			}
+
 	</style>
 </head>
 <body>
@@ -243,54 +260,52 @@
 
 
 <h1>SVG-elementer:</h1>
-<h4>Når jobber du best?</h4>
+<h4>Når jobber du best? [demo]</h4>
 <svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="hours-svg">
-  <line x1="0" y1="40" x2="1000" y2="40" style="stroke:rgb(42,157,144);stroke-width:2" />
+  <line x1="500" y1="40" x2="500" y2="1000" style="stroke:rgb(42,157,144);stroke-width:2" />
 
-  <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
-  text-anchor="left">
-    <text x="0" y="65" dx="0">Morgenfugl</text>
-    <text x="475" y="65" dx="0">Nøytral</text>
-    <text x="933" y="65" dx="0">Natteravn</text>
+  <rect width="1000px" height="30px" fill="#264653"/>
+  <g font-size="15" font-family="sans-serif" fill="#e76f51" stroke="none">
+    <text x="10" y="20" dx="0" text-anchor="left">MORGENFUGL</text>
+    <text x="500" y="20" dx="0" text-anchor="middle">NØYTRAL</text>
+    <text x="900" y="20" dx="0" text-anchor="right">NATTERAVN</text>
   </g>
+    
 </svg>
 
 <br>
 <h4>Hvor aktiv er du?</h4>
 <svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="akt-svg">
-  <line x1="0" y1="40" x2="1000" y2="40" style="stroke:rgb(42,157,144);stroke-width:2" />
-
-  <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
-  text-anchor="left">
-    <text x="0" y="65" dx="0">Sofagris</text>
-    <text x="475" y="65" dx="0">Nøytral</text>
-    <text x="940" y="65" dx="0">Atletisk</text>
+  <line x1="500" y1="40" x2="500" y2="1000" style="stroke:rgb(42,157,144);stroke-width:2" />
+  <rect width="1000px" height="30px" fill="#264653"/>
+  <g font-size="15" font-family="sans-serif" fill="#e76f51" stroke="none">
+    <text x="10" y="20" dx="0" text-anchor="left">SOFAGRIS</text>
+    <text x="500" y="20" dx="0" text-anchor="middle">NØYTRAL</text>
+    <text x="900" y="20" dx="0" text-anchor="right">ATLETISK</text>
   </g>
 </svg>
 
 <br>
 <h4>Hvordan foretrekker du å jobbe?</h4>
 <svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="work-svg">
-  <line x1="0" y1="40" x2="1000" y2="40" style="stroke:rgb(42,157,144);stroke-width:2" />
-
-  <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
-  text-anchor="left">
-    <text x="0" y="65" dx="0">Selvstendig</text>
-    <text x="475" y="65" dx="0">Nøytral</text>
-    <text x="920" y="65" dx="0">Samarbeid</text>
+  <line x1="500" y1="40" x2="500" y2="1000" style="stroke:rgb(42,157,144);stroke-width:2" />
+  <rect width="1000px" height="30px" fill="#264653"/>
+  <g font-size="15" font-family="sans-serif" fill="#e76f51" stroke="none">
+    <text x="10" y="20" dx="0" text-anchor="left">SELVSTENDIG</text>
+    <text x="500" y="20" dx="0" text-anchor="middle">NØYTRAL</text>
+    <text x="900" y="20" dx="0" text-anchor="right">SAMARBEID</text>
   </g>
 </svg>
 
 <br>
 	<h4>Foretrekker du hjemmekontor eller fysisk oppmøte?</h4>
 <svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="dify-svg">
-  <line x1="0" y1="40" x2="1000" y2="40" style="stroke:rgb(42,157,144);stroke-width:2" />
-
-  <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
-  text-anchor="left">
-    <text x="0" y="65" dx="0">Hjemmekontor</text>
-    <text x="475" y="65" dx="0">Nøytral</text>
-    <text x="950" y="65" dx="0">Fysisk</text>
+  <line x1="500" y1="40" x2="500" y2="1000" style="stroke:rgb(42,157,144);stroke-width:2" />
+  <rect width="1000px" height="30px" fill="#264653"/>
+  <g font-size="15" font-family="sans-serif" fill="#e76f51" stroke="none">
+    <text x="10" y="20" dx="0" text-anchor="left">HJEMMEKONTOR</text>
+    <text x="500" y="20" dx="0" text-anchor="middle">NØYTRAL</text>
+    <text x="900" y="20" dx="0" text-anchor="right">FYSISK</text>
   </g>
 </svg>
 
@@ -298,13 +313,12 @@
 
 	<h4>Foretrekker du å fortelle bakgrunnshistorie eller gå rett på sak?</h4>
 <svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="bgrp-svg">
-  <line x1="0" y1="40" x2="1000" y2="40" style="stroke:rgb(42,157,144);stroke-width:2" />
-
-  <g font-size="15" font-family="sans-serif" fill="black" stroke="none"
-  text-anchor="left">
-    <text x="0" y="65" dx="0">Bakgrunnshistorie</text>
-    <text x="475" y="65" dx="0">Nøytral</text>
-    <text x="920" y="65" dx="0">Rett på sak</text>
+  <line x1="500" y1="40" x2="500" y2="1000" style="stroke:rgb(42,157,144);stroke-width:2" />
+  <rect width="1000px" height="30px" fill="#264653"/>
+  <g font-size="15" font-family="sans-serif" fill="#e76f51" stroke="none">
+    <text x="10" y="20" dx="0" text-anchor="left">BAKGRUNNSHISTORIE</text>
+    <text x="500" y="20" dx="0" text-anchor="middle">NØYTRAL</text>
+    <text x="900" y="20" dx="0" text-anchor="right">RETT PÅ SAK</text>
   </g>
 </svg>
 
@@ -313,40 +327,57 @@
 
 <script type="text/javascript">
 
+//Funksjon for å plassere navn på SVG-demo. Trenger en tall-verdi (value), en farge (color) og element-id til SVG (svgID)
+function drawSvgText (value, color, svgID, name) {
 
-//Funksjon for å tegne alle sirkler. Trenger en tall-verdi (value), en farge (color) og element-id til SVG (svgID)
-function drawSvgCircle (value, color, svgID, name) {
 	const svg = document.getElementById(svgID);
 	const svgns = "http://www.w3.org/2000/svg";
 	let xVal = parseInt(value) * 10;
-		if(xVal == 0) { xVal = xVal + 10; }
-		if(xVal == 1000) { xVal = xVal - 10; }
 
+	if(xVal < 500) { 
+			svgHeightLeft = svgHeightLeft + 35; 
+			svgYvalue = svgHeightLeft;
+			svgLeftValueSum = svgLeftValueSum + xVal;
+		} 
+		else { 
+			svgHeightRight = svgHeightRight + 35; 
+			svgYvalue = svgHeightRight; 
+			svgRightValueSum = svgRightValueSum + xVal;
+		}
+
+		if(xVal == 0) { xVal = xVal + 50; }
+		if(xVal == 1000) { xVal = xVal - 50; }
+
+		console.log("Right: " + svgHeightRight);
+		console.log("Left: " + svgHeightLeft);
+
+	let nametext = document.createElementNS(svgns, 'text');
+	nametext.setAttributeNS(null, 'x', xVal);
+	nametext.setAttributeNS(null, 'y', svgYvalue);
+	nametext.setAttributeNS(null, 'font-size', '12px');
+	nametext.setAttributeNS(null, 'fill', '#000');
+	nametext.setAttributeNS(null, 'class', 'svg-text');
+	nametext.textContent = name;
 
 	let newCircle = document.createElementNS(svgns, "circle");
 	newCircle.setAttributeNS(null, 'cx', xVal);
-	newCircle.setAttributeNS(null, 'cy', 40);
+	newCircle.setAttributeNS(null, 'cy', svgYvalue+10);
 	newCircle.setAttributeNS(null, 'r', 10);
-	newCircle.setAttributeNS(null, 'style', 'fill: '+color+';' );
-
-	let nametext = document.createElementNS(svgns, 'text');
-	nametext.setAttributeNS(null, 'x', xVal-10);
-	nametext.setAttributeNS(null, 'y', '20');
-	nametext.setAttributeNS(null, 'font-size', '12px');
-	nametext.setAttributeNS(null, 'fill', '#000');
-	nametext.textContent = name;
+	newCircle.setAttributeNS(null, 'style', 'fill: '+color );
+	newCircle.setAttributeNS(null, 'class', 'svg');
 
 	let valtext = document.createElementNS(svgns, 'text');
-	valtext.setAttributeNS(null, 'x', xVal-10);
-	valtext.setAttributeNS(null, 'y', '20');
+	valtext.setAttributeNS(null, 'x', xVal);
+	valtext.setAttributeNS(null, 'y', svgYvalue+15);
 	valtext.setAttributeNS(null, 'font-size', '12px');
 	valtext.setAttributeNS(null, 'fill', '#000');
-	valtext.textContent = value + "%";
+	valtext.setAttributeNS(null, 'text-anchor', 'middle');
+	valtext.textContent = value;
 
 	//Legger til sirkelen til svg-elementet
 	svg.appendChild(newCircle);
-	//svg.appendChild(valtext);
 	svg.appendChild(nametext);
+	svg.appendChild(valtext);
 	}
 
 
@@ -363,71 +394,102 @@ Promise.all([
   ])
   .then((data) => {
   	//Henter ut data for hver enkelt person i en egen variabel/array
-
 	 let eirik = data[0]; 
-	 //SVG
-		drawSvgCircle(eirik.hours, "#0800FF", "hours-svg", eirik.fname);
-		drawSvgCircle(eirik.akt, "#0800FF", "akt-svg", eirik.fname);
-		drawSvgCircle(eirik.work, "#0800FF", "work-svg", eirik.fname);
-		drawSvgCircle(eirik.dify, "#0800FF", "dify-svg", eirik.fname);
-		drawSvgCircle(eirik.bgrp, "#0800FF", "bgrp-svg", eirik.fname);
-
 	 let theodor = data[1]; 
-	 //SVG
-		drawSvgCircle(theodor.hours, "#2AFF00", "hours-svg", theodor.fname);
-		drawSvgCircle(theodor.akt, "#2AFF00", "akt-svg", theodor.fname);
-		drawSvgCircle(theodor.work, "#2AFF00", "work-svg", theodor.fname);
-		drawSvgCircle(theodor.dify, "#2AFF00", "dify-svg", theodor.fname);
-		drawSvgCircle(theodor.bgrp, "#2AFF00", "bgrp-svg", theodor.fname);
-
 	 let truls = data[2]; 
-	 //SVG
-		drawSvgCircle(truls.hours, "#00B7FF", "hours-svg", truls.fname);
-		drawSvgCircle(truls.akt, "#00B7FF", "akt-svg", truls.fname);
-		drawSvgCircle(truls.work, "#00B7FF", "work-svg", truls.fname);
-		drawSvgCircle(truls.dify, "#00B7FF", "dify-svg", truls.fname);
-		drawSvgCircle(truls.bgrp, "#00B7FF", "bgrp-svg", truls.fname);
-
 	 let marius = data[3]; 
-	 //SVG
-		drawSvgCircle(marius.hours, "#FFFF1C", "hours-svg", marius.fname);
-		drawSvgCircle(marius.akt, "#FFFF1C", "akt-svg", marius.fname);
-		drawSvgCircle(marius.work, "#FFFF1C", "work-svg", marius.fname);
-		drawSvgCircle(marius.dify, "#FFFF1C", "dify-svg", marius.fname);
-		drawSvgCircle(marius.bgrp, "#FFFF1C", "bgrp-svg", marius.fname);
-
-	 let thomas = data[4]; 
-	 //SVG
-		drawSvgCircle(thomas.hours, "#FF0000", "hours-svg", thomas.fname);
-		drawSvgCircle(thomas.akt, "#FF0000", "akt-svg", thomas.fname);
-		drawSvgCircle(thomas.work, "#FF0000", "work-svg", thomas.fname);
-		drawSvgCircle(thomas.dify, "#FF0000", "dify-svg", thomas.fname);
-		drawSvgCircle(thomas.bgrp, "#FF0000", "bgrp-svg", thomas.fname);
+	 let thomas = data[4];
 
 	 let jacob = data[5]; 
-
-	 //SVG
-		drawSvgCircle(jacob.hours, "#572f9c", "hours-svg", jacob.fname);
-		drawSvgCircle(jacob.akt, "#572f9c", "akt-svg", jacob.fname);
-		drawSvgCircle(jacob.work, "#572f9c", "work-svg", jacob.fname);
-		drawSvgCircle(jacob.dify, "#572f9c", "dify-svg", jacob.fname);
-		drawSvgCircle(jacob.bgrp, "#572f9c", "bgrp-svg", jacob.fname);
-
 	 let magnus = data[6]; 
-	 //SVG
-		drawSvgCircle(magnus.hours, "#8c862a", "hours-svg", magnus.fname);
-		drawSvgCircle(magnus.akt, "#8c862a", "akt-svg", magnus.fname);
-		drawSvgCircle(magnus.work, "#8c862a", "work-svg", magnus.fname);
-		drawSvgCircle(magnus.dify, "#8c862a", "dify-svg", magnus.fname);
-		drawSvgCircle(magnus.bgrp, "#8c862a", "bgrp-svg", magnus.fname);
-
 	 let zeyd = data[7]; 
-	 //SVG
-		drawSvgCircle(zeyd.hours, "#eb34e5", "hours-svg", zeyd.fname);
-		drawSvgCircle(zeyd.akt, "#eb34e5", "akt-svg", zeyd.fname);
-		drawSvgCircle(zeyd.work, "#eb34e5", "work-svg", zeyd.fname);
-		drawSvgCircle(zeyd.dify, "#eb34e5", "dify-svg", zeyd.fname);
-		drawSvgCircle(zeyd.bgrp, "#eb34e5", "bgrp-svg", zeyd.fname);
+  
+		  //Hours
+  	svgYvalue = 0;
+		svgHeightLeft = 25;
+		svgHeightRight = 25;
+		svgLeftValueSum = 0;
+		svgRightValueSum = 0;
+		drawSvgText(eirik.hours, "#b9b9b9", "hours-svg", eirik.fname);
+		drawSvgText(theodor.hours, "#7dcc6f", "hours-svg", theodor.fname);
+		drawSvgText(truls.hours, "#8fdeff", "hours-svg", truls.fname);
+		drawSvgText(marius.hours, "#c9b82e", "hours-svg", marius.fname);
+		drawSvgText(thomas.hours, "#eea241", "hours-svg", thomas.fname);
+		drawSvgText(jacob.hours, "#8f62e1", "hours-svg", jacob.fname);
+		drawSvgText(magnus.hours, "#7bdc5e", "hours-svg", magnus.fname);
+		drawSvgText(zeyd.hours, "#faa5f2", "hours-svg", zeyd.fname);
+  	if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
+		document.getElementById('hours-svg').setAttribute("height", svgYvalue+40);
+
+		  //Akt
+  	svgYvalue = 0;
+		svgHeightLeft = 25;
+		svgHeightRight = 25;
+		svgLeftValueSum = 0;
+		svgRightValueSum = 0;
+		drawSvgText(eirik.akt, "#b9b9b9", "akt-svg", eirik.fname);
+		drawSvgText(theodor.akt, "#7dcc6f", "akt-svg", theodor.fname);
+		drawSvgText(truls.akt, "#8fdeff", "akt-svg", truls.fname);
+		drawSvgText(marius.akt, "#c9b82e", "akt-svg", marius.fname);
+		drawSvgText(thomas.akt, "#eea241", "akt-svg", thomas.fname);
+		drawSvgText(jacob.akt, "#8f62e1", "akt-svg", jacob.fname);
+		drawSvgText(magnus.akt, "#7bdc5e", "akt-svg", magnus.fname);
+		drawSvgText(zeyd.akt, "#faa5f2", "akt-svg", zeyd.fname);
+  	if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
+		document.getElementById('akt-svg').setAttribute("height", svgYvalue+40);
+
+		  //Work
+  	svgYvalue = 0;
+		svgHeightLeft = 25;
+		svgHeightRight = 25;
+		svgLeftValueSum = 0;
+		svgRightValueSum = 0;
+		drawSvgText(eirik.work, "#b9b9b9", "work-svg", eirik.fname);
+		drawSvgText(theodor.work, "#7dcc6f", "work-svg", theodor.fname);
+		drawSvgText(truls.work, "#8fdeff", "work-svg", truls.fname);
+		drawSvgText(marius.work, "#c9b82e", "work-svg", marius.fname);
+		drawSvgText(thomas.work, "#eea241", "work-svg", thomas.fname);
+		drawSvgText(jacob.work, "#8f62e1", "work-svg", jacob.fname);
+		drawSvgText(magnus.work, "#7bdc5e", "work-svg", magnus.fname);
+		drawSvgText(zeyd.work, "#faa5f2", "work-svg", zeyd.fname);
+  	if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
+		document.getElementById('work-svg').setAttribute("height", svgYvalue+40);
+
+		  //Dify
+  	svgYvalue = 0;
+		svgHeightLeft = 25;
+		svgHeightRight = 25;
+		svgLeftValueSum = 0;
+		svgRightValueSum = 0;
+		drawSvgText(eirik.dify, "#b9b9b9", "dify-svg", eirik.fname);
+		drawSvgText(theodor.dify, "#7dcc6f", "dify-svg", theodor.fname);
+		drawSvgText(truls.dify, "#8fdeff", "dify-svg", truls.fname);
+		drawSvgText(marius.dify, "#c9b82e", "dify-svg", marius.fname);
+		drawSvgText(thomas.dify, "#eea241", "dify-svg", thomas.fname);
+		drawSvgText(jacob.dify, "#8f62e1", "dify-svg", jacob.fname);
+		drawSvgText(magnus.dify, "#7bdc5e", "dify-svg", magnus.fname);
+		drawSvgText(zeyd.dify, "#faa5f2", "dify-svg", zeyd.fname);
+  	if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
+		document.getElementById('dify-svg').setAttribute("height", svgYvalue+40);
+
+		  //Bgrp
+  	svgYvalue = 0;
+		svgHeightLeft = 25;
+		svgHeightRight = 25;
+		svgLeftValueSum = 0;
+		svgRightValueSum = 0;
+		drawSvgText(eirik.bgrp, "#b9b9b9", "bgrp-svg", eirik.fname);
+		drawSvgText(theodor.bgrp, "#7dcc6f", "bgrp-svg", theodor.fname);
+		drawSvgText(truls.bgrp, "#8fdeff", "bgrp-svg", truls.fname);
+		drawSvgText(marius.bgrp, "#c9b82e", "bgrp-svg", marius.fname);
+		drawSvgText(thomas.bgrp, "#eea241", "bgrp-svg", thomas.fname);
+		drawSvgText(jacob.bgrp, "#8f62e1", "bgrp-svg", jacob.fname);
+		drawSvgText(magnus.bgrp, "#7bdc5e", "bgrp-svg", magnus.fname);
+		drawSvgText(zeyd.bgrp, "#faa5f2", "bgrp-svg", zeyd.fname);
+  	if(svgHeightRight < svgHeightLeft) { svgYvalue = svgHeightLeft; } else { svgYvalue = svgHeightRight; }
+		document.getElementById('bgrp-svg').setAttribute("height", svgYvalue+40);
+
+
   });
 
 </script>
