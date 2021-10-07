@@ -160,6 +160,13 @@ Promise.all([
 	 skrivUtData(zeyd, "#faa5f2");
 
   });
+if (localStorage.trxid) {
+	let last_trxid = localStorage.getItem("trxid");
+	let last_time = localStorage.getItem("time");
+	fetch('https://bacit.info/hwr/'+last_time+'-'+last_trxid+'.json')
+			.then(response => response.json())
+			.then(data => skrivUtData(data,"#d164a9"));
+}
 // just an alert message for when users try to use the search bar
   function OnlyAPlaceHolder(){
 	  alert("this item doesn't have much functionality yet and is only a placeholder")
