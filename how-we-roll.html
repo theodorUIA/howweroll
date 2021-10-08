@@ -109,7 +109,7 @@
 </table>
 <br><br>
 <div class="btncontainer">
-<button class="btn submit" type="submit" onclick="setTimeout(function() { window.scrollTo(0,document.body.scrollHeight);; }, 750)">
+<button class="btn submit" type="submit">
     Submit
 </button> 
 </div>
@@ -155,16 +155,22 @@
         .then(data => {
            results.innerText = JSON.stringify(data, null, 2);
         document.getElementById("HWR-form").reset();
+        
+        ScrollDown();
         return false;
         });
    }
    const form = document.querySelector('form');
    form.addEventListener('submit', handleSubmit);
+   
 
    // just an alert message for when users try to use the search bar
    function OnlyAPlaceHolder(){
 	  alert("this item doesn't have much functionality yet and is only a placeholder")
   }
+
+function ScrollDown(){window.scrollTo(0,document.body.scrollHeight);}
+
 
 </script>
 </body>
