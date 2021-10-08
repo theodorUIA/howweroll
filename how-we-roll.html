@@ -27,7 +27,7 @@
 
 <h2>Registrer din profil her</h2>
 
-<br>
+<div id='localstorage-tekst'></div>
 <div class="form-div">
 <table class="form-table">
     <tr>
@@ -126,6 +126,12 @@
 <!--------Javascript for dokumentet------>
 
 <script>
+
+    //Sjekker om skjemaet er fylt ut fra før og skriver ut en melding til div-elementet med ID "localstorage-tekst".
+    if (localStorage.trxid) {
+      document.getElementById("localstorage-tekst").innerHTML = "<span style='color: red;'>Du har allerede fylt ut dette skjemaet, men du er velkommen til å fylle ut en gang til!</span><br><br>";
+    }
+
    // From https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (seen 2021-09-27)
    // Example POST method implementation using fetch:
    async function postData(url = '', data = {}) {
@@ -153,6 +159,10 @@
         const results = document.querySelector('.results pre');
         postData('https://bacit.info/', formJSON)
         .then(data => {
+            let trxid = JSON.stringify(data.trxid, null, 2).replace(/"/g, "");
+            let time = JSON.stringify(data.time, null, 2).replace(/"/g, "");
+            localStorage.setItem("trxid", trxid);
+            localStorage.setItem("time", time);
            results.innerText = JSON.stringify(data, null, 2);
         document.getElementById("HWR-form").reset();
         
