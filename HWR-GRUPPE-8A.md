@@ -4,7 +4,42 @@ I denne markdown filen skal vi beskrive vår fremgangsmåte for å lage nettside
 Gruppeleder-vara har i oppgave å ta over oppgavene til gruppeleder i gruppeleders fravær, samt skrive referat fra hvert møte vi gjennomfører.
 
 <h2>Fremgangsmåte/metodikk</h2>
-Utviklingssyklussen. Skisser. Prototyper. 
+Arbeidsmetodikken våres er basert systemutviklingssyklusen "Agile Development Methodology". Ved oppstart på oppgaven satte vi oss ned og lagde en plan på hvordan arbeidstegene skal foregå.
+Punktene så slik ut:
+<h4>1. Brainstorming</h4>
+En idemyldring i gruppen rundt oppgaven og dens innhold. Hvilke avgrensninger vi skal gjøre, og hva vi ser for oss som endelig mål for prosjektet. Gjennomføre en behovsanalyse for å konkretisere hvilke funksjoner vi ser for oss i løsningen.
+Lage brukerhistorier med enkle skisser over hvilke løsninger/funksjoner vi skal ha med.
+<h4>2. Design</h4>
+Lage en digital skisse over løsningen basert på brukerhistorier og enkle skisser. Vurdere muligheten for en delvis fungerende prototype.
+<h4>3. Utvikling</h4>
+Utvikle/programmere prototypen i.h.t kanban metoden ved bruk av git og Github. Viktig med tilbakemelding på de ulike branchene underveis.
+<h4>4. Kvalitetskontroll</h4>
+Finne ting som ikke fungerer med prototypen og vurdere å utbedre eller fjerne funksjonalitet.
+<h4>5. Deployering</h4>
+Siste hånden på verket.
+<h4>6. Levering</h4>
+Levering av oppgaven.
+<h4>7. Veien videre</h4>
+Hva er de videre utviklingsstegene for applikasjonen? Hvilke funksjoner var med i den første brainstormingen, men som ikke kom med i design- eller utviklingsfasen?
+
+Dette fungerte fint i praksis og vi så at det var greit å ha et rammeverk å følge. I tillegg har vi brukt Kanban-board på github for å organisere arbeidsoppgaver.
+Link til Kanban-board: https://github.com/theodorUIA/howweroll/projects/1
+<h3>Skisser/prototype</h3>
+Første sitemap: https://drive.google.com/file/d/1Qr2cku7yrEng-jhgTJbPnYwt-ufWcbCJ/view?usp=sharing
+
+Empathy map: https://drive.google.com/file/d/1-wOrJNSOMY7afRwX8tBE-yyKEj-MTQ5r/view?usp=sharing
+
+Mål og mottakeranalyse: https://whimsical.com/mal-og-mottakeranalyse-brainstorming-6DJji3sLSEpzDwGP11Dced
+
+Wireframe 1: https://whimsical.com/how-we-roll-wireframe-1-ikke-i-bruk-CqXkdyxRbrhEHSP56NyWn5
+
+Wireframe 2: https://whimsical.com/how-we-roll-wireframe-2-CrLmzZb4rE3LNPLbnMMcgw
+
+Sitemap 2: https://whimsical.com/how-we-roll-sitemap-Br5VmPG4vYz9hYt2RXnsmd
+
+Form elements: https://whimsical.com/howweroll-form-elements-PNs5qcMtKrBX8ELq776bwQ
+
+[Vise bilder av design og brukerreiser her.]
 
 <h2>Organisering</h2>
 Vi er 8 medlemmer på gruppen og har derfor vært nødt til å vetlegge planlegging for å gjennomføre oppgaven, og samtidig involvære alle og sørge for god læring.
@@ -24,9 +59,6 @@ Hva vi ble enige om i starten. Begrunnelse for hvorfor vi gjorde det slik. Hvorf
 
 <h2>Utviklingsprosess</h2>
 Hvert enkelt gruppemedlem har bidratt til prosjektet i større og mindre grad. I et slikt prosjekt er det vanskelig å få lik deltakelse, men vi har etterstrebet at alle gruppemedlemmer skal inkluderes i alle steg av utviklingsprosessen. 
-
-<h3>Skisser/prototype</h3>
-[Vise bilder av design og brukerreiser her.]
 
 <h3>Avgjørelser i.h.t design og programmeringskode</h3>
 Vår innlevering består av 3 språk. HTML, CSS og Javascript. Dette er de tre mest grunneleggende kodespråkene en kan lære og likevel anvende på en effektiv og god måte. Vi ble anbefalt til å lære oss disse språkene, mest kritisk var HTML og CSS. Siden disse er grunnsteinen i en nett side var det viktigst at vi satt oss inn i det først. Deretter mot slutten av prosjektet ble vi oppfordret til å se litt på Javascript, siden det ville være relevant med uthenting av data fra oppgaven. Det var ikke forventet å "kunne" Javascript, men ha en viss forståelse. HTML brukte vi for å legge inn teksten og innholdet i nettsiden, samt legge til funksjoner som knapper og linker. Deretter CSS for å "style" dette slik at det skulle se bra ut. Så til slutt for å hente ut og framvise data, brukte vi Javascript. Javascript er ikke kun for å hente ut data, men for å lage funskjoner som gjør at nettsiden fungerer bedre. Ved hjelp av mer tid og annet kodespråk kunne nettsiden blitt det som er forventet av systematikere den dag idag, men siden vi fortsatt er i startfasen ble det en forsåvidt "enkel" nettside. 
