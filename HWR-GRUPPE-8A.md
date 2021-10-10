@@ -135,12 +135,20 @@ Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjek
 
 #### Truls
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
+<<<<<<< Updated upstream
 
 #### Magnus
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 
 #### Marius
-Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
+=======
+<h4>Magnus</h4>
+Jeg hadde generelt grunnleggende kunnskaper om html og css før "how we roll oppgaven" så oppstarten gikk mye ut på å gjenoppdage det jeg allerede kunne. Jeg oppdaget etter hvert at det hovedsakelig bare var prinsippene jeg allerede kunne som var nyttige da det meste av koding vi skulle gjøre fulgte en 
+litt annen stil og en mye høyere vanskelighetsgrad enn det jeg er vant til. Jeg brukte relativt lang tid på å innse det så mye av tiden min i starten ble brukt til å se gjennom gamle notater i stedet for å lære meg mer relevante tema. Det er den første tingen jeg ville gjort annerledes. Selv med litt
+erfaring var det ganske krevende å sette seg inn i det så jeg måtte være generøs med bruken av hjelpemidler. Min mest verdifulle kilde og læringsverktøy var w3schools (https://www.w3schools.com/) som kunne gi meg tips til koder med eksempler og "Try it yourself" funksjoner til både html og css. 
+Det kan også brukes for å lære Javascript, men under oppgaven brukte jeg mest tid på html og css. Av alle arbeidsmetodene vi har prøvd, har fysisk gruppearbeid fungert desidert best for min del. Det at de som kan mest enkelt kan jobbe med og hjelpe de som kan mindre har spilt størst rolle i 
+undervisningen min og har gitt meg mest læringsutbytte. 
+<h4>Marius</h4>
 
 #### Eirik
 I løpet av arbeidsperioden på How We Roll-oppgaven så har jeg lært grunnleggende koding. I HTML, CSS og javaScript. I starten fokuserte jeg mest på HTML og CSS siden disse var de mest elementære, og letteste og lære. Det var først etter halvveis gjennom prosjektet jeg begynte å se på javascript. Javascript virket veldig mye vanskeligere enn de to første språkene, men etter øving og anvending kommer det litt lettere. Jeg driver fortsatt å lærer alle tre språkene, men javascript har fått mer vekt nå nylig og fremover.
