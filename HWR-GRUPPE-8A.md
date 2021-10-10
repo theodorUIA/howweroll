@@ -18,6 +18,12 @@ Hva vi ble enige om i starten. Begrunnelse for hvorfor vi gjorde det slik. Hvorf
 <h2>Utviklingsprosess</h2>
 Hvert enkelt gruppemedlem har bidratt til prosjektet i større og mindre grad. I et slikt prosjekt er det vanskelig å få lik deltakelse, men vi har etterstrebet at alle gruppemedlemmer skal inkluderes i alle steg av utviklingsprosessen. 
 
+<h3>Skisser/prototype</h3>
+[Vise bilder av design og brukerreiser her.]
+
+<h3>Avgjørelser i.h.t design og programmeringskode</h3>
+Hvilket programmeringsspråk har vi benyttet og hvorfor? Hvilke muligheter/begrensninger gir dette?
+
 <h3>Læringsprosesses</h3>
 Gruppen har fokuset på enkelte nettressuser for å komme frem til nettsiden slik den er idag. Listen er reflekterer ikke den komplette listen over ressurser vi har brukt, men er ment for å trekke frem noen ressurser og forklare fordeler og ulemper ved disse.
 - 
