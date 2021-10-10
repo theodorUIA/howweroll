@@ -6,7 +6,18 @@ Gruppeleder-vara har i oppgave å ta over oppgavene til gruppeleder i gruppelede
 ## Fremgangsmåte/metodikk
 Utviklingssyklussen. Skisser. Prototyper. 
 
+
 ## Organisering
+
+<h2>Organisering</h2>
+Vi er 8 medlemmer på gruppen og har derfor vært nødt til å vetlegge planlegging for å gjennomføre oppgaven, og samtidig involvære alle og sørge for god læring.
+Til å begynne med var det et fåtall på gruppen med tidligere erfaring med programmering. Derfor satte vi oss som mål at samtlige gruppemedlemmer skulle få en grunnleggende forståelse i løpet av arbeidsprossesen.
+Måte vi håndterte det på har vært gjennom mye gruppearbeid. Etter vi kom igang ordentlig med oppgaven har vi møttes på skolen nesten hver dag.
+Da brukte vi tiden for å brainstorme sammen og programmere i par. Theodor, som har mest erfaring på gruppen, har blant annet undervist oss for at alle skal være på samme bølgelengde.
+Som følge av dette har gruppen utviklet seg i et jevnt tempo. Slik har vi nå klart å produsere et produkt.
+Det å møtes med jevne mellomrom og arbeide sammen fysisk har fungert veldig godt, men vi har også sett at det er vannskelig å innvolvere alle på gruppen. Spesielt da fordi at ferdighetsnivåene er såpass forskjellige. For å løse dette var det svært hjelpsomt å gå gjennom ting sammen, som for eksempel javascript.
+
+
 Gruppesammensettning. Gruppeorganisering. Ledelsesstruktur. Mål og ønsker i starten. Utvikling underveis. Hva fungerte godt. Hva fungerte dårlig.
 
 ## Verktøy
@@ -80,10 +91,19 @@ Neste gang det kommer et slikt prosjekt vil jeg prøve å fokusere enda mer på 
 
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 
+
 #### Thomas
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 
 #### Jacob
+
+<h4>Thomas</h4>
+How we roll-oppgaven har gitt meg en grunnleggende innføring i koding. Jeg har tilegnet meg basisferdigheter i bruk av Html og Css, samtidig som jeg har fått litt forståelse av javascript. Dette har jeg lært meg ved hjelp av en kombinasjon av forskjellige læringsmetoder.
+W3schools, codeacademy og youtube brukte jeg helt i starten for å lære det mest grunnleggende. Videre har forelesninger, ekstra-kurs med Jannis og gruppearbeid vært hjelpsomt. Det som har gitt meg mest mulig lærdom er uten tvil hjelp fra gruppemedlemmer. Det å kunne samarbeide i par har vært utrolig lærerikt,
+da vi så at kunnskapsnivået på gruppen økte for hver gang. Slik var det mulig å få god veiledning. Dette har ført til at alle på gruppen har kunnet bidra i mer eller mindre grad. Skulle jeg gjort noe annerledes ville jeg nok brukt litt ekstra tid i begynnelsen på å lære koding. Jeg merket etterhvert at jeg hang litt etter flere på gruppa.
+Jeg ønsker også å kunne bruke javascript på egenhånd. Til nå har jeg enkel forståelse for det, men ville nok slitet med å bruke det selv. Videre blir det derfor å sette av mer tid til koding og dermed bli bedre på dette.
+<h4>Jacob</h4>
+
 I løpet av How we roll oppgaven har jeg forsøkt i sette meg inn i koding på et veldig enkelt nivå.
 Jeg har tilegnet meg en veldig grunnleggende kompetanse, som gir meg mulighet til å bruke Html og Css i en viss grad.
 I startperioden av prosjektet kom jeg ikke så veldig godt i gang, noe som gjorde at jeg mistet noe motivasjon for å sette meg inn i koding
