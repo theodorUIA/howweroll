@@ -22,7 +22,10 @@ Hvert enkelt gruppemedlem har bidratt til prosjektet i større og mindre grad. I
 [Vise bilder av design og brukerreiser her.]
 
 <h3>Avgjørelser i.h.t design og programmeringskode</h3>
-Hvilket programmeringsspråk har vi benyttet og hvorfor? Hvilke muligheter/begrensninger gir dette?
+Vår innlevering består av 3 språk. HTML, CSS og Javascript. Dette er de tre mest grunneleggende kodespråkene en kan lære og likevel anvende på en effektiv og god måte. Vi ble anbefalt til å lære oss disse språkene, mest kritisk var HTML og CSS. Siden disse er grunnsteinen i en nett side var det viktigst at vi satt oss inn i det først. Deretter mot slutten av prosjektet ble vi oppfordret til å se litt på Javascript, siden det ville være relevant med uthenting av data fra oppgaven. Det var ikke forventet å "kunne" Javascript, men ha en viss forståelse. HTML brukte vi for å legge inn teksten og innholdet i nettsiden, samt legge til funksjoner som knapper og linker. Deretter CSS for å "style" dette slik at det skulle se bra ut. Så til slutt for å hente ut og framvise data, brukte vi Javascript. Javascript er ikke kun for å hente ut data, men for å lage funskjoner som gjør at nettsiden fungerer bedre. Ved hjelp av mer tid og annet kodespråk kunne nettsiden blitt det som er forventet av systematikere den dag idag, men siden vi fortsatt er i startfasen ble det en forsåvidt "enkel" nettside. 
+Det at nivået i gruppa når det kom til koding varierte, førte også til at mye av gruppetimer ble brukt til bortlæring og fremvisning. Mens noen kodet inn for eksempel Javascript så resten av gruppen på en delt skjerm, og fikk gjennomgang i hvordan koden fungerte. Det hjalp i gi en felles forståelse av kode som ble brukt i prosjektet innad i gruppa, samtidig som at de som hadde erfaring fikk gjennomgå det å undervise.
+Målet til gruppen var å gi nybegynnerne en god start, samtidig som de med erfaring fikk frisket opp. Samtidig som de lærte om det å undervise og noen ganger noe nytt om koding.
+
 
 <h3>Læringsprosesses</h3>
 Gruppen har fokuset på enkelte nettressuser for å komme frem til nettsiden slik den er idag. Listen reflekterer ikke den komplette listen over ressurser vi har brukt, men er ment for å trekke frem noen ressurser og forklare fordeler og ulemper ved disse.
