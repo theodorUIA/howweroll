@@ -41,7 +41,12 @@ Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjek
 <h4>Thomas</h4>
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 <h4>Jacob</h4>
-Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
+I løpet av How we roll oppgaven har jeg forsøkt i sette meg inn i koding på et veldig enkelt nivå.
+Jeg har tilegnet meg en veldig grunnleggende kompetanse, som gir meg mulighet til å bruke Html og Css i en viss grad.
+I startperioden av prosjektet kom jeg ikke så veldig godt i gang, noe som gjorde at jeg mistet noe motivasjon for å sette meg inn i koding
+men motivasjonen kom tilbake senere i prosjektet da jeg innså hvor viktig dette er å lære. W3schools.com har vært et hjelpemiddel jeg har prøvd å lære av, men
+jeg har uten tvil lært mest av mine gruppemedlemmer samt ulike læringsvideoer på youtube.com.
+Javascript har jeg enda ikke lært meg, men målsetter meg å få en grei forståelse for dette før jul.
 <h4>Zeyd</h4>
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 <h4>Truls</h4>
