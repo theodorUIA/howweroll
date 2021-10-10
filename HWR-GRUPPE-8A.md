@@ -4,53 +4,33 @@ I denne markdown filen skal vi beskrive vår fremgangsmåte for å lage nettside
 Gruppeleder-vara har i oppgave å ta over oppgavene til gruppeleder i gruppeleders fravær, samt skrive referat fra hvert møte vi gjennomfører.
 
 ## Fremgangsmåte/metodikk
-### Utviklingssyklussen. Skisser. Prototyper. 
+
+### Utviklingssyklussen
 
 Arbeidsmetodikken våres er basert systemutviklingssyklusen "Agile Development Methodology". Ved oppstart på oppgaven satte vi oss ned og lagde en plan på hvordan arbeidstegene skal foregå.
+
 Punktene så slik ut:
-#### 1. Brainstorming
-En idemyldring i gruppen rundt oppgaven og dens innhold. Hvilke avgrensninger vi skal gjøre, og hva vi ser for oss som endelig mål for prosjektet. Gjennomføre en behovsanalyse for å konkretisere hvilke funksjoner vi ser for oss i løsningen.
-Lage brukerhistorier med enkle skisser over hvilke løsninger/funksjoner vi skal ha med.
 
-#### 2. Design
-Lage en digital skisse over løsningen basert på brukerhistorier og enkle skisser. Vurdere muligheten for en delvis fungerende prototype.
-
-#### 3. Utvikling
-Utvikle/programmere prototypen i.h.t kanban metoden ved bruk av git og Github. Viktig med tilbakemelding på de ulike branchene underveis.
-
-#### 4. Kvalitetskontroll
-Finne ting som ikke fungerer med prototypen og vurdere å utbedre eller fjerne funksjonalitet.
-
-#### 5. Deployering
-Siste hånden på verket.
-
-#### 6. Levering
-Levering av oppgaven.
-
-#### 7. Veien videre
-Hva er de videre utviklingsstegene for applikasjonen? Hvilke funksjoner var med i den første brainstormingen, men som ikke kom med i design- eller utviklingsfasen?
+1. Brainstorming
+	- En idemyldring i gruppen rundt oppgaven og dens innhold. Hvilke avgrensninger vi skal gjøre, og hva vi ser for oss som endelig mål for prosjektet. Gjennomføre en behovsanalyse for å konkretisere hvilke funksjoner vi ser for oss i løsningen. Lage brukerhistorier med enkle skisser over hvilke løsninger/funksjoner vi skal ha med.
+2. Design
+	- Lage en digital skisse over løsningen basert på brukerhistorier og enkle skisser. Vurdere muligheten for en delvis fungerende prototype.
+3. Utvikling
+	- Utvikle/programmere prototypen i.h.t kanban metoden ved bruk av git og Github. Viktig med tilbakemelding på de ulike branchene underveis.
+4. Kvalitetskontroll
+	- Finne ting som ikke fungerer med prototypen og vurdere å utbedre eller fjerne funksjonalitet.
+5. Deployering
+	- Siste hånden på verket.
+6. Levering
+ 	- Levering av oppgaven.
+7. Veien videre
+	- Hva er de videre utviklingsstegene for applikasjonen? Hvilke funksjoner var med i den første brainstormingen, men som ikke kom med i design- eller utviklingsfasen?
 
 Dette fungerte fint i praksis og vi så at det var greit å ha et rammeverk å følge. I tillegg har vi brukt Kanban-board på github for å organisere arbeidsoppgaver.
-Link til Kanban-board: https://github.com/theodorUIA/howweroll/projects/1
-<h3>Skisser/prototype</h3>
-Første sitemap: https://drive.google.com/file/d/1Qr2cku7yrEng-jhgTJbPnYwt-ufWcbCJ/view?usp=sharing
-
-Empathy map: https://drive.google.com/file/d/1-wOrJNSOMY7afRwX8tBE-yyKEj-MTQ5r/view?usp=sharing
-
-Mål og mottakeranalyse: https://whimsical.com/mal-og-mottakeranalyse-brainstorming-6DJji3sLSEpzDwGP11Dced
-
-Wireframe 1: https://whimsical.com/how-we-roll-wireframe-1-ikke-i-bruk-CqXkdyxRbrhEHSP56NyWn5
-
-Wireframe 2: https://whimsical.com/how-we-roll-wireframe-2-CrLmzZb4rE3LNPLbnMMcgw
-
-Sitemap 2: https://whimsical.com/how-we-roll-sitemap-Br5VmPG4vYz9hYt2RXnsmd
-
-Form elements: https://whimsical.com/howweroll-form-elements-PNs5qcMtKrBX8ELq776bwQ
-
-[Vise bilder av design og brukerreiser her.]
+[Link til Kanban-board](https://github.com/theodorUIA/howweroll/projects/1)
 
 
-## Organisering
+### Organisering
 Vi er 8 medlemmer på gruppen og har derfor vært nødt til å vetlegge planlegging for å gjennomføre oppgaven, og samtidig involvære alle og sørge for god læring.
 Til å begynne med var det et fåtall på gruppen med tidligere erfaring med programmering. Derfor satte vi oss som mål at samtlige gruppemedlemmer skulle få en grunnleggende forståelse i løpet av arbeidsprossesen.
 Måte vi håndterte det på har vært gjennom mye gruppearbeid. Etter vi kom igang ordentlig med oppgaven har vi møttes på skolen nesten hver dag.
@@ -58,9 +38,7 @@ Da brukte vi tiden for å brainstorme sammen og programmere i par. Theodor, som 
 Som følge av dette har gruppen utviklet seg i et jevnt tempo. Slik har vi nå klart å produsere et produkt.
 Det å møtes med jevne mellomrom og arbeide sammen fysisk har fungert veldig godt, men vi har også sett at det er vannskelig å innvolvere alle på gruppen. Spesielt da fordi at ferdighetsnivåene er såpass forskjellige. For å løse dette var det svært hjelpsomt å gå gjennom ting sammen, som for eksempel javascript.
 
-Gruppesammensettning. Gruppeorganisering. Ledelsesstruktur. Mål og ønsker i starten. Utvikling underveis. Hva fungerte godt. Hva fungerte dårlig.
-
-## Verktøy
+### Verktøy
 Vi som gruppe har jobbet sammen med programmering i våres oppsatte gruppetimer, på egen hånd og til avtalte tider over discord.
 Theodor har vært en god støttespiller til alle underveis og har til tider hatt "undervisning" for de som ønsker å lære mer.
 Vi har brukt flere nettressurser i vårt arbeid.
@@ -69,14 +47,21 @@ Vi har brukt flere nettressurser i vårt arbeid.
 - Whimsical
 - Kanban board gjennom Github
 
-## Regler for Git
-Hva vi ble enige om i starten. Begrunnelse for hvorfor vi gjorde det slik. Hvorfor vi eventuell ikke burde gjøre det videre.
+**Legge inn utviklingsmijø også**
 
-## Utviklingsprosess
-Hvert enkelt gruppemedlem har bidratt til prosjektet i større og mindre grad. I et slikt prosjekt er det vanskelig å få lik deltakelse, men vi har etterstrebet at alle gruppemedlemmer skal inkluderes i alle steg av utviklingsprosessen. 
+### Regler for Git
+**Hva vi ble enige om i starten. Begrunnelse for hvorfor vi gjorde det slik. Hvorfor vi eventuell ikke burde gjøre det videre.**
 
 
-### Skisser/prototype
+## Skisser/prototype
+- Første sitemap: https://drive.google.com/file/d/1Qr2cku7yrEng-jhgTJbPnYwt-ufWcbCJ/view?usp=sharing
+- Empathy map: https://drive.google.com/file/d/1-wOrJNSOMY7afRwX8tBE-yyKEj-MTQ5r/view?usp=sharing
+- Mål og mottakeranalyse: https://whimsical.com/mal-og-mottakeranalyse-brainstorming-6DJji3sLSEpzDwGP11Dced
+- Wireframe 1: https://whimsical.com/how-we-roll-wireframe-1-ikke-i-bruk-CqXkdyxRbrhEHSP56NyWn5
+- Wireframe 2: https://whimsical.com/how-we-roll-wireframe-2-CrLmzZb4rE3LNPLbnMMcgw
+- Sitemap 2: https://whimsical.com/how-we-roll-sitemap-Br5VmPG4vYz9hYt2RXnsmd
+- Form elements: https://whimsical.com/howweroll-form-elements-PNs5qcMtKrBX8ELq776bwQ
+
 [Vise bilder av design og brukerreiser her.]
 
 ### Avgjørelser i.h.t design og programmeringskode
@@ -84,6 +69,9 @@ Vår innlevering består av 3 språk. HTML, CSS og Javascript. Dette er de tre m
 
 Det at nivået i gruppa når det kom til koding varierte, førte også til at mye av gruppetimer ble brukt til bortlæring og fremvisning. Mens noen kodet inn for eksempel Javascript så resten av gruppen på en delt skjerm, og fikk gjennomgang i hvordan koden fungerte. Det hjalp i gi en felles forståelse av kode som ble brukt i prosjektet innad i gruppa, samtidig som at de som hadde erfaring fikk gjennomgå det å undervise.
 Målet til gruppen var å gi nybegynnerne en god start, samtidig som de med erfaring fikk frisket opp. Samtidig som de lærte om det å undervise og noen ganger noe nytt om koding.
+
+### Utviklingsprosess
+Hvert enkelt gruppemedlem har bidratt til prosjektet i større og mindre grad. I et slikt prosjekt er det vanskelig å få lik deltakelse, men vi har etterstrebet at alle gruppemedlemmer skal inkluderes i alle steg av utviklingsprosessen. 
 
 
 ### Læringsprosesses
@@ -102,7 +90,7 @@ I forkant av How We Roll har jeg programmert tidligere og har hatt god kjennskap
 Underveis i prosjektet ble Javascript mer aktuelt, og spesielt generering av canvas-element basert på `fetch()`av json-filer som jeg aldri har gjort før. Jeg satte meg grundig inn i hvilke muligheter og begrensninger som fantes ved å lese på [w3schools.com](https://www.w3schools.com/html/html5_canvas.asp), [MDN Web docs](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API), samt se på hva [som var mulig å få til](https://code.tutsplus.com/articles/21-ridiculously-impressive-html5-canvas-experiments--net-14210). Etter å har laget en nesten ferdig kode for visning av data ved bruk av Canvas, ønsket jeg å se litt nærmere på et alternativ; SVG.
 
 *Utdrag fra Canvas-koden:*
-```
+```javascript
 
 	//Funksjon for å tegne sirkler på linjen i canvas-elementet "work-canvas".
 	Trenger en tallverdi og en farge-verdi for å fungere.
@@ -127,24 +115,14 @@ Vi har utviklet en løsningen hvor Javascript-koden kanskje er unødvendig avans
 
 Neste gang det kommer et slikt prosjekt vil jeg prøve å fokusere enda mer på organisering og prosessen rundt fordeling av programmeringsoppgaver. Jeg opplevde det som uoversiktlig å ikke starte med gode rammer for hvordan Git skulle fungere i gruppen, og ikke minst hvordan fordele relativt **små** programmeringsoppgaver på 8 gruppemedlemmer. Effekten av at vi var så mange kom til syne når alle hadde en grunnleggende forståelse for programmering i HTML og CSS. Da ble det produsert kode hurtig, og nettsiden slik den ser ut i dag kom ganske kjapt sammen.
 
-
-
-
-Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
-
-
 #### Thomas
-Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
-
-#### Jacob
-
-<h4>Thomas</h4>
 How we roll-oppgaven har gitt meg en grunnleggende innføring i koding. Jeg har tilegnet meg basisferdigheter i bruk av Html og Css, samtidig som jeg har fått litt forståelse av javascript. Dette har jeg lært meg ved hjelp av en kombinasjon av forskjellige læringsmetoder.
 W3schools, codeacademy og youtube brukte jeg helt i starten for å lære det mest grunnleggende. Videre har forelesninger, ekstra-kurs med Jannis og gruppearbeid vært hjelpsomt. Det som har gitt meg mest mulig lærdom er uten tvil hjelp fra gruppemedlemmer. Det å kunne samarbeide i par har vært utrolig lærerikt,
 da vi så at kunnskapsnivået på gruppen økte for hver gang. Slik var det mulig å få god veiledning. Dette har ført til at alle på gruppen har kunnet bidra i mer eller mindre grad. Skulle jeg gjort noe annerledes ville jeg nok brukt litt ekstra tid i begynnelsen på å lære koding. Jeg merket etterhvert at jeg hang litt etter flere på gruppa.
-Jeg ønsker også å kunne bruke javascript på egenhånd. Til nå har jeg enkel forståelse for det, men ville nok slitet med å bruke det selv. Videre blir det derfor å sette av mer tid til koding og dermed bli bedre på dette.
-<h4>Jacob</h4>
 
+Jeg ønsker også å kunne bruke javascript på egenhånd. Til nå har jeg enkel forståelse for det, men ville nok slitet med å bruke det selv. Videre blir det derfor å sette av mer tid til koding og dermed bli bedre på dette.
+
+#### Jacob
 I løpet av How we roll oppgaven har jeg forsøkt i sette meg inn i koding på et veldig enkelt nivå.
 Jeg har tilegnet meg en veldig grunnleggende kompetanse, som gir meg mulighet til å bruke Html og Css i en viss grad.
 I startperioden av prosjektet kom jeg ikke så veldig godt i gang, noe som gjorde at jeg mistet noe motivasjon for å sette meg inn i koding
