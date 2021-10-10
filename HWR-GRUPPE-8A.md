@@ -4,18 +4,27 @@ I denne markdown filen skal vi beskrive vår fremgangsmåte for å lage nettside
 Gruppeleder-vara har i oppgave å ta over oppgavene til gruppeleder i gruppeleders fravær, samt skrive referat fra hvert møte vi gjennomfører.
 
 <h2>Fremgangsmåte/metodikk</h2>
+Utviklingssyklussen. Skisser. Prototyper. 
 
 <h2>Organisering</h2>
+Gruppesammensettning. Gruppeorganisering. Ledelsesstruktur. Mål og ønsker i starten. Utvikling underveis. Hva fungerte godt. Hva fungerte dårlig.
 
 <h2>Verktøy</h2>
+Programmeringsmiljø. Nettressurser vi fokuserte på. Kilder til læring. Læringsmetoder. Undervisning internt i gruppen.
 
 <h2>Regler for Git</h2>
+Hva vi ble enige om i starten. Begrunnelse for hvorfor vi gjorde det slik. Hvorfor vi eventuell ikke burde gjøre det videre.
 
 <h2>Utviklingsprosess</h2>
 Hvert enkelt gruppemedlem har bidratt til prosjektet i større og mindre grad. I et slikt prosjekt er det vanskelig å få lik deltakelse, men vi har etterstrebet at alle gruppemedlemmer skal inkluderes i alle steg av utviklingsprosessen. 
 
+<h3>Læringsprosesses</h3>
+Gruppen har fokuset på enkelte nettressuser for å komme frem til nettsiden slik den er idag. Disse er:
+- 
+- 
 
 <h3>Individuell refleksjon</h3>
+Hvert enkelt gruppemedlem har hatt et ulikt utgangspunkt ved starten av denne oppgaven. Derfor har læringsprosessen hos den enkelte også vært ulik. Noen likehetstrekk har vi, men vi har valgt å fremheve de individuelle fremgangsmåtene under.
 <h4>Theodor</h4>
 <h4>Thomas</h4>
 <h4>Jacob</h4>
