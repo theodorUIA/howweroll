@@ -19,20 +19,28 @@ Hva vi ble enige om i starten. Begrunnelse for hvorfor vi gjorde det slik. Hvorf
 Hvert enkelt gruppemedlem har bidratt til prosjektet i større og mindre grad. I et slikt prosjekt er det vanskelig å få lik deltakelse, men vi har etterstrebet at alle gruppemedlemmer skal inkluderes i alle steg av utviklingsprosessen. 
 
 <h3>Læringsprosesses</h3>
-Gruppen har fokuset på enkelte nettressuser for å komme frem til nettsiden slik den er idag. Disse er:
+Gruppen har fokuset på enkelte nettressuser for å komme frem til nettsiden slik den er idag. Listen er reflekterer ikke den komplette listen over ressurser vi har brukt, men er ment for å trekke frem noen ressurser og forklare fordeler og ulemper ved disse.
 - 
 - 
 
-<h3>Individuell refleksjon</h3>
+<h3>Individuell refleksjon/læringsprosess</h3>
 Hvert enkelt gruppemedlem har hatt et ulikt utgangspunkt ved starten av denne oppgaven. Derfor har læringsprosessen hos den enkelte også vært ulik. Noen likehetstrekk har vi, men vi har valgt å fremheve de individuelle fremgangsmåtene under.
 <h4>Theodor</h4>
+Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 <h4>Thomas</h4>
+Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 <h4>Jacob</h4>
+Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 <h4>Zeyd</h4>
+Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 <h4>Truls</h4>
+Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 <h4>Magnus</h4>
+Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 <h4>Marius</h4>
+Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 <h4>Eirik</h4>
+Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 
 <h4>Oppgavebeskrivelse</h4>
 Liste over innhold/besvarelser i HowWeRoll-oppgaven:<br>
