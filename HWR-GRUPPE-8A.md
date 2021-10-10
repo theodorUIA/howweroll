@@ -131,10 +131,10 @@ jeg har uten tvil lært mest av mine gruppemedlemmer samt ulike læringsvideoer 
 Javascript har jeg enda ikke lært meg, men målsetter meg å få en grei forståelse for dette før jul.
 
 <h4>Zeyd</h4>
-Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
+Jeg lærte mye om teamverden siden jeg alltid jobbet alene før,Jeg lærte HTML, CSS og JS som lar meg lese forstå koden for de fleste nettsider.det som ville ha gjort annerledes ville være å definere funksjonene i begynnelsen av prosjektet for å ha mer tid til å fikse dem senere,de beste kildene og studiematerialet ville MDN, W3 -eksempler og Stackoverflow,og hjelpen fra resten av gruppen, spesielt theodor som var snill med å forklare mange ting.
 
 #### Zeyd
-Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
+Jeg lærte mye om teamverden siden jeg alltid jobbet alene før,Jeg lærte HTML, CSS og JS som lar meg lese forstå koden for de fleste nettsider.det som ville ha gjort annerledes ville være å definere funksjonene i begynnelsen av prosjektet for å ha mer tid til å fikse dem senere,de beste kildene og studiematerialet ville MDN, W3 -eksempler og Stackoverflow,og hjelpen fra resten av gruppen, spesielt theodor som var snill med å forklare mange ting.
 
 #### Truls
 
