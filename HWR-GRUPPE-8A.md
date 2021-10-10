@@ -4,19 +4,59 @@ I denne markdown filen skal vi beskrive vår fremgangsmåte for å lage nettside
 Gruppeleder-vara har i oppgave å ta over oppgavene til gruppeleder i gruppeleders fravær, samt skrive referat fra hvert møte vi gjennomfører.
 
 ## Fremgangsmåte/metodikk
-Utviklingssyklussen. Skisser. Prototyper. 
+### Utviklingssyklussen. Skisser. Prototyper. 
+
+Arbeidsmetodikken våres er basert systemutviklingssyklusen "Agile Development Methodology". Ved oppstart på oppgaven satte vi oss ned og lagde en plan på hvordan arbeidstegene skal foregå.
+Punktene så slik ut:
+#### 1. Brainstorming
+En idemyldring i gruppen rundt oppgaven og dens innhold. Hvilke avgrensninger vi skal gjøre, og hva vi ser for oss som endelig mål for prosjektet. Gjennomføre en behovsanalyse for å konkretisere hvilke funksjoner vi ser for oss i løsningen.
+Lage brukerhistorier med enkle skisser over hvilke løsninger/funksjoner vi skal ha med.
+
+#### 2. Design
+Lage en digital skisse over løsningen basert på brukerhistorier og enkle skisser. Vurdere muligheten for en delvis fungerende prototype.
+
+#### 3. Utvikling
+Utvikle/programmere prototypen i.h.t kanban metoden ved bruk av git og Github. Viktig med tilbakemelding på de ulike branchene underveis.
+
+#### 4. Kvalitetskontroll
+Finne ting som ikke fungerer med prototypen og vurdere å utbedre eller fjerne funksjonalitet.
+
+#### 5. Deployering
+Siste hånden på verket.
+
+#### 6. Levering
+Levering av oppgaven.
+
+#### 7. Veien videre
+Hva er de videre utviklingsstegene for applikasjonen? Hvilke funksjoner var med i den første brainstormingen, men som ikke kom med i design- eller utviklingsfasen?
+
+Dette fungerte fint i praksis og vi så at det var greit å ha et rammeverk å følge. I tillegg har vi brukt Kanban-board på github for å organisere arbeidsoppgaver.
+Link til Kanban-board: https://github.com/theodorUIA/howweroll/projects/1
+<h3>Skisser/prototype</h3>
+Første sitemap: https://drive.google.com/file/d/1Qr2cku7yrEng-jhgTJbPnYwt-ufWcbCJ/view?usp=sharing
+
+Empathy map: https://drive.google.com/file/d/1-wOrJNSOMY7afRwX8tBE-yyKEj-MTQ5r/view?usp=sharing
+
+Mål og mottakeranalyse: https://whimsical.com/mal-og-mottakeranalyse-brainstorming-6DJji3sLSEpzDwGP11Dced
+
+Wireframe 1: https://whimsical.com/how-we-roll-wireframe-1-ikke-i-bruk-CqXkdyxRbrhEHSP56NyWn5
+
+Wireframe 2: https://whimsical.com/how-we-roll-wireframe-2-CrLmzZb4rE3LNPLbnMMcgw
+
+Sitemap 2: https://whimsical.com/how-we-roll-sitemap-Br5VmPG4vYz9hYt2RXnsmd
+
+Form elements: https://whimsical.com/howweroll-form-elements-PNs5qcMtKrBX8ELq776bwQ
+
+[Vise bilder av design og brukerreiser her.]
 
 
 ## Organisering
-
-<h2>Organisering</h2>
 Vi er 8 medlemmer på gruppen og har derfor vært nødt til å vetlegge planlegging for å gjennomføre oppgaven, og samtidig involvære alle og sørge for god læring.
 Til å begynne med var det et fåtall på gruppen med tidligere erfaring med programmering. Derfor satte vi oss som mål at samtlige gruppemedlemmer skulle få en grunnleggende forståelse i løpet av arbeidsprossesen.
 Måte vi håndterte det på har vært gjennom mye gruppearbeid. Etter vi kom igang ordentlig med oppgaven har vi møttes på skolen nesten hver dag.
 Da brukte vi tiden for å brainstorme sammen og programmere i par. Theodor, som har mest erfaring på gruppen, har blant annet undervist oss for at alle skal være på samme bølgelengde.
 Som følge av dette har gruppen utviklet seg i et jevnt tempo. Slik har vi nå klart å produsere et produkt.
 Det å møtes med jevne mellomrom og arbeide sammen fysisk har fungert veldig godt, men vi har også sett at det er vannskelig å innvolvere alle på gruppen. Spesielt da fordi at ferdighetsnivåene er såpass forskjellige. For å løse dette var det svært hjelpsomt å gå gjennom ting sammen, som for eksempel javascript.
-
 
 Gruppesammensettning. Gruppeorganisering. Ledelsesstruktur. Mål og ønsker i starten. Utvikling underveis. Hva fungerte godt. Hva fungerte dårlig.
 
@@ -34,6 +74,7 @@ Hva vi ble enige om i starten. Begrunnelse for hvorfor vi gjorde det slik. Hvorf
 
 ## Utviklingsprosess
 Hvert enkelt gruppemedlem har bidratt til prosjektet i større og mindre grad. I et slikt prosjekt er det vanskelig å få lik deltakelse, men vi har etterstrebet at alle gruppemedlemmer skal inkluderes i alle steg av utviklingsprosessen. 
+
 
 ### Skisser/prototype
 [Vise bilder av design og brukerreiser her.]
