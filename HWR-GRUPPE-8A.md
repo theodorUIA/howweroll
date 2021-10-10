@@ -39,7 +39,10 @@ Hvert enkelt gruppemedlem har hatt et ulikt utgangspunkt ved starten av denne op
 <h4>Theodor</h4>
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 <h4>Thomas</h4>
-Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
+How we roll-oppgaven har gitt meg en grunnleggende innføring i koding. Jeg har tilegnet meg basisferdigheter i bruk av Html og Css, samtidig som jeg har fått litt forståelse av javascript. Dette har jeg lært meg ved hjelp av en kombinasjon av forskjellige læringsmetoder.
+W3schools, codeacademy og youtube brukte jeg helt i starten for å lære det mest grunnleggende. Videre har forelesninger, ekstra-kurs med Jannis og gruppearbeid vært hjelpsomt. Det som har gitt meg mest mulig lærdom er uten tvil hjelp fra gruppemedlemmer. Det å kunne samarbeide i par har vært utrolig lærerikt,
+da vi så at kunnskapsnivået på gruppen økte for hver gang. Slik var det mulig å få god veiledning. Dette har ført til at alle på gruppen har kunnet bidra i mer eller mindre grad. Skulle jeg gjort noe annerledes ville jeg nok brukt litt ekstra tid i begynnelsen på å lære koding. Jeg merket etterhvert at jeg hang litt etter flere på gruppa.
+Jeg ønsker også å kunne bruke javascript på egenhånd. Til nå har jeg enkel forståelse for det, men ville nok slitet med å bruke det selv. Videre blir det derfor å sette av mer tid til koding og dermed bli bedre på dette.
 <h4>Jacob</h4>
 I løpet av How we roll oppgaven har jeg forsøkt i sette meg inn i koding på et veldig enkelt nivå.
 Jeg har tilegnet meg en veldig grunnleggende kompetanse, som gir meg mulighet til å bruke Html og Css i en viss grad.
