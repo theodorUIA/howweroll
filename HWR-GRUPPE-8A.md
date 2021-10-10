@@ -56,7 +56,6 @@ Vi har brukt flere nettressurser i vårt arbeid.
 - Sitemap 2: https://whimsical.com/how-we-roll-sitemap-Br5VmPG4vYz9hYt2RXnsmd
 - Form elements: https://whimsical.com/howweroll-form-elements-PNs5qcMtKrBX8ELq776bwQ
 
-[Vise bilder av design og brukerreiser her.]
 
 ### Avgjørelser i.h.t design og programmeringskode
 Vår innlevering består av 3 språk. HTML, CSS og Javascript. Dette er de tre mest grunneleggende kodespråkene en kan lære og likevel anvende på en effektiv og god måte. Vi ble anbefalt til å lære oss disse språkene, mest kritisk var HTML og CSS. Siden disse er grunnsteinen i en nett side var det viktigst at vi satt oss inn i det først. Deretter mot slutten av prosjektet ble vi oppfordret til å se litt på Javascript, siden det ville være relevant med uthenting av data fra oppgaven. Det var ikke forventet å "kunne" Javascript, men ha en viss forståelse. HTML brukte vi for å legge inn teksten og innholdet i nettsiden, samt legge til funksjoner som knapper og linker. Deretter CSS for å "style" dette slik at det skulle se bra ut. Så til slutt for å hente ut og framvise data, brukte vi Javascript. Javascript er ikke kun for å hente ut data, men for å lage funskjoner som gjør at nettsiden fungerer bedre. Ved hjelp av mer tid og annet kodespråk kunne nettsiden blitt det som er forventet av systematikere den dag idag, men siden vi fortsatt er i startfasen ble det en forsåvidt "enkel" nettside. 
@@ -125,7 +124,7 @@ jeg har uten tvil lært mest av mine gruppemedlemmer samt ulike læringsvideoer 
 Javascript har jeg enda ikke lært meg, men målsetter meg å få en grei forståelse for dette før jul.
 
 #### Zeyd
-Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
+Jeg lærte mye om teamverden siden jeg alltid jobbet alene før,Jeg lærte HTML, CSS og JS som lar meg lese forstå koden for de fleste nettsider.det som ville ha gjort annerledes ville være å definere funksjonene i begynnelsen av prosjektet for å ha mer tid til å fikse dem senere,de beste kildene og studiematerialet ville MDN, W3 -eksempler og Stackoverflow,og hjelpen fra resten av gruppen, spesielt theodor som var snill med å forklare mange ting.
 
 #### Truls
 I løpet av How-We-Roll oppgaven har jeg gått fra tilnærmet null kompetanse i koding, til en grei forståelse på hvordan det fungerer og har klart å kode uten hjelp. Jeg har mest erfaring i html og css, men også en forståelse for javascript. Theodor på gruppa har vært til stor hjelp for alle gruppemedlemmene fordi han har god erfaring med koding fra tidlgere. Jeg har lært ekstremt mye fra Theodor, w3schools, codecademy og youtube, men foretrekker å jobbe med gruppen da dette er mest lærerikt.
