@@ -11,13 +11,21 @@ Gruppeleder-vara har i oppgave å ta over oppgavene til gruppeleder i gruppelede
 
 <h2>Regler for Git</h2>
 
+<h2>Utviklingsprosess</h2>
+Hvert enkelt gruppemedlem har bidratt til prosjektet i større og mindre grad. I et slikt prosjekt er det vanskelig å få lik deltakelse, men vi har etterstrebet at alle gruppemedlemmer skal inkluderes i alle steg av utviklingsprosessen. 
 
 
+<h3>Individuell refleksjon</h3>
+<h4>Theodor</h4>
+<h4>Thomas</h4>
+<h4>Jacob</h4>
+<h4>Zeyd</h4>
+<h4>Truls</h4>
+<h4>Magnus</h4>
+<h4>Marius</h4>
+<h4>Eirik</h4>
 
-
-
-
-
+<h4>Oppgavebeskrivelse</h4>
 Liste over innhold/besvarelser i HowWeRoll-oppgaven:
 - Opprette en hovedside/hjemmeside som ligger på github-pages
 - LHWR01: index.html med visittkort og hyperlenker til how-we-roll.html og hwr-report.html
