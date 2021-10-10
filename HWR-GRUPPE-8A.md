@@ -152,12 +152,18 @@ men motivasjonen kom tilbake senere i prosjektet da jeg innså hvor viktig dette
 jeg har uten tvil lært mest av mine gruppemedlemmer samt ulike læringsvideoer på youtube.com.
 Javascript har jeg enda ikke lært meg, men målsetter meg å få en grei forståelse for dette før jul.
 
+<h4>Zeyd</h4>
+Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
+
 #### Zeyd
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 
 #### Truls
-Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 
+<h4>Truls</h4>
+I løpet av How-We-Roll oppgaven har jeg gått fra tilnærmet null kompetanse i koding, til en grei forståelse på hvordan det fungerer og har klart å kode uten hjelp. Jeg har mest erfaring i html og css, men også en forståelse for javascript. Theodor på gruppa har vært til stor hjelp for alle gruppemedlemmene fordi han har god erfaring med koding fra tidlgere. Jeg har lært ekstremt mye fra Theodor, w3schools, codecademy og youtube, men foretrekker å jobbe med gruppen da dette er mest lærerikt.
+Jeg føler jeg har fått bidratt en god del med prosjektet så snart jeg lærte meg hvordan alt skulle gjøres. JavaScript er noe jeg ønsker å lære mer av. Jeg har satt meg et mål om å kunne javascript like godt som html og css. 
+<h4>Magnus</h4>
 #### Magnus
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 
