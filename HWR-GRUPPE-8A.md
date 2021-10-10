@@ -19,9 +19,11 @@ Hva vi ble enige om i starten. Begrunnelse for hvorfor vi gjorde det slik. Hvorf
 Hvert enkelt gruppemedlem har bidratt til prosjektet i større og mindre grad. I et slikt prosjekt er det vanskelig å få lik deltakelse, men vi har etterstrebet at alle gruppemedlemmer skal inkluderes i alle steg av utviklingsprosessen. 
 
 <h3>Læringsprosesses</h3>
-Gruppen har fokuset på enkelte nettressuser for å komme frem til nettsiden slik den er idag. Listen er reflekterer ikke den komplette listen over ressurser vi har brukt, men er ment for å trekke frem noen ressurser og forklare fordeler og ulemper ved disse.
-- 
-- 
+Gruppen har fokuset på enkelte nettressuser for å komme frem til nettsiden slik den er idag. Listen reflekterer ikke den komplette listen over ressurser vi har brukt, men er ment for å trekke frem noen ressurser og forklare fordeler og ulemper ved disse.
+- https://developer.mozilla.org/en-US/docs/Web/Tutorials#html-tutorials
+- https://developer.mozilla.org/en-US/docs/Web/Tutorials#css-tutorials
+- https://developer.mozilla.org/en-US/docs/Web/Tutorials#javascript-tutorials
+- https://www.w3schools.com/
 
 <h3>Individuell refleksjon/læringsprosess</h3>
 Hvert enkelt gruppemedlem har hatt et ulikt utgangspunkt ved starten av denne oppgaven. Derfor har læringsprosessen hos den enkelte også vært ulik. Noen likehetstrekk har vi, men vi har valgt å fremheve de individuelle fremgangsmåtene under.
@@ -40,7 +42,11 @@ Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjek
 <h4>Marius</h4>
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 <h4>Eirik</h4>
-Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
+I løpet av arbeidsperioden på How We Roll-oppgaven så har jeg lært grunnleggende koding. I HTML, CSS og javaScript. I starten fokuserte jeg mest på HTML og CSS siden disse var de mest elementære, og letteste og lære. Det var først etter halvveis gjennom prosjektet jeg begynte å se på javascript. Javascript virket veldig mye vanskeligere enn de to første språkene, men etter øving og anvending kommer det litt lettere. Jeg driver fortsatt å lærer alle tre språkene, men javascript har fått mer vekt nå nylig og fremover.
+Jeg brukte aller først developer.mozilla.org, men syntes de var litt vanskelig å komme inn i, for en komplett nybegynner som meg selv. Dermed brukte jeg w3schools først, siden de gikk mer gjennom det grunnleggende rolig og strukturert. Etterhvert som jeg lærte mer gikk jeg derimot tilbake til mdn web docs. Der var det mer demonstrasjon og implementering av kode, enn bare å lære syntax og begreper. Følte jeg lærte mer med dette, og hvis jeg skulle gjort noe annerledes, hadde det vært å prøvd litt hardere på mdn web docs i starten.
+Jeg syntes alle undervisningsformene førte til et helhetlig godt læringsmiljø for min del. I starten var forelesningene litt forvirrende og vanskelig å følge med på. Spesielt med tanke på at jeg ikke hadde noe erfaring med kode, og at de som hadde det stilte veldig kompliserte spørsmål om ting vi ikke hadde lært enda. Gruppearbeidet hjalp ved å gi et miljø hvor noen hadde erfaring og andre ikke. Dette senket skuldrene litt og det å få hjelp fungerte veldig godt. Var litt forvirring i starten om vi skulle kode eller ikke. Dette gjorde at jeg ikke tok det å lære med kode like seriøst, men jeg prøvde å kode litt hver dag uansett.
+Det å undersøke på egenhånd var vanskelig i starten, jeg ante ikke hvilke sider som var nyttige og hva jeg burde fokusere på. Det at det var forvirring om hvorvidt vi skulle kode eller ikke hjalp ikke særlig. Etterhvert gikk det mye bedre og det å kode selv ga en stor mestringsfølelse, når det ikke gjorde det følte jeg alltid det var lav terskel for å spørre dagen etter i gruppe eller til lærer.
+
 
 <h4>Oppgavebeskrivelse</h4>
 Liste over innhold/besvarelser i HowWeRoll-oppgaven:<br>
