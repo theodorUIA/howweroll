@@ -7,6 +7,13 @@ Gruppeleder-vara har i oppgave å ta over oppgavene til gruppeleder i gruppelede
 Utviklingssyklussen. Skisser. Prototyper. 
 
 <h2>Organisering</h2>
+Vi er 8 medlemmer på gruppen og har derfor vært nødt til å vetlegge planlegging for å gjennomføre oppgaven, og samtidig involvære alle og sørge for god læring.
+Til å begynne med var det et fåtall på gruppen med tidligere erfaring med programmering. Derfor satte vi oss som mål at samtlige gruppemedlemmer skulle få en grunnleggende forståelse i løpet av arbeidsprossesen.
+Måte vi håndterte det på har vært gjennom mye gruppearbeid. Etter vi kom igang ordentlig med oppgaven har vi møttes på skolen nesten hver dag.
+Da brukte vi tiden for å brainstorme sammen og programmere i par. Theodor, som har mest erfaring på gruppen, har blant annet undervist oss for at alle skal være på samme bølgelengde.
+Som følge av dette har gruppen utviklet seg i et jevnt tempo. Slik har vi nå klart å produsere et produkt.
+Det å møtes med jevne mellomrom og arbeide sammen fysisk har fungert veldig godt, men vi har også sett at det er vannskelig å innvolvere alle på gruppen. Spesielt da fordi at ferdighetsnivåene er såpass forskjellige. For å løse dette var det svært hjelpsomt å gå gjennom ting sammen, som for eksempel javascript.
+
 Gruppesammensettning. Gruppeorganisering. Ledelsesstruktur. Mål og ønsker i starten. Utvikling underveis. Hva fungerte godt. Hva fungerte dårlig.
 
 <h2>Verktøy</h2>
