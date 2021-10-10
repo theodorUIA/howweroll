@@ -34,9 +34,24 @@
 
 </div>
 
-
 		<script>
+async function sjekkBildeUrl(url, callback) {
+    const bilde = new Image();
 
+    bilde.src = url;
+
+    if (bilde.complete) {
+      callback(true);
+    } else {
+      bilde.onload = () => {
+        callback(true);
+      };
+      
+      bilde.onerror = () => {
+        callback(false);
+      };
+    }
+  }
 function skrivUtData(data, color) {
 
 	let mail = data.Email; //Hente ut mail fra Email-variabel
@@ -51,6 +66,20 @@ function skrivUtData(data, color) {
 	let work = "";
 	let dify = "";
 	let bgrp = "";
+	let filnavn = data.fname.replace(/"/g, "");
+	let bildefil = "visittkort/"+filnavn+".png";
+
+//Sjekker om det finnes et bilde til denne personen:
+	sjekkBildeUrl(bildefil, (finnes) => {
+	  if (finnes) {
+	    let bildefil = "visittkort/"+filnavn+".png";
+	  	console.log("finnes");
+	  } 
+	  else {
+	  	console.log("finnes ikke");
+	    let bildefil = "profilbilde-mann.jpg";
+	  }
+	});
 
 	//Generaliserer verdiene fra how-we-roll
 	if(data.hours < 50 ) { hours = "Morgenfugl ("+data.hours+")"; }
@@ -83,7 +112,6 @@ function skrivUtData(data, color) {
 		hwrInfo += "<b>" + dify + "</b><br><br>";
 		hwrInfo += "Bakgrunnshistorie eller gå rett på sak? <b>" + bgrp + "</b";
 
-
 	//Oppretter visittkortet
 
 	//Div for how-we-roll informasjon
@@ -100,7 +128,7 @@ function skrivUtData(data, color) {
 	//IMG for profilbilde
 	let profilIMG = document.createElement('img');
 		profilIMG.setAttribute('style', 'max-height: 100px; max-width:200px');
-		profilIMG.setAttribute('src', 'profilbilde-mann.jpg');
+		profilIMG.setAttribute('src', bildefil);
 
 	//Div for bilde
 	let kortDIVimgContainer = document.createElement('div');
@@ -119,7 +147,7 @@ function skrivUtData(data, color) {
 
 	document.getElementById("visittkort-container").append(kortDIVmain);
 
-	console.log(data);
+	//console.log(data);
 }
 
 Promise.all([
