@@ -10,7 +10,13 @@ Utviklingssyklussen. Skisser. Prototyper.
 Gruppesammensettning. Gruppeorganisering. Ledelsesstruktur. Mål og ønsker i starten. Utvikling underveis. Hva fungerte godt. Hva fungerte dårlig.
 
 ## Verktøy
-Programmeringsmiljø. Nettressurser vi fokuserte på. Kilder til læring. Læringsmetoder. Undervisning internt i gruppen.
+Vi som gruppe har jobbet sammen med programmering i våres oppsatte gruppetimer, på egen hånd og til avtalte tider over discord.
+Theodor har vært en god støttespiller til alle underveis og har til tider hatt "undervisning" for de som ønsker å lære mer.
+Vi har brukt flere nettressurser i vårt arbeid.
+- Undervisningsvideoer om koding og programmering funnet på youtube har vært hjelpsomt under visse oppgaver.
+- w3schools.com
+- Whimsical
+- Kanban board gjennom Github
 
 ## Regler for Git
 Hva vi ble enige om i starten. Begrunnelse for hvorfor vi gjorde det slik. Hvorfor vi eventuell ikke burde gjøre det videre.
