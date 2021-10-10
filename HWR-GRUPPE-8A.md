@@ -47,12 +47,6 @@ Vi har brukt flere nettressurser i vårt arbeid.
 - Whimsical
 - Kanban board gjennom Github
 
-**Legge inn utviklingsmijø også**
-
-### Regler for Git
-**Hva vi ble enige om i starten. Begrunnelse for hvorfor vi gjorde det slik. Hvorfor vi eventuell ikke burde gjøre det videre.**
-
-
 ## Skisser/prototype
 - Første sitemap: https://drive.google.com/file/d/1Qr2cku7yrEng-jhgTJbPnYwt-ufWcbCJ/view?usp=sharing
 - Empathy map: https://drive.google.com/file/d/1-wOrJNSOMY7afRwX8tBE-yyKEj-MTQ5r/view?usp=sharing
@@ -130,18 +124,13 @@ men motivasjonen kom tilbake senere i prosjektet da jeg innså hvor viktig dette
 jeg har uten tvil lært mest av mine gruppemedlemmer samt ulike læringsvideoer på youtube.com.
 Javascript har jeg enda ikke lært meg, men målsetter meg å få en grei forståelse for dette før jul.
 
-<h4>Zeyd</h4>
-Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
-
 #### Zeyd
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
 
 #### Truls
-
-<h4>Truls</h4>
 I løpet av How-We-Roll oppgaven har jeg gått fra tilnærmet null kompetanse i koding, til en grei forståelse på hvordan det fungerer og har klart å kode uten hjelp. Jeg har mest erfaring i html og css, men også en forståelse for javascript. Theodor på gruppa har vært til stor hjelp for alle gruppemedlemmene fordi han har god erfaring med koding fra tidlgere. Jeg har lært ekstremt mye fra Theodor, w3schools, codecademy og youtube, men foretrekker å jobbe med gruppen da dette er mest lærerikt.
 Jeg føler jeg har fått bidratt en god del med prosjektet så snart jeg lærte meg hvordan alt skulle gjøres. JavaScript er noe jeg ønsker å lære mer av. Jeg har satt meg et mål om å kunne javascript like godt som html og css. 
-<h4>Magnus</h4>
+
 #### Magnus
 Jeg hadde generelt grunnleggende kunnskaper om html og css før "how we roll oppgaven" så oppstarten gikk mye ut på å gjenoppdage det jeg allerede kunne. Jeg oppdaget etter hvert at det hovedsakelig bare var prinsippene jeg allerede kunne som var nyttige da det meste av koding vi skulle gjøre fulgte en 
 litt annen stil og en mye høyere vanskelighetsgrad enn det jeg er vant til. Jeg brukte relativt lang tid på å innse det så mye av tiden min i starten ble brukt til å se gjennom gamle notater i stedet for å lære meg mer relevante tema. Det er den første tingen jeg ville gjort annerledes. Selv med litt
@@ -165,22 +154,3 @@ Jeg syntes alle undervisningsformene førte til et helhetlig godt læringsmiljø
 Det å undersøke på egenhånd var vanskelig i starten, jeg ante ikke hvilke sider som var nyttige og hva jeg burde fokusere på. Det at det var forvirring om hvorvidt vi skulle kode eller ikke hjalp ikke særlig. Etterhvert gikk det mye bedre og det å kode selv ga en stor mestringsfølelse, når det ikke gjorde det følte jeg alltid det var lav terskel for å spørre dagen etter i gruppe eller til lærer.
 
 Mitt mål videre vil være å lære Javascript like godt som HTML og CSS. Kanskje også lese på andre kodespråk
-
-#### Oppgavebeskrivelse
-Liste over innhold/besvarelser i HowWeRoll-oppgaven:<br>
-- Opprette en hovedside/hjemmeside som ligger på github-pages<br>
-- LHWR01: index.html med visittkort og hyperlenker til how-we-roll.html og hwr-report.html<br>
-- LHWR02: how-we-roll.html med form-elementer for kartlegging av gruppemedlemmer. Send/lagre knapp <br>
-- LHWR03: hwr-report.html med visualisering av data fra how-we-roll.html<br>
-- LHWR04: HWR-GRUPPE-8A.md (leveres i PDF format).<br>
-- LHWR04a: Dokumentere analyse- og designprosessen fra brukerhistorier gjennom papir-prototyper/”mocups”, “wireframes” til kode i HTML og CSS. Dokumentasjon skal være i Markdown format og også tilgjengelig i deres hovedrepository i Github.<br>
--LHWR04b: HWR-GRUPPE<gruppe-id>.md skal inneholde et sammendrag av deres arbeid med “How We Roll”-oppgaven. Dere skal så konsist som mulig beskrive hva dere gjorde for å besvare oppgaven. For eksempel, hvordan organiserte dere dere, hvordan dere tok i bruk verktøy og hva som fungerte bra, minde bra og dårlig? Hvilke regler dere satt for bruke av hovedrepository og hvordan fungerte disse? Hvordan sørget dere at alle lærer grunnleggende programmering i HTML og CSS (arbeid i par, arbeid med alle, individuelt arbeid osv.)? Detaljerte beskrivelser relatert til design av deres programmer (koding), kan dere vurdere å legge inn i koden.<br>
-	- LHWR04c: Innhold i Markup-fil:<br>
-	(1) at alle har bidratt tilstrekkelig til arbeidet med oppgaven,<br>
-	(2) at alle kilder dere har brukt er det blitt referert til,<br>
-	(3) om dere tillater oss å bruke deres arbeid i undervisning i fremtiden og<br>
-	(4) hyperlenkene til deres Github hovedrepository og deres hjemmeside.<br>
-- LHWR05: Bruke GitHub-Project med Kanban oppsett + alle har rimelig antall commits i prosjektet<br>
-- Endelig leveranse bør sjekket opp mot https://validator.w3.org/<br>
-
-
