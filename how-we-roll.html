@@ -20,7 +20,7 @@
     <input type="text" placeholder="Søk...">
 
 </div>
-<form <label name="HWR-form" id="HWR-form">
+<form id="HWR-form">
     <div class="main-content">
 
         <!------Overskrift på profilsiden------>
@@ -39,20 +39,28 @@
     </tr>
     <tr>
         <td class="text-align-right">Telefon:</td>
-        <td class="text-align-left"><input type="number" name="phone" class='form-textinput' placeholder="Telefon nr"></td>
+        <label for="phone">
+        <td class="text-align-left"><input type="number" name="phone" id="phone" class='form-textinput' placeholder="Telefon nr"></td>
+        </label>
         <td class="text-align-right">E-post:</td>
-        <td class="text-align-left"><input type="email" name="email" class='form-textinput' placeholder="E-post"></td>
+        <label for="email">
+        <td class="text-align-left"><input type="email" name="email" id="email" class='form-textinput' placeholder="E-post"></td>
+        </label>
     </tr>
 </table>
 
     <!-----------Slidere----------->
 
     <h4>Skriv inn dine ferdigheter her:</h4>
-    <textarea name="ferdigheter" rows="4" cols="50" class="form-ferdigheter"></textarea>
+    <label for="ferdigheter">
+    <textarea name="ferdigheter" id="ferdigheter" rows="4" cols="50" class="form-ferdigheter"></textarea>
+    </label>
     <h4>Når jobber du best?</h4>
     <table class="slidercontainer">
         <tr>
-            <td colspan="3"><input type="range" name="hours" min="0" max="100" value="50" class="slider"></td>
+            <label for="hours"
+            <td colspan="3"><input type="range" name="hours" id="hours" min="0" max="100" value="50" class="slider"></td>
+            </label>
         </tr>
         <tr>
             <td class="text-align-left">Morgenfugl</td>
@@ -62,9 +70,11 @@
     </table>
 
 <h4>Hvor aktiv er du?</h4>
-<table <label name="akt" class="slidercontainer">
+<table class="slidercontainer">
     <tr>
-        <td colspan="3"><input type="range" name="akt" min="0" max="100" value="50" class="slider"></td>
+        <label for="akt">
+        <td colspan="3"><input type="range" name="akt" id="akt" min="0" max="100" value="50" class="slider"></td>
+        </label>
     </tr>
     <tr>
         <td class="text-align-left">Sofagris</td>
@@ -73,9 +83,11 @@
     </tr>
 </table>
 <h4>Hvordan foretrekker du å jobbe?</h4>
-<table <label name="work" class="slidercontainer">
+<table class="slidercontainer">
     <tr>
-        <td colspan="3"><input type="range" name="work" min="0" max="100" value="50" class="slider"></td>
+        <label for="work"
+        <td colspan="3"><input type="range" name="work" id="work" min="0" max="100" value="50" class="slider"></td>
+        </label>
     </tr>
     <tr>
         <td class="text-align-left">Selvstendig</td>
@@ -85,9 +97,11 @@
 </table>
 
 <h4>Foretrekker du hjemmekontor eller fysisk oppmøte?</h4>
-<table <label name="dify" class="slidercontainer">
+<table class="slidercontainer">
     <tr>
-        <td colspan="3"><input type="range" name="dify" min="0" max="100" value="50" class="slider"></td>
+        <label for="dify">
+        <td colspan="3"><input type="range" name="dify" id="dify" min="0" max="100" value="50" class="slider"></td>
+        </label>
     </tr>
     <tr>
         <td class="text-align-left">Hjemmekontor</td>
@@ -98,9 +112,11 @@
 
 <h4>Foretrekker du å fortelle bakgrunnshistorie eller gå rett på sak?</h4>
 
-<table <label name="bgrp" class="slidercontainer">
+<table class="slidercontainer">
 <tr>
-    <td colspan="3"><input type="range" name="bgrp" min="0" max="100" value="50" class="slider"></td>
+    <label for="bgrp">
+    <td colspan="3"><input type="range" name="bgrp" id="bgrp" min="0" max="100" value="50" class="slider"></td>
+    </label>
 </tr>
 <tr>
     <td class="text-align-left">Bakgrunnshistorie</td>
@@ -109,7 +125,7 @@
 </tr>
 </table>
 <br><br>
-<div <label name="submit" class="btncontainer">
+<div class="btncontainer">
 <button class="btn submit" type="submit">
     Submit
 </button> 
