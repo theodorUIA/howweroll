@@ -1,6 +1,22 @@
-How-We-Roll Gruppe 8A
+<h1>How-We-Roll Gruppe 8A</h1>
 
-Markup fil
+I denne markdown filen skal vi beskrive vår fremgangsmåte for å lage nettsiden **How We Roll**. Vi har benyttet utviklingsmetodikken Kanban for å organisere programmeringen, men vi har organisert gruppen mer tradisjonelt med en gruppeleder og en gruppeleder-vara. Gruppelederens oppgave har vært å inkludere så mange som mulig i gruppen i arbeidet, i tillegg har gruppelederen ansvar for praktisk organisering av oppmøter m.m.
+Gruppeleder-vara har i oppgave å ta over oppgavene til gruppeleder i gruppeleders fravær, samt skrive referat fra hvert møte vi gjennomfører.
+
+<h2>Fremgangsmåte/metodikk</h2>
+
+<h2>Organisering</h2>
+
+<h2>Verktøy</h2>
+
+<h2>Regler for Git</h2>
+
+
+
+
+
+
+
 
 Liste over innhold/besvarelser i HowWeRoll-oppgaven:
 - Opprette en hovedside/hjemmeside som ligger på github-pages
@@ -20,3 +36,5 @@ Roll”-oppgaven. Dere skal så konsist som mulig beskrive hva dere gjorde for �
 (4) hyperlenkene til deres Github hovedrepository og deres hjemmeside.
 - LHWR05: Bruke GitHub-Project med Kanban oppsett + alle har rimelig antall commits i prosjektet
 - Endelig leveranse bør sjekket opp mot https://validator.w3.org/
+
+
