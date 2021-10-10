@@ -158,6 +158,7 @@ Jeg syntes alle undervisningsformene førte til et helhetlig godt læringsmiljø
 
 Det å undersøke på egenhånd var vanskelig i starten, jeg ante ikke hvilke sider som var nyttige og hva jeg burde fokusere på. Det at det var forvirring om hvorvidt vi skulle kode eller ikke hjalp ikke særlig. Etterhvert gikk det mye bedre og det å kode selv ga en stor mestringsfølelse, når det ikke gjorde det følte jeg alltid det var lav terskel for å spørre dagen etter i gruppe eller til lærer.
 
+Mitt mål videre vil være å lære Javascript like godt som HTML og CSS. Kanskje også lese på andre kodespråk
 
 #### Oppgavebeskrivelse
 Liste over innhold/besvarelser i HowWeRoll-oppgaven:<br>
