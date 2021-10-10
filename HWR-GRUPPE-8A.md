@@ -47,10 +47,7 @@ Vi har brukt flere nettressurser i vårt arbeid.
 - Whimsical
 - Kanban board gjennom Github
 
-**Legge inn utviklingsmijø også**
 
-### Regler for Git
-**Hva vi ble enige om i starten. Begrunnelse for hvorfor vi gjorde det slik. Hvorfor vi eventuell ikke burde gjøre det videre.**
 
 
 ## Skisser/prototype
@@ -138,10 +135,9 @@ Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjek
 
 #### Truls
 
-<h4>Truls</h4>
 I løpet av How-We-Roll oppgaven har jeg gått fra tilnærmet null kompetanse i koding, til en grei forståelse på hvordan det fungerer og har klart å kode uten hjelp. Jeg har mest erfaring i html og css, men også en forståelse for javascript. Theodor på gruppa har vært til stor hjelp for alle gruppemedlemmene fordi han har god erfaring med koding fra tidlgere. Jeg har lært ekstremt mye fra Theodor, w3schools, codecademy og youtube, men foretrekker å jobbe med gruppen da dette er mest lærerikt.
 Jeg føler jeg har fått bidratt en god del med prosjektet så snart jeg lærte meg hvordan alt skulle gjøres. JavaScript er noe jeg ønsker å lære mer av. Jeg har satt meg et mål om å kunne javascript like godt som html og css. 
-<h4>Magnus</h4>
+
 #### Magnus
 Jeg hadde generelt grunnleggende kunnskaper om html og css før "how we roll oppgaven" så oppstarten gikk mye ut på å gjenoppdage det jeg allerede kunne. Jeg oppdaget etter hvert at det hovedsakelig bare var prinsippene jeg allerede kunne som var nyttige da det meste av koding vi skulle gjøre fulgte en 
 litt annen stil og en mye høyere vanskelighetsgrad enn det jeg er vant til. Jeg brukte relativt lang tid på å innse det så mye av tiden min i starten ble brukt til å se gjennom gamle notater i stedet for å lære meg mer relevante tema. Det er den første tingen jeg ville gjort annerledes. Selv med litt
