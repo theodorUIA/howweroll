@@ -32,17 +32,23 @@
 <div class="form-div">
 <table class="form-table">
     <tr>
-        <td class="text-align-right">Fornavn:</td>
-        <td class="text-align-left"><input type="text" name="fname" class='form-textinput' placeholder="Fornavn"></td>
-        <td class="text-align-right">Etternavn:</td>
-        <td class="text-align-left"><input type="text" name="lname" class='form-textinput' placeholder="Etternavn"></td>
+        <td class="text-align-right">
+        <label for="fname">Fornavn:</label>
+        </td>
+        <td class="text-align-left"><input type="text" name="fname" id="fname" class='form-textinput' placeholder="Fornavn">
+        <td class="text-align-right">
+        <label for="lname">Etternavn:</label>
+    </td>
+        <td class="text-align-left"><input type="text" name="lname" id="lname" class='form-textinput' placeholder="Etternavn"></td>
     </tr>
     <tr>
-        <td class="text-align-right"</td>
+        <td class="text-align-right">
         <label for="phone">Telefon:</label>
+        </td>
         <td class="text-align-left"><input type="number" name="phone" id="phone" class='form-textinput' placeholder="Telefon nr"></td>
-        <td class="text-align-right"</td>
+        <td class="text-align-right">
         <label for="email">E-post:</label>
+        </td>
         <td class="text-align-left"><input type="email" name="email" id="email" class='form-textinput' placeholder="E-post"></td>
         </label>
     </tr>
@@ -50,16 +56,17 @@
 
     <!-----------Slidere----------->
 
-    <h4>Skriv inn dine ferdigheter her:</h4>
     <label for="ferdigheter">
+    <h4>Skriv inn dine ferdigheter her:</h4>
+</label>
+
     <textarea name="ferdigheter" id="ferdigheter" rows="4" cols="50" class="form-ferdigheter"></textarea>
-    </label>
+    <label for="hours">
     <h4>Når jobber du best?</h4>
+</label>
     <table class="slidercontainer">
         <tr>
-            <label for="hours">
             <td colspan="3"><input type="range" name="hours" id="hours" min="0" max="100" value="50" class="slider"></td>
-            </label>
         </tr>
         <tr>
             <td class="text-align-left">Morgenfugl</td>
@@ -95,12 +102,12 @@
     </tr>
 </table>
 
+<label for="dify">
 <h4>Foretrekker du hjemmekontor eller fysisk oppmøte?</h4>
+</label>
 <table class="slidercontainer">
     <tr>
-        <label for="dify">
         <td colspan="3"><input type="range" name="dify" id="dify" min="0" max="100" value="50" class="slider"></td>
-        </label>
     </tr>
     <tr>
         <td class="text-align-left">Hjemmekontor</td>
@@ -109,13 +116,12 @@
     </tr>
 </table>
 
+    <label for="bgrp">
 <h4>Foretrekker du å fortelle bakgrunnshistorie eller gå rett på sak?</h4>
-
+    </label>
 <table class="slidercontainer">
 <tr>
-    <label for="bgrp">
     <td colspan="3"><input type="range" name="bgrp" id="bgrp" min="0" max="100" value="50" class="slider"></td>
-    </label>
 </tr>
 <tr>
     <td class="text-align-left">Bakgrunnshistorie</td>
