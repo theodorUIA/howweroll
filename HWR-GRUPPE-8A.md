@@ -36,10 +36,17 @@ Gruppen har fokuset på enkelte nettressuser for å komme frem til nettsiden sli
 
 <h3>Individuell refleksjon/læringsprosess</h3>
 Hvert enkelt gruppemedlem har hatt et ulikt utgangspunkt ved starten av denne oppgaven. Derfor har læringsprosessen hos den enkelte også vært ulik. Noen likehetstrekk har vi, men vi har valgt å fremheve de individuelle fremgangsmåtene under.
+
 <h4>Theodor</h4>
+I forkant av How We Roll har jeg programmert tidligere og har hatt god kjennskap til HTML, CSS og JavaScript fra før. Jeg har derfor fokusert på detaljene i undervisningen som er gitt i programmering, samt nøyaktighet på syntax som benyttes i HTML og CSS. Kanban-board og bruk av GitHub-projects var nytt for meg, og jeg benyttet noen [videoer om Kanban](https://youtu.be/CKWvmiY7f_g) fra YoutTube for å lære mer detaljert om hva metodikken innebærer. Kanban minner mye om SCRUM som jeg har jobbet med tidligere, så jeg har jobbet med å fremheve forskjellene underveis i prosjektet. Også i dette har jeg benyttet YouTube til å finne [videoer som beskriver forskjellene](https://youtu.be/HNd1_irOL5k). GitHub-projects var også nytt for min del, og jeg brukte litt tid i starten for å sette meg inn i hvordan vi skulle organisere prosjektet der når så få hadde bakgrunn fra programmering, og ikke minst GitHub. For å få litt oversikt over GitHub-projects benyttet jeg denne [videoen om automatisert Kanban project management](https://youtu.be/YVFa5VljCDY), samt undervisningen som ble gitt i emnet.<br><br>
+
+
+
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
+
 <h4>Thomas</h4>
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
+
 <h4>Jacob</h4>
 I løpet av How we roll oppgaven har jeg forsøkt i sette meg inn i koding på et veldig enkelt nivå.
 Jeg har tilegnet meg en veldig grunnleggende kompetanse, som gir meg mulighet til å bruke Html og Css i en viss grad.
@@ -47,14 +54,19 @@ I startperioden av prosjektet kom jeg ikke så veldig godt i gang, noe som gjord
 men motivasjonen kom tilbake senere i prosjektet da jeg innså hvor viktig dette er å lære. W3schools.com har vært et hjelpemiddel jeg har prøvd å lære av, men
 jeg har uten tvil lært mest av mine gruppemedlemmer samt ulike læringsvideoer på youtube.com.
 Javascript har jeg enda ikke lært meg, men målsetter meg å få en grei forståelse for dette før jul.
+
 <h4>Zeyd</h4>
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
+
 <h4>Truls</h4>
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
+
 <h4>Magnus</h4>
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
+
 <h4>Marius</h4>
 Hva jeg har lært, hvordan (med kilder), hvilken betydning det hadde for prosjektet. Hva jeg ville gjort annerledes. Hvilke kilder/ressurser som virket bedre enn andre. Foretrukket læringsmetode; forelesning, gruppe-undervisning, par-programmering, undersøke på egenhånd, undervise/forklare til andre.
+
 <h4>Eirik</h4>
 I løpet av arbeidsperioden på How We Roll-oppgaven så har jeg lært grunnleggende koding. I HTML, CSS og javaScript. I starten fokuserte jeg mest på HTML og CSS siden disse var de mest elementære, og letteste og lære. Det var først etter halvveis gjennom prosjektet jeg begynte å se på javascript. Javascript virket veldig mye vanskeligere enn de to første språkene, men etter øving og anvending kommer det litt lettere. Jeg driver fortsatt å lærer alle tre språkene, men javascript har fått mer vekt nå nylig og fremover.
 Jeg brukte aller først developer.mozilla.org, men syntes de var litt vanskelig å komme inn i, for en komplett nybegynner som meg selv. Dermed brukte jeg w3schools først, siden de gikk mer gjennom det grunnleggende rolig og strukturert. Etterhvert som jeg lærte mer gikk jeg derimot tilbake til mdn web docs. Der var det mer demonstrasjon og implementering av kode, enn bare å lære syntax og begreper. Følte jeg lærte mer med dette, og hvis jeg skulle gjort noe annerledes, hadde det vært å prøvd litt hardere på mdn web docs i starten.
