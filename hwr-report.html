@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <Style>
+  
+	<meta charset="utf-8">
+	<title>HowWeRoll</title>
+  <style>
     /* Skjermoppløsning under 600px */
     @media screen and (max-width: 600px) {
       .topnav a, .topnav input[type=text] {
@@ -43,7 +46,6 @@
         padding: 30px;
       }
     }
-
 
     body {
       margin: 0px;
@@ -107,7 +109,7 @@
       float:right;
       border: none;
       margin-top: 6px;
-      margin-right: 16;
+      margin-right: 16px;
       background-color: #264563 ;
       font-size: 16px;
       cursor: pointer;
@@ -158,14 +160,11 @@
       -webkit-filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, .3));
       filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, .3));
     }
-  </Style>
-	<meta charset="utf-8">
-	<title>HowWeRoll</title>
-    <link rel="stylesheet" href="styles.css" />
+  </style>
 </head>
 <body>
 
-<!----------------Header-------------->
+<!--Header-->
 
 <div class="header"><span class="header-text">How We Roll</span></div>
 
@@ -177,7 +176,6 @@
     <input type="text" placeholder="Søk...">
 </div>
 <div class="main-content"> 
-
 
 <h2>How-we-roll rapport</h2>
 <p>Her er en visuell fremstilling av gruppe 8A sine innmeldinger i skjema "HowWeRoll". Vi har benyttet SVG-elementer for å vise dataene fra gruppen. </p>
@@ -264,9 +262,8 @@
 </svg>
 
 </div>
-</body>
 
-<script type="text/javascript">
+<script>
 
 //Funksjon for å plassere navn på SVG-demo. Trenger en tall-verdi (value), en farge (color) og element-id til SVG (svgID)
 function drawSvgText (value, color, svgID, name) {
@@ -315,8 +312,6 @@ function drawSvgText (value, color, svgID, name) {
 	svg.appendChild(txtName);
 	svg.appendChild(txtValue);
 	}
-
-
 
 
 svgYvalue = 0; //Totalhøyde på SVG-elementet
@@ -464,4 +459,5 @@ function OnlyAPlaceHolder(){
   }
 
 </script>
+</body>
 </html>

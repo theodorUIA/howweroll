@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-	<Style>
+	
+	<meta charset="utf-8">
+	<title>HowWeRoll</title>
+    <style>
 		/* Skjermoppløsning under 600px */
 		@media screen and (max-width: 600px) {
 			.topnav a, .topnav input[type=text] {
@@ -67,8 +70,6 @@
 		.main-content {
 			padding: 25px 25px 25px 50px;
 		}
-
-
 		/* Meny i header  */
 		.topnav {
 			overflow: hidden;
@@ -105,7 +106,7 @@
 			float:right;
 			border: none;
 			margin-top: 6px;
-			margin-right: 16;
+			margin-right: 16px;
 			background-color: #264563 ;
 			font-size: 16px;
 			cursor: pointer;
@@ -120,133 +121,10 @@
 			background-color:#2A9D8F ;
 			color: #264563;
 		}
-
-
 		h4 {
 			padding-top: 40px;
 			padding-bottom: 0px;
 			margin: 0px;
-		}
-
-		/* Visittkort style */
-		.card-container {
-			display: flex;
-			flex-direction: row;
-			flex-flow: center;
-			flex-wrap: wrap;
-			justify-content: space-evenly;
-		}
-		.card-div {
-			flex-basis: 15em;
-			align-self: center;
-			border: 1px solid black;
-			border-radius: 1px;
-			margin-left: 0.3em;
-			margin-right: 0.3em;
-			margin-bottom: 1.5em;
-			transition: 0.3s ease;
-			border-radius: 6px;
-			overflow:  hidden;
-			box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-		}
-		.card-div:hover{
-			cursor: pointer;
-			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-		}
-		.card-information-div {
-			margin-left: 2em;
-			margin-right: 2em;
-			margin-top:  1em;
-			margin-bottom: 1em;
-			padding: 10px;
-			font-size: 1em;
-			font-family: arial;
-			text-align: center;
-			color: white;
-
-		}
-		.card-image-div {
-			background: white;
-			max-height: 300px;
-			overflow: hidden;
-			justify-content: center;
-			align-items: center;
-			position: relative;
-		}
-		.card-image {
-			max-width: 100%;
-			max-height:  100%;
-			transition: 0.7s ease;
-		}
-		.card-image:hover {
-			transition: 0.7s ease;
-			-webkit-transform: scale(1.2);
-			-ms-transform: scale(1.2);
-			transform: scale(1.2);
-		}
-		.card-bg-color {
-			background-color: #264653;
-		}
-
-		/* Form styles */
-		.form-div {
-			max-width: 600px;
-		}
-		.form-table {
-			width: 100%;
-		}
-		.form-ferdigheter {
-			border-radius: 4px;
-			font-size: 15px;
-			border: 1px solid #8C8C8C;
-			padding: 7px;
-		}
-		.slider {
-			-webkit-appearance: none;
-			width: 100%;
-			height: 5px;
-			background: #2A9D8F;
-			outline: none;
-			opacity: 0.7;
-			-webkit-transition: .2s;
-			transition: opacity .2s;
-		}
-		.slider:hover{
-			opacity: 1;
-		}
-		.slider::-webkit-slider-thumb {
-			-webkit-appearance: none;
-			appearance: none;
-			background: #264653;
-			width: 18px;
-			height: 18px;
-			cursor: pointer;
-			border-radius: 50%;
-		}
-		.slidercontainer{
-			width: 100%;
-			border: 0px solid black;
-		}
-		.slidercontainer td{
-			border: 0px solid black;
-			width: 33.3%;
-		}
-		.form-textinput {
-			border-radius: 4px;
-			font-size: 15px;
-			border: 1px solid #8C8C8C;
-			padding: 7px;
-		}
-
-		.submit
-		{
-			color: white;
-		}
-		.submit:hover
-		{
-			font-weight: bold;
-			border-radius: 50%;
-
 		}
 		.btn
 		{
@@ -310,10 +188,7 @@
 				opacity: 1;
 			}
 		}
-	</Style>
-	<meta charset="utf-8">
-	<title>HowWeRoll</title>
-    <link rel="stylesheet" href="styles.css" />
+	</style>
 </head>
 <body>
 
@@ -329,7 +204,7 @@
     <input type="text" placeholder="Søk...">
 </div>
 
-<!------Overskrift på hjemsiden------>
+<!--Overskrift på hjemsiden-->
 
 <div class="main-content">
 <h2>Velkommen til How We Roll</h2>
@@ -337,13 +212,12 @@
   <p>I dette verktøyet kan du registrere din profil og sammenlikne dine preferanser med andre, for å bedre bli kjent med gruppen/teamet du jobber i. Registrer din preferanser på profil-siden, og bli en del av gruppe 8A!</p>
 
 
-	<!-----------Visittkort----------->
+	<!--Visittkort-->
 
-<div id="visittkort-container" width="100%">
-
+<div id="visittkort-container">
 
 </div>
-
+</div>
 		<script>
 function skrivUtData(data, color) {
 
@@ -482,6 +356,6 @@ if (localStorage.trxid) {
 	  alert("this item doesn't have much functionality yet and is only a placeholder")
   }
 		</script>
-
+</body>
 </body>
 </html>
