@@ -1,361 +1,349 @@
 <!DOCTYPE html>
 <html lang="no">
-<head>
-	
-	<meta charset="utf-8">
-	<title>HowWeRoll</title>
-    <style>
-		/* Skjermoppløsning under 600px */
-		@media screen and (max-width: 600px) {
-			.topnav a, .topnav input[type=text] {
-				float: none;
-				display: block;
+	<head>
+		
+		<meta charset="utf-8">
+		<title>HowWeRoll</title>
+		<style>
+			/* Skjermoppløsning under 600px */
+			@media screen and (max-width: 600px) {
+				.topnav a,
+				.topnav input[type=text] {
+					float: none;
+					display: block;
+					text-align: left;
+					width: 100%;
+					margin: 0;
+					padding: 14px;
+				}
+				.topnav input[type=text] {
+					border: 1px solid #ccc;
+				}
+				h4 {
+					padding-top: 40px;
+					padding-bottom: 0px;
+					margin: 0px;
+					font-size: 1.5vw;
+				}
+				.header {
+					text-align: left;
+					background-color: #264653;
+					height: 30px;
+					width: auto;
+					padding-top: 30px;
+					padding-bottom: 30px;
+					padding-left: 1%;
+				}
+				.topnav {
+					overflow: hidden;
+					background-color: #264653;
+					padding-left: 5%;
+					padding-right: 10%;
+				}
+				.header-text {
+					padding: 30px;
+				}
+			}
+
+			body {
+				margin: 0px;
+				font-family: Arial;
+			}
+
+			.header {
 				text-align: left;
-				width: 100%;
-				margin: 0;
-				padding: 14px;
+				background-color: #264653;
+				height: 30px;
+				padding-top: 30px;
+				padding-bottom: 30px;
+				padding-left: 50px;
 			}
+
+			.header-text {
+				font-style: italic;
+				font-size: 30px;
+				font-family: Arial;
+				color: white;
+			}
+
+
+			/* Div som omkranser innhold utenom header */
+
+			.main-content {
+				padding: 25px 25px 25px 50px;
+			}
+
+
+			/* Meny i header  */
+
+			.topnav {
+				overflow: hidden;
+				background-color: #264653;
+				padding-left: 50px;
+				padding-right: 15px;
+			}
+
+			.topnav a {
+				float: left;
+				display: block;
+				color: #e76f51;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+				font-size: 17px;
+			}
+
+			.topnav a:hover {
+				background-color: #e76f51;
+				color: #264563;
+			}
+
+			.topnav a.active {
+				background-color: #2A9D8F;
+				color: #264563;
+			}
+
 			.topnav input[type=text] {
-				border: 1px solid #ccc;
+				float: right;
+				padding: 6px;
+				border: none;
+				margin-top: 8px;
+				margin-right: 3px;
+				font-size: 17px;
 			}
+
+			.topnav input[type=button] {
+				float: right;
+				border: none;
+				margin-top: 6px;
+				margin-right: 16px;
+				background-color: #264563;
+				font-size: 16px;
+				cursor: pointer;
+				height: 36px;
+				width: 60px;
+				border: none;
+				color: white;
+				align-items: center;
+			}
+
+			.topnav input[type=button]:hover {
+				font-weight: bolder;
+				background-color: #2A9D8F;
+				color: #264563;
+			}
+
 			h4 {
 				padding-top: 40px;
 				padding-bottom: 0px;
 				margin: 0px;
-				font-size: 1.5vw;
 			}
-			.header{
-				text-align: left;
-				background-color: #264653;
-				height: 30px;
-				width: auto;
-				padding-top: 30px;
-				padding-bottom: 30px;
-				padding-left: 1%;
 
+			.btn {
+				background-color: #2A9D8F;
+				font-size: 16px;
+				cursor: pointer;
+				height: 40px;
+				width: 140px;
+				border-radius: 12px;
+				border: none;
 			}
-			.topnav {
+
+			.btncontainer {
+				text-align: center;
+				width: 100%;
+			}
+
+
+			/* Visittkort style */
+
+			.visittkort-main {
+				float: left;
+				width: 500px;
+				height: 250px;
+				margin: 10px;
+				display: grid;
+				grid-template-columns: 220px;
+				grid-template-rows: 150px;
+				border: 1px solid black;
+				border-radius: 10px;
 				overflow: hidden;
+			}
+
+			.visittkort-img-container {
+				text-align: center;
+				padding: 25px;
 				background-color: #264653;
-				padding-left: 5%;
-				padding-right: 10%;
+				grid-column-start: 1;
+				grid-row-start: 1;
 			}
 
-			.header-text {
-				padding: 30px;
+			.visittkort-profile {
+				color: black;
+				grid-column-start: 1;
+				grid-row-start: 2;
+				padding: 25px
 			}
-		}
 
-		body {
-			margin: 0px;
-			font-family: Arial;
-		}
-		.header{
-			text-align: left;
-			background-color: #264653;
-			height: 30px;
-			padding-top: 30px;
-			padding-bottom: 30px;
-			padding-left: 50px;
-
-		}
-		.header-text{
-			font-style: italic;
-			font-size: 30px;
-			font-family: Arial;
-			color: white;
-		}
-
-		/* Div som omkranser innhold utenom header */
-		.main-content {
-			padding: 25px 25px 25px 50px;
-		}
-		/* Meny i header  */
-		.topnav {
-			overflow: hidden;
-			background-color: #264653;
-			padding-left: 50px;
-			padding-right: 15px;
-		}
-		.topnav a {
-			float: left;
-			display: block;
-			color: #e76f51;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-			font-size: 17px;
-		}
-		.topnav a:hover {
-			background-color: #e76f51;
-			color: #264563;
-		}
-		.topnav a.active {
-			background-color: #2A9D8F;
-			color: #264563;
-		}
-		.topnav input[type=text] {
-			float: right;
-			padding: 6px;
-			border: none;
-			margin-top: 8px;
-			margin-right: 3px;
-			font-size: 17px;
-		}
-		.topnav input[type=button]{
-			float:right;
-			border: none;
-			margin-top: 6px;
-			margin-right: 16px;
-			background-color: #264563 ;
-			font-size: 16px;
-			cursor: pointer;
-			height: 36px;
-			width: 60px;
-			border: none;
-			color: white;
-			align-items: center;
-		}
-		.topnav input[type=button]:hover{
-			font-weight: bolder;
-			background-color:#2A9D8F ;
-			color: #264563;
-		}
-		h4 {
-			padding-top: 40px;
-			padding-bottom: 0px;
-			margin: 0px;
-		}
-		.btn
-		{
-			background-color: #2A9D8F ;
-			font-size: 16px;
-			cursor: pointer;
-			height: 40px;
-			width: 140px;
-			border-radius: 12px;
-			border: none;
-		}
-		.btncontainer
-		{
-			text-align: center;
-			width: 100%;
-		}
-
-
-		/* Visittkort style */
-
-		.visittkort-main {
-			float: left;
-			width:500px;
-			height: 250px;
-			margin: 10px;
-			display:grid;
-			grid-template-columns:220px;
-			grid-template-rows: 150px;
-			border: 1px solid black;
-			border-radius: 10px;
-			overflow: hidden;
-		}
-		.visittkort-img-container  {
-			text-align: center;
-			padding: 25px;
-			background-color: #264653;
-			grid-column-start: 1;
-			grid-row-start: 1;
-		}
-		.visittkort-profile {
-			color: black;
-			grid-column-start: 1;
-			grid-row-start: 2;
-			padding: 25px
-		}
-		.visittkort-how-we-roll {
-			background-color: #fafafa;
-			grid-column-start: 2;
-			grid-row-start: 1;
-			grid-row-end: span 2;
-			padding: 15px;
-			font-size: 14px;
-
-		}
-
-		@keyframes fadeIn {
-			0% {
-				opacity: 0;
+			.visittkort-how-we-roll {
+				background-color: #fafafa;
+				grid-column-start: 2;
+				grid-row-start: 1;
+				grid-row-end: span 2;
+				padding: 15px;
+				font-size: 14px;
 			}
-			100% {
-				opacity: 1;
+
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
 			}
-		}
-	</style>
-</head>
-<body>
-
-<!-----------------Header------------------->
-
-<div class="header"><span class="header-text">How We Roll</span></div>
-<div class="topnav">
-
-	<a class="active" href="index.html">Hjem</a>
-	<a href="how-we-roll.html">Profil</a>
-	<a href="hwr-report.html">Rapport</a>
-	<input type="button" value="Søk" onclick="OnlyAPlaceHolder()">
-    <input type="text" placeholder="Søk...">
-</div>
-
-<!--Overskrift på hjemsiden-->
-
-<div class="main-content">
-<h2>Velkommen til How We Roll</h2>
-
-  <p>I dette verktøyet kan du registrere din profil og sammenlikne dine preferanser med andre, for å bedre bli kjent med gruppen/teamet du jobber i. Registrer din preferanser på profil-siden, og bli en del av gruppe 8A!</p>
-
-
-	<!--Visittkort-->
-
-<div id="visittkort-container">
-
-</div>
-</div>
+		</style>
+	</head>
+	<body>
+		<!--Header-->
+		<div class="header"><span class="header-text">How We Roll</span></div>
+		<div class="topnav">
+			<a class="active" href="index.html">Hjem</a>
+			<a href="how-we-roll.html">Profil</a>
+			<a href="hwr-report.html">Rapport</a>
+			<input type="button" value="Søk" onclick="OnlyAPlaceHolder()">
+			<input type="text" placeholder="Søk...">
+		</div>
+		<!--Overskrift på hjemsiden-->
+		<div class="main-content">
+			<h2>Velkommen til How We Roll</h2>
+			<p>I dette verktøyet kan du registrere din profil og sammenlikne dine preferanser med andre, for å bedre bli kjent med gruppen/teamet du jobber i. Registrer din preferanser på profil-siden, og bli en del av gruppe 8A!</p>
+			<!--Visittkort-->
+			<div id="visittkort-container">
+			</div>
+		</div>
 		<script>
-function skrivUtData(data, color) {
+			function skrivUtData(data, color) {
+		    let mail = data.Email; //Hente ut mail fra Email-variabel
+		    //We fucked up, but fixed it..isj
+		    if (mail === undefined) {
+		        mail = data.email; //Hente ut mail på de som har sendt inn skjema etter endring av variabel
+		    }
+		    let hours = "";
+		    let akt = "";
+		    let work = "";
+		    let dify = "";
+		    let bgrp = "";
+		    let filnavn = data.fname.replace(/"/g, "");
+		    let bildefil = "visittkort/" + filnavn + ".png";
+		    //Generaliserer verdiene fra how-we-roll
+		    if (data.hours < 50) {
+		        hours = "Morgenfugl (" + data.hours + ")";
+		    } else {
+		        hours = "Natteravn (" + data.hours + ")";
+		    }
+		    if (data.akt < 50) {
+		        akt = "Sofagris (" + data.akt + ")";
+		    } else {
+		        akt = "Atletisk (" + data.akt + ")";
+		    }
+		    if (data.work < 50) {
+		        work = "Hjemmekontor (" + data.work + ")";
+		    } else {
+		        work = "Samarbeid (" + data.work + ")";
+		    }
+		    if (data.dify < 50) {
+		        dify = "Selvstendig (" + data.dify + ")";
+		    } else {
+		        dify = "Fysisk (" + data.dify + ")<br>";
+		    }
+		    if (data.bgrp < 50) {
+		        bgrp = "Bakgrunnshistorie (" + data.bgrp + ")";
+		    } else {
+		        bgrp = "Rett på sak (" + data.bgrp + ")";
+		    }
+		    //Oppretter profil fra data
+		    let ProfileData = data.fname + " " + data.lname + "<br>" + "Tlf: " + data.phone + "<br>" + mail;
+		    ProfileData
+		    //Oppretter hwr profil
+		    let hwrInfo = "";
+		    //Hente ut alle verdier i enkelt-variabler
+		    hwrInfo += "Mine ferdigheter er; <b>" + data.ferdigheter + "</b><br><br>";
+		    hwrInfo += "Jeg er en <b>" + hours + "</b>, og ";
+		    hwrInfo += "<b>" + akt + "</b>.<br><br>";
+		    hwrInfo += "Jeg foretrekker <b>" + work + "</b>, og å jobbe ";
+		    hwrInfo += "<b>" + dify + "</b><br><br>";
+		    hwrInfo += "Bakgrunnshistorie eller gå rett på sak? <b>" + bgrp + "</b";
+		    //Oppretter visittkortet
+		    //Div for how-we-roll informasjon
+		    let kortDIVhwr = document.createElement('div');
+		    kortDIVhwr.setAttribute('class', 'visittkort-how-we-roll');
+		    kortDIVhwr.innerHTML = hwrInfo;
+		    //Div for profilinformasjon
+		    let kortDIVprofil = document.createElement('div');
+		    kortDIVprofil.setAttribute('class', 'visittkort-profile');
+		    kortDIVprofil.setAttribute('style', 'background-color: #264653; color: white');
+		    kortDIVprofil.innerHTML = ProfileData;
+		    //IMG for profilbilde
+		    let profilIMG = document.createElement('img');
+		    profilIMG.setAttribute('style', 'max-height: 100px; max-width:200px');
+		    profilIMG.setAttribute('src', bildefil);
+		    profilIMG.setAttribute('alt', "Mangler bilde av " + data.fname);
+		    //Div for bilde
+		    let kortDIVimgContainer = document.createElement('div');
+		    kortDIVimgContainer.setAttribute('class', 'visittkort-img-container');
+		    kortDIVimgContainer.setAttribute('style', 'background-color:' + color);
+		    kortDIVimgContainer.appendChild(profilIMG);
+		    //Div for visittkort
+		    let kortDIVmain = document.createElement('div');
+		    kortDIVmain.setAttribute('class', 'visittkort-main');
+		    kortDIVmain.appendChild(kortDIVimgContainer);
+		    kortDIVmain.appendChild(kortDIVprofil);
+		    kortDIVmain.appendChild(kortDIVhwr);
+		    document.getElementById("visittkort-container").append(kortDIVmain);
+		    //console.log(data);
+			}
+			Promise.all([
+        fetch('https://bacit.info/hwr/20211001094058-34dc0beed53ce17dd663f6e087108c9d.json').then(response => response.json()), //Eirik
+        fetch('https://bacit.info/hwr/20211001093746-d8cb56df33e70d2ef254d6c80ea38775.json').then(response => response.json()), //Theodor
+        fetch('https://bacit.info/hwr/20211001094627-7fa2d75c27d4f4cba1ecc00495324c36.json').then(response => response.json()), //Truls
+        fetch('https://bacit.info/hwr/20211001094831-ba9e391bae4b7a39f06be4f8a19a7823.json').then(response => response.json()), //Marius
+        fetch('https://bacit.info/hwr/20211005113204-b6cfa28db27ae79a0bbf35470e248e88.json').then(response => response.json()), //Thomas
+        fetch('https://bacit.info/hwr/20211004103333-c240a2e1dfbe3426bf1e6a2bb1eadbce.json').then(response => response.json()), //Jacob
+        fetch('https://bacit.info/hwr/20211004103455-8cbc00dea8a541d0c092099f4c8bde96.json').then(response => response.json()), //Magnus
+        fetch('https://bacit.info/hwr/20211011104422-d917f3b7711497a42476da1a6fa9e2fd.json').then(response => response.json()), //Zeyd
+		    ])
+		    .then((data) => {
+		        //Henter ut data for hver enkelt person i en egen variabel/array
+		        let eirik = data[0];
+		        skrivUtData(eirik, "#b9b9b9");
+		        let theodor = data[1];
+		        skrivUtData(theodor, "#7dcc6f");
+		        let truls = data[2];
+		        skrivUtData(truls, "#8fdeff");
+		        let marius = data[3];
+		        skrivUtData(marius, "#c9b82e");
+		        let thomas = data[4];
+		        skrivUtData(thomas, "#eea241");
+		        let jacob = data[5];
+		        skrivUtData(jacob, "#8f62e1");
+		        let magnus = data[6];
+		        skrivUtData(magnus, "#7bdc5e");
+		        let zeyd = data[7];
+		        skrivUtData(zeyd, "#faa5f2");
+		    });
 
-	let mail = data.Email; //Hente ut mail fra Email-variabel
-
- 	//We fucked up, but fixed it..isj
-	if(mail === undefined) {
-		mail = data.email;  //Hente ut mail på de som har sendt inn skjema etter endring av variabel
-	}
-
-	let hours = "";
-	let akt = "";
-	let work = "";
-	let dify = "";
-	let bgrp = "";
-	let filnavn = data.fname.replace(/"/g, "");
-	let bildefil = "visittkort/"+filnavn+".png";
-
-	//Generaliserer verdiene fra how-we-roll
-	if(data.hours < 50 ) { hours = "Morgenfugl ("+data.hours+")"; }
-	else { hours = "Natteravn ("+ data.hours +")"; }
-
-	if(data.akt < 50 ) { akt = "Sofagris ("+data.akt+")"; }
-	else { akt = "Atletisk ("+data.akt+")";	}
-
-	if(data.work < 50 ) { work = "Hjemmekontor ("+data.work+")"; }
-	else { work = "Samarbeid ("+data.work+")"; }
-
-	if(data.dify < 50 ) { dify = "Selvstendig ("+data.dify+")"; }
-	else { dify = "Fysisk ("+data.dify+")<br>"; }
-
-	if(data.bgrp < 50 ) { bgrp = "Bakgrunnshistorie ("+data.bgrp+")"; }
-	else { bgrp = "Rett på sak ("+data.bgrp+")"; }
-
-	//Oppretter profil fra data
-	let ProfileData = data.fname + " " + data.lname + "<br>" + "Tlf: " + data.phone + "<br>" + mail;
-	ProfileData
-
-	//Oppretter hwr profil
-	let hwrInfo = "";
-
-	//Hente ut alle verdier i enkelt-variabler
-		hwrInfo += "Mine ferdigheter er; <b>" + data.ferdigheter + "</b><br><br>";
-		hwrInfo += "Jeg er en <b>" + hours + "</b>, og ";
-		hwrInfo += "<b>" + akt + "</b>.<br><br>";
-		hwrInfo += "Jeg foretrekker <b>" + work + "</b>, og å jobbe ";
-		hwrInfo += "<b>" + dify + "</b><br><br>";
-		hwrInfo += "Bakgrunnshistorie eller gå rett på sak? <b>" + bgrp + "</b";
-
-	//Oppretter visittkortet
-
-	//Div for how-we-roll informasjon
-	let kortDIVhwr = document.createElement('div');
-		kortDIVhwr.setAttribute('class', 'visittkort-how-we-roll');
-		kortDIVhwr.innerHTML = hwrInfo;
-
-	//Div for profilinformasjon
-	let kortDIVprofil = document.createElement('div');
-		kortDIVprofil.setAttribute('class', 'visittkort-profile');
-		kortDIVprofil.setAttribute('style', 'background-color: #264653; color: white');
-		kortDIVprofil.innerHTML= ProfileData;
-
-	//IMG for profilbilde
-	let profilIMG = document.createElement('img');
-		profilIMG.setAttribute('style', 'max-height: 100px; max-width:200px');
-		profilIMG.setAttribute('src', bildefil);
-		profilIMG.setAttribute('alt', "Mangler bilde av "+data.fname);
-
-	//Div for bilde
-	let kortDIVimgContainer = document.createElement('div');
-		kortDIVimgContainer.setAttribute('class', 'visittkort-img-container');
-		kortDIVimgContainer.setAttribute('style', 'background-color:' + color);
-		kortDIVimgContainer.appendChild(profilIMG);
-
-	//Div for visittkort
-	let kortDIVmain = document.createElement('div');
-		kortDIVmain.setAttribute('class', 'visittkort-main');
-		kortDIVmain.appendChild(kortDIVimgContainer);
-		kortDIVmain.appendChild(kortDIVprofil);
-		kortDIVmain.appendChild(kortDIVhwr);
-
-
-
-	document.getElementById("visittkort-container").append(kortDIVmain);
-
-	//console.log(data);
-}
-
-Promise.all([
-  fetch('https://bacit.info/hwr/20211001094058-34dc0beed53ce17dd663f6e087108c9d.json').then(response => response.json()), //Eirik
-  fetch('https://bacit.info/hwr/20211001093746-d8cb56df33e70d2ef254d6c80ea38775.json').then(response => response.json()), //Theodor
-  fetch('https://bacit.info/hwr/20211001094627-7fa2d75c27d4f4cba1ecc00495324c36.json').then(response => response.json()), //Truls
-  fetch('https://bacit.info/hwr/20211001094831-ba9e391bae4b7a39f06be4f8a19a7823.json').then(response => response.json()), //Marius
-  fetch('https://bacit.info/hwr/20211005113204-b6cfa28db27ae79a0bbf35470e248e88.json').then(response => response.json()), //Thomas
-  fetch('https://bacit.info/hwr/20211011103345-e83ea3b785ac114fc534dfda95e62ab8.json').then(response => response.json()), //Jacob
-  fetch('https://bacit.info/hwr/20211004103455-8cbc00dea8a541d0c092099f4c8bde96.json').then(response => response.json()), //Magnus
-  fetch('https://bacit.info/hwr/20211004193742-933a4cf17a4bfc1f3904ba223102ac12.json').then(response => response.json()), //Zeyd
-  ])
-  .then((data) => {
-  	//Henter ut data for hver enkelt person i en egen variabel/array
-
-	 let eirik = data[0]; 
-	 skrivUtData(eirik, "#b9b9b9");
-
-	 let theodor = data[1]; 
-	 skrivUtData(theodor, "#7dcc6f");
-
-	 let truls = data[2]; 
-	 skrivUtData(truls, "#8fdeff");
-
-	 let marius = data[3]; 
-	 skrivUtData(marius, "#c9b82e");
-
-	 let thomas = data[4];
-	 skrivUtData(thomas, "#eea241");
-
-	 let jacob = data[5];
-	 skrivUtData(jacob, "#8f62e1");
-
-	 let magnus = data[6];
-	 skrivUtData(magnus, "#7bdc5e");
-
-	 let zeyd = data[7];
-	 skrivUtData(zeyd, "#faa5f2");
-
-  });
-if (localStorage.trxid) {
-	let last_trxid = localStorage.getItem("trxid");
-	let last_time = localStorage.getItem("time");
-	fetch('https://bacit.info/hwr/'+last_time+'-'+last_trxid+'.json')
-			.then(response => response.json())
-			.then(data => skrivUtData(data,"#e36256"));
-}
-// just an alert message for when users try to use the search bar
-  function OnlyAPlaceHolder(){
-	  alert("this item doesn't have much functionality yet and is only a placeholder")
-  }
+			if (localStorage.trxid) {
+			    let last_trxid = localStorage.getItem("trxid");
+			    let last_time = localStorage.getItem("time");
+			    fetch('https://bacit.info/hwr/' + last_time + '-' + last_trxid + '.json')
+			        .then(response => response.json())
+			        .then(data => skrivUtData(data, "#e36256"));
+			}
+			// just an alert message for when users try to use the search bar
+			function OnlyAPlaceHolder() {
+			    alert("this item doesn't have much functionality yet and is only a placeholder")
+			}
 		</script>
-</body>
-</body>
+	</body>
 </html>
