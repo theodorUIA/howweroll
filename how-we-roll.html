@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <Style>
+    
+    <meta charset="utf-8">
+    <title>HowWeRoll</title>
+<style>
         /* Skjermoppløsning under 600px */
         @media screen and (max-width: 600px) {
             .topnav a, .topnav input[type=text] {
@@ -64,7 +67,6 @@
             padding-top: 30px;
             padding-bottom: 30px;
             padding-left: 50px;
-
         }
         .header-text{
             font-style: italic;
@@ -77,7 +79,6 @@
         .main-content {
             padding: 25px 25px 25px 50px;
         }
-
 
         /* Meny i header  */
         .topnav {
@@ -115,7 +116,7 @@
             float:right;
             border: none;
             margin-top: 6px;
-            margin-right: 16;
+            margin-right: 16px;
             background-color: #264563 ;
             font-size: 16px;
             cursor: pointer;
@@ -130,7 +131,6 @@
             background-color:#2A9D8F ;
             color: #264563;
         }
-
 
         h4 {
             padding-top: 40px;
@@ -226,15 +226,11 @@
             -webkit-filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, .3));
             filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, .3));
         }
-    </Style>
-    <meta charset="utf-8">
-    <title>HowWeRoll</title>
-
-    <link rel="stylesheet" href="styles.css" />
+    </style>
 </head>
 <body>
 
-<!-----------------Header------------------->
+<!--Header-->
 
 <div class="header"><span class="header-text">How We Roll</span></div>
 
@@ -249,7 +245,7 @@
 <form id="HWR-form">
     <div class="main-content">
 
-        <!------Overskrift på profilsiden------>
+        <!--Overskrift på profilsiden-->
 
 <h2>Registrer din profil her</h2>
         <p>Kartlegg din info og dine preferanser for å gi dine medarbeidere innsikt i deg og dine vaner.</p>
@@ -276,11 +272,10 @@
         <label for="email">E-post:</label>
         </td>
         <td class="text-align-left"><input type="email" name="email" id="email" class='form-textinput' placeholder="E-post"></td>
-        </label>
     </tr>
 </table>
 
-    <!-----------Slidere----------->
+    <!--Slidere-->
 
         <h4><label for="ferdigheter">Skriv inn dine ferdigheter her:</label></h4>
 
@@ -345,14 +340,18 @@
     <td class="text-align-right">Rett på sak</td>
 </tr>
 </table>
+
 <br><br>
+
 <div class="btncontainer">
-<button class="btn submit" type="submit">
-    Submit
-</button> 
+    <button class="btn submit" type="submit">Submit</button> 
 </div>
+
 </form>
-<!------Resultat på undersøkelse----->
+
+</div>
+
+<!--Resultat på undersøkelse-->
 <br><br>
     <div class='results'>
         Her kommer resultat:<br>
@@ -361,7 +360,7 @@
 </div>
 </div>
 
-<!--------Javascript for dokumentet------>
+<!--Javascript for dokumentet-->
 
 <script>
 
