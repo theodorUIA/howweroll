@@ -172,7 +172,6 @@
 
 			.visittkort-img-container {
 				text-align: center;
-				padding: 25px;
 				background-color: #264653;
 				grid-column-start: 1;
 				grid-row-start: 1;
@@ -286,7 +285,7 @@
 		    kortDIVprofil.innerHTML = ProfileData;
 		    //IMG for profilbilde
 		    let profilIMG = document.createElement('img');
-		    profilIMG.setAttribute('style', 'max-height: 100px; max-width:200px');
+		    profilIMG.setAttribute('style', 'height: 100%');
 		    profilIMG.setAttribute('src', bildefil);
 		    profilIMG.setAttribute('alt', "Mangler bilde av " + data.fname);
 		    //Div for bilde
